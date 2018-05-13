@@ -7,7 +7,7 @@ layout: 2017/sheet
 ### Frequency separation retouching in Photoshop
 
 Duplicate the layer twice. Perform these in each layer:
-{: .-setup}
+<!-- {.-setup} -->
 
 #### Lower layer
 
@@ -25,4 +25,4 @@ Duplicate the layer twice. Perform these in each layer:
 ### Reference
 
 - <https://phlearn.com/amazing-power-frequency-separation-retouching-photoshop>
-{: .-also-see}
+<!-- {.-also-see} -->

@@ -10,7 +10,7 @@ tags: [Featurable]
 
 Getting started
 ---------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### CSS syntax
 
@@ -47,13 +47,13 @@ caps-type()
   text-transform: uppercase
   letter-spacing: 0.05em
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 h5
   caps-type()
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 See [Mixins](#mixins-1) below.
 
@@ -62,7 +62,7 @@ See [Mixins](#mixins-1) below.
 ```stylus
 royal-blue = #36a
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 div
@@ -71,7 +71,7 @@ div
 
 Mixins
 ------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Without arguments
 
@@ -79,13 +79,13 @@ Mixins
 red-border()
   border: solid 2px red
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 div
   red-border()
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 See: [Mixins](http://stylus-lang.com/docs/mixins.html)
 
@@ -96,14 +96,14 @@ border-radius(n)
   -webkit-border-radius: n
   border-radius: n
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 div
   border-radius: 2px
   border-radius(2px)
 ```
-{: data-line="2,3"}
+<!-- {data-line="2,3"} -->
 
 Mixins can be applied in two different ways.
 
@@ -113,7 +113,7 @@ Mixins can be applied in two different ways.
 border-radius(n = 2px)
   -webkit-border-radius: n
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ### Block mixins
 
@@ -122,13 +122,13 @@ mobile()
   @media (max-width: 480px)
     {block}
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 ```stylus
 +mobile()
   width: 10px
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 See: [Block mixins](http://stylus-lang.com/docs/mixins.html#block-mixins)
 
@@ -139,7 +139,7 @@ shadow(offset-x, args...)
   box-shadow: offset-x args
   margin-top: offset-x
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 #login
@@ -150,7 +150,7 @@ See: [Rest params](http://stylus-lang.com/docs/vargs.html)
 
 Functions
 ---------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Functions
 
@@ -158,13 +158,13 @@ Functions
 add(a, b)
   a + b
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```stylus
 body
   padding: add(10px, 5)
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 See: [Functions](http://stylus-lang.com/docs/functions.html)
 
@@ -174,7 +174,7 @@ See: [Functions](http://stylus-lang.com/docs/functions.html)
 add(a, b = 2)
   a + b
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 See: [Argument defaults](http://stylus-lang.com/docs/functions.html#argument-defaults)
 
@@ -189,7 +189,7 @@ shadow(x, y)
 .button
   box-shadow: shadow(x: 2, y: 4)
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 See: [Named parameters](http://stylus-lang.com/docs/functions.html#named-parameters)
 
@@ -199,7 +199,7 @@ See: [Named parameters](http://stylus-lang.com/docs/functions.html#named-paramet
 sizes()
   8px 16px
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```stylus
 sizes()[0]  // → 8px
@@ -210,7 +210,7 @@ See: [Multiple return values](http://stylus-lang.com/docs/functions.html#multipl
 
 Values
 ------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Conditional assignment
 
@@ -218,7 +218,7 @@ Values
 royal-blue = #36a
 royal-blue ?= #89f
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```stylus
 div
@@ -236,7 +236,7 @@ See: [Conditional assignment](http://stylus-lang.com/docs/operators.html#conditi
   width: w = 150
   margin-left: -(w / 2)
 ```
-{: data-line="2,3"}
+<!-- {data-line="2,3"} -->
 
 See: [Property lookup](http://stylus-lang.com/docs/variables.html#property-lookup)
 
@@ -266,7 +266,7 @@ n = 5px
 foo: (n)em
 foo: (n * 5)%
 ```
-{: data-line="1,2"}
+<!-- {data-line="1,2"} -->
 
 ### Lookup
 
@@ -275,13 +275,13 @@ light-blue = #3bd
 name = 'blue'
 lookup('light-' + name)
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 See: [lookup](http://stylus-lang.com/docs/bifs.html#lookupname)
 
 Advanced features
 -----------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Conditional
 
@@ -316,7 +316,7 @@ for i in 1..3
   .text-{i}
     font-size: lookup('font-size-' + i)
 ```
-{: data-line="5"}
+<!-- {data-line="5"} -->
 
 ### Definition check
 
@@ -324,7 +324,7 @@ for i in 1..3
 if ohnoes is defined
   color: blue
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 See: [is defined](http://stylus-lang.com/docs/operators.html#variable-definition-is-defined)
 
@@ -349,7 +349,7 @@ See: [Instance check](http://stylus-lang.com/docs/operators.html#instance-check-
 
 Built-in functions
 ------------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Color functions
 

@@ -91,7 +91,7 @@ Selectors
 :--button { ··· }
 :--button:--enter { ··· }
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ### Future selectors
 
@@ -165,7 +165,7 @@ div {
 Sets animation, background, margin, padding, and so on.
 
 ## References
-{: .-one-column}
+<!-- {.-one-column} -->
 
 - Based on cssnext 2.9.0.
 - <http://cssnext.io/features/>

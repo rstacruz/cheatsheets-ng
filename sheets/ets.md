@@ -30,7 +30,7 @@ iex> :ets.delete_all_objects(table)
 ```elixir
 iex> table = :ets.new(:my_table, [:set, :protected])
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 | `:set` | no duplicate keys (or: `:ordered_set`, `:bag`, `:duplicate_bag`) |
 | `:protected` | only this process can use it (or: `:public`, `:private`) |
@@ -45,7 +45,7 @@ iex> table = :ets.new(:my_table, [:set, :protected])
 ```
 
 ## References
-{: .-one-column}
+<!-- {.-one-column} -->
 
 * <http://erlang.org/doc/man/ets.html>
 * <http://learnyousomeerlang.com/ets>

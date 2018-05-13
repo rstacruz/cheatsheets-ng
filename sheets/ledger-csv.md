@@ -5,12 +5,12 @@ layout: 2017/sheet
 ---
 
 ## Ledger CSV format
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ```
 $ ledger csv
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```csv
 date         , ?  , desc     , account            , currency , amt     , pending/cleared , ?

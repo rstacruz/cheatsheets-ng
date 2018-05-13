@@ -6,7 +6,7 @@ weight: -3
 ---
 
 ## Date
-{: .-left-reference}
+<!-- {.-left-reference} -->
 
 ### Constructor
 
@@ -38,7 +38,7 @@ new Date(2014, 2, 1, 13, 0, 59, 0)
 
 | `new Date(` | `2014,` | `2,`  | `1,` | `13,` | `0,` | `59,` | `0)`  |
 | Date        | Year    | Month | Day  | Hour  | Min  | Sec   | Milli |
-{: .-css-breakdown}
+<!-- {.-css-breakdown} -->
 
 Months are zero-indexed (eg, January is `0`).
 

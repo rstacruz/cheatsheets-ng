@@ -14,7 +14,7 @@ intro: |
 ```html
 <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 ```
-{: .-wrap}
+<!-- {.-wrap} -->
 
 This is the default script for Polyfill.io.
 
@@ -48,6 +48,6 @@ js.src='https://cdn.polyfill.io/v2/polyfill.min.js?features=default,fetch';
 sc.parentNode.insertBefore(js, sc);
 }(document,'script'))</script>
 ```
-{: data-line="2,4"}
+<!-- {data-line="2,4"} -->
 
 This is the same as the previous, but also adds a polyfill for `window.fetch()`. We add a `window.fetch` check and loads the additional `fetch` feature.

@@ -7,6 +7,6 @@ intro: |
 ---
 
 ## Nothing
-{: .-one-column}
+<!-- {.-one-column} -->
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

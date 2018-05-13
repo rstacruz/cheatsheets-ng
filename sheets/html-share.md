@@ -6,7 +6,7 @@ updated: 2017-09-04
 ---
 
 ## Share links
-{: .-one-column}
+<!-- {.-one-column} -->
 
 Facebook:
 {:.-setup}

@@ -22,14 +22,14 @@ weight: -1
 | `Alt ↑` _/_ `Alt ↓` | Previous _/_ next arguments |
 | `Alt E` _/_ `Alt V` | Open in external editor     |
 | `^L`                | Repaint screen              |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### Help
 
 | `Alt H` | Help on word (man)                     |
 | `Alt W` | Help on word (short descriptions)      |
 | `Alt L` | List directory on cursor               |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ## Function
 

@@ -20,16 +20,16 @@ intro: |
 
 Components
 ----------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Components
-{: .-prime}
+<!-- {.-prime} -->
 
 ```jsx
 import React from 'react'
 import ReactDOM from 'react-dom'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```jsx
 class Hello extends React.Component {
@@ -53,7 +53,7 @@ Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hack
 ```html
 <Video fullscreen={true} />
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```jsx
 render () {
@@ -61,7 +61,7 @@ render () {
   ···
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Use `this.props` to access properties passed to the component.
 
@@ -86,7 +86,7 @@ render () {
   ···
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Use states (`this.state`) to manage dynamic data.
 
@@ -124,7 +124,7 @@ class Info extends React.Component {
 ```
 
 
-{: data-line="5,6,7,8,9,10"}
+<!-- {data-line="5,6,7,8,9,10"} -->
 
 Nest components to separate concerns.
 
@@ -137,7 +137,7 @@ See: [Composing Components](https://reactjs.org/docs/components-and-props.html#c
   <h1>You have pending notifications</h1>
 </AlertBox>
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```jsx
 class AlertBox extends React.Component {
@@ -148,7 +148,7 @@ class AlertBox extends React.Component {
   }
 }
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 Children are passed as the `children` property.
 
@@ -162,7 +162,7 @@ Hello.defaultProps = {
   color: 'blue'
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 See: [defaultProps](https://reactjs.org/docs/react-component.html#defaultprops)
 
@@ -176,7 +176,7 @@ class Hello extends React.Component {
   }
 }
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 Set the default state in the `constructor()`.
 
@@ -184,7 +184,7 @@ See: [Setting the default state](https://reactjs.org/docs/react-without-es6.html
 
 Other components
 ----------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Function components
 
@@ -195,7 +195,7 @@ function MyComponent ({ name }) {
   </div>
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 Functional components have no state. Also, their `props` are passed as the first parameter to a function.
 
@@ -208,7 +208,7 @@ class MessageBox extends React.PureComponent {
   ···
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 Performance-optimized version of `React.Component`. Doesn't rerender if props/state hasn't changed.
 
@@ -235,7 +235,7 @@ See: [Component API](http://facebook.github.io/react/docs/component-api.html)
 
 Lifecycle
 ---------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Mounting
 
@@ -269,7 +269,7 @@ See: [Component specs](http://facebook.github.io/react/docs/component-specs.html
 
 DOM nodes
 ---------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### References
 
@@ -286,7 +286,7 @@ class MyComponent extends React.Component {
   }
 }
 ```
-{: data-line="4,9"}
+<!-- {data-line="4,9"} -->
 
 Allows access to DOM nodes.
 
@@ -307,7 +307,7 @@ class MyComponent extends React.Component {
   }
 }
 ```
-{: data-line="5,9"}
+<!-- {data-line="5,9"} -->
 
 Pass functions to attributes like `onChange`.
 
@@ -320,7 +320,7 @@ See: [Events](https://reactjs.org/docs/events.html)
 ```html
 <VideoPlayer src="video.mp4" />
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```jsx
 class VideoPlayer extends React.Component {
@@ -329,7 +329,7 @@ class VideoPlayer extends React.Component {
   }
 }
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 Propagates `src="..."` down to the sub-component.
 
@@ -358,7 +358,7 @@ See: [React top-level API](https://reactjs.org/docs/react-api.html)
 
 JSX patterns
 ------------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Style shorthand
 
@@ -396,7 +396,7 @@ class TodoList extends React.Component {
   }
 }
 ```
-{: data-line="6,7"}
+<!-- {data-line="6,7"} -->
 
 Always supply a `key` property.
 
@@ -420,7 +420,7 @@ Always supply a `key` property.
 
 New features
 ------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Returning multiple elements
 
@@ -437,7 +437,7 @@ render () {
   ]
 }
 ```
-{: data-line="3,4,5,6"}
+<!-- {data-line="3,4,5,6"} -->
 
 #### Fragments
 ```js
@@ -451,7 +451,7 @@ render () {
   )
 }
 ```
-{: data-line="3,4,5,6,7,8"}
+<!-- {data-line="3,4,5,6,7,8"} -->
 
 See: [Fragments and strings](https://reactjs.org/blog/2017/09/26/react-v16.0.html#new-render-return-types-fragments-and-strings)
 
@@ -462,7 +462,7 @@ render() {
   return 'Look ma, no spans!';
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 You can return just a string.
 
@@ -478,7 +478,7 @@ class MyComponent extends React.Component {
   }
 }
 ```
-{: data-line="3,4,5"}
+<!-- {data-line="3,4,5"} -->
 
 Catch errors via `componentDidCatch`. (React 16+)
 
@@ -494,7 +494,7 @@ render () {
   )
 }
 ```
-{: data-line="2,3,4,5"}
+<!-- {data-line="2,3,4,5"} -->
 
 This renders `this.props.children` into any location in the DOM.
 
@@ -506,7 +506,7 @@ See: [Portals](https://reactjs.org/docs/portals.html)
 const el = document.getElementById('app')
 ReactDOM.hydrate(<App />, el)
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Use `ReactDOM.hydrate` instead of using `ReactDOM.render` if you're rendering over the output of [ReactDOMServer](https://reactjs.org/docs/react-dom-server.html).
 
@@ -514,14 +514,14 @@ See: [Hydrate](https://reactjs.org/docs/react-dom.html#hydrate)
 
 Property validation
 -------------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### PropTypes
 
 ```js
 import PropTypes from 'prop-types'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 See: [Typechecking with PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html)
 

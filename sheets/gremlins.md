@@ -30,7 +30,7 @@ gremlins.createHorde()
     document.activeElement.blur()
   })
 ```
-{: data-line="3,4,5"}
+<!-- {data-line="3,4,5"} -->
 
 Runs the given function at regular intervals.
 
@@ -69,7 +69,7 @@ gremlins.createHorde()
     console.profileEnd()
   })
 ```
-{: data-line="2,6"}
+<!-- {data-line="2,6"} -->
 
 ### Asynchronous
 
@@ -82,7 +82,7 @@ gremlins.createHorde()
     }, 500)
   })
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ## References
 

@@ -6,7 +6,7 @@ updated: 2017-09-20
 ---
 
 ## Support table
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ### CSS Selectors
 
@@ -34,7 +34,7 @@ updated: 2017-09-20
 | `:target`                                                  |     |     |     | 9 ✓ | ✓    |
 | `::selection`                                              |     |     |     | 9 ✓ | ✓    |
 | `:root`                                                    |     |     |     | 9 ✓ | ✓    |
-{: .-headers.-no-wrap}
+<!-- {.-headers.-no-wrap} -->
 
 `first-child:` doesn't work for elements inserted via JS.
 
@@ -69,7 +69,7 @@ updated: 2017-09-20
 | `text-shadow` — [polyfill][text-shadow]                    |     |     |     |     | 10 ✓ | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
 | `border-image`                                             |     |     |     |     |      | 11 ✓ |
-{: .-headers.-no-wrap}
+<!-- {.-headers.-no-wrap} -->
 
 `inline-block:` IE6/7 can only support inline-block for elements that are naturally inline, like span
 
@@ -97,7 +97,7 @@ updated: 2017-09-20
 | JS: Web sockets                                            |     |     |     |     | 10 ✓ | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
 | JS: Fullscreen mode                                        |     |     |     |     |      | 11 ✓ |
-{: .-headers.-no-wrap}
+<!-- {.-headers.-no-wrap} -->
 
 `flexbox:` IE10 only supports the 2012 syntax with -ms- prefix.
 

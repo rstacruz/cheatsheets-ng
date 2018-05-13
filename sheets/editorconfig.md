@@ -7,7 +7,7 @@ updated: 2017-09-04
 ---
 
 ### Short example
-{: .-prime}
+<!-- {.-prime} -->
 
 ```ini
 # editorconfig.org

@@ -6,7 +6,7 @@ weight: -3
 ---
 
 ### Fetch
-{: .-prime}
+<!-- {.-prime} -->
 
 ```js
 fetch('/data.json')
@@ -16,7 +16,7 @@ fetch('/data.json')
   })
   .catch(err => ...)
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 ### Response
 
@@ -86,7 +86,7 @@ const fetch = require('isomorphic-fetch')
 See: [isomorphic-fetch](https://npmjs.com/package/isomorphic-fetch) _(npmjs.com)_
 
 ## References
-{: .-one-column}
+<!-- {.-one-column} -->
 
 - <https://fetch.spec.whatwg.org/>
 - <https://www.npmjs.com/package/whatwg-fetch>

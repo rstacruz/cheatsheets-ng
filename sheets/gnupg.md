@@ -42,7 +42,7 @@ gpg --import key.asc --merge-options merge-only
 ### Managing your keyring
 
 Generate a new key:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```bash
 gpg --gen-key
@@ -68,7 +68,7 @@ gpg --list-secret-keys
 ### Using a keyserver
 
 Import keys from keyserver:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```bash
 gpg --receive-keys <KEY IDS>
@@ -112,7 +112,7 @@ __NOTE:__ You can use the owner's email or name (or part thereof) instead of the
 
 Encrypting
 ---------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Public key encryption
 This will produce an encrypted file, `secret.txt.gpg`, that can only be decrypted by the recipient:
@@ -149,7 +149,7 @@ gpg -c secret.txt
 
 Decrypting
 ---------
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ### Decrypting a file
 
@@ -163,7 +163,7 @@ __NOTE__: Omitting `-o|--output` will print the unencrypted contents to `stdout`
 
 Signing & Verifying
 ---------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Signing
 
@@ -192,12 +192,12 @@ gpg -d signed-file.txt.gpg
 
 Miscellaneous
 ----------
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Components
 
 List all components:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```bash
 gpgconf --list-components

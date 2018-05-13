@@ -46,7 +46,7 @@ docker-compose down
 ```
 
 ## Reference
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ```yaml
 web:
@@ -106,7 +106,7 @@ web:
 ```
 
 ## Advanced features
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Labels
 

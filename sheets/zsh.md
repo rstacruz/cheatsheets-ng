@@ -19,7 +19,7 @@ layout: 2017/sheet
 | ---               | ---                 | ---
 | `*(m0)`           | `rm *(m0)`          | Last modified today
 | `*(m-4)`          |                     | Last modified <4 days ago
-{: .-headers}
+<!-- {.-headers} -->
 
 ### Change default shell
 

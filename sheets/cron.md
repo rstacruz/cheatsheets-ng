@@ -7,14 +7,14 @@ weight: -3
 ---
 
 ## Format
-{: .-two-column}
+<!-- {.-two-column} -->
 
 ### Format
 
 ```
 Min  Hour Day  Mon  Weekday
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```
 *    *    *    *    *  command to be executed
@@ -28,7 +28,7 @@ Min  Hour Day  Mon  Weekday
 │    └────────────────  Hour     (0..23)
 └─────────────────────  Minute   (0..59)
 ```
-{: .-setup.-box-chars}
+<!-- {.-setup.-box-chars} -->
 
 ### Examples
 

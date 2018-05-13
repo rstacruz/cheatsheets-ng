@@ -7,7 +7,7 @@ tags: [Featurable]
 ---
 
 ## Common time formats
-{: .-one-column}
+<!-- {.-one-column} -->
 
 - [UNIX strftime](./strftime) - Used by Ruby, `date`, and more
 - [Moment.js](./moment#formatting) - Used by Moment.js, date-fns, and more

@@ -10,7 +10,7 @@ Request
 -------
 
 ### Request
-{: .-prime}
+<!-- {.-prime} -->
 
 ```elixir
 conn.host          # → "example.com"
@@ -43,7 +43,7 @@ Response
 --------
 
 ### Response
-{: .-prime}
+<!-- {.-prime} -->
 
 ```elixir
 conn.resp_body     # → "..."
@@ -120,7 +120,7 @@ Other features
 --------------
 
 ### Other fields
-{: .-prime}
+<!-- {.-prime} -->
 
 ```elixir
 conn.assigns          # storage of crap

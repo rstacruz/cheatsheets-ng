@@ -12,7 +12,7 @@ description: |
 | ----  | ----                | -                                 |
 | `100` | Continue            | [?](https://httpstatuses.com/100) |
 | `101` | Switching Protocols | [?](https://httpstatuses.com/101) |
-{: .xp}
+<!-- {.xp} -->
 
 ### Success Responses
 
@@ -26,7 +26,7 @@ description: |
 | `205` | Reset Content               | [?](https://httpstatuses.com/205) |
 | `206` | Partial Content             | [?](https://httpstatuses.com/206) |
 | `226` | IM Used                     | [?](https://httpstatuses.com/226) |
-{: .xp}
+<!-- {.xp} -->
 
 ### Redirection Responses
 
@@ -41,7 +41,7 @@ description: |
 | `306` | *Switch Proxy*     | [?](https://httpstatusdogs.com/306-switch-proxy) |
 | `307` | Temporary Redirect | [?](https://httpstatuses.com/307)                |
 | `308` | Permanent Redirect | [?](https://httpstatuses.com/308)                |
-{: .xp}
+<!-- {.xp} -->
 
 ### Client Error Responses
 
@@ -72,7 +72,7 @@ description: |
 | `429` | Too Many Requests               | [?](https://httpstatuses.com/429) |
 | `431` | Request Header Fields Too Large | [?](https://httpstatuses.com/431) |
 | `451` | Unavailable For Legal Reasons   | [?](https://httpstatuses.com/451) |
-{: .xp}
+<!-- {.xp} -->
 
 ### Server Error Responses
 
@@ -87,7 +87,7 @@ description: |
 | `506` | Variant Also Negotiates         | [?](https://httpstatuses.com/506) |
 | `510` | Not Extended                    | [?](https://httpstatuses.com/510) |
 | `511` | Network Authentication Required | [?](https://httpstatuses.com/511) |
-{: .xp}
+<!-- {.xp} -->
 
 ## WebDAV Status Codes
 
@@ -105,7 +105,7 @@ WebDAV is an extension of HTTP that allows clients to perform remote Web content
 | `424` | Failed Dependency               | [?](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#424) |
 | `507` | Insufficient Storage            | [?](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#507) |
 | `508` | Loop Detected                   | [?](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#508) |
-{: .xp}
+<!-- {.xp} -->
 
 ## Also see
 

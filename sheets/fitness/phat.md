@@ -19,7 +19,7 @@ updated: 2017-08-26
 | ----              | ----                             | ----        |
 | Aux: curling      | Cambered bar curls               | 3 x 6-10    |
 | Aux: extension    | Skull crushers                   | 3 x 6-10    |
-{: .-headers}
+<!-- {.-headers} -->
 
 ### Day 2: Lower Body Power
 
@@ -35,7 +35,7 @@ updated: 2017-08-26
 | ----                    | ----                                | ----        |
 | Aux: calf               | Standing calf raise                 | 3 x 6-10    |
 | Aux: calf               | Seated calf raise                   | 2 x 6-10    |
-{: .-headers}
+<!-- {.-headers} -->
 
 ### Day 4: Upper Body Hypertrophy
 
@@ -51,7 +51,7 @@ updated: 2017-08-26
 | Shoulder         | Seated dumbbell presses                      | 3 x 8-12    |
 | Shoulder         | Upright rows                                 | 2 x 12-15   |
 | Shoulder         | Side lateral raises with dumbbells or cables | 3 x 12-20   |
-{: .-headers}
+<!-- {.-headers} -->
 
 Speed work: with 65-70% of normal 3-5 rep max
 
@@ -71,7 +71,7 @@ Speed work: with 65-70% of normal 3-5 rep max
 | ----             | ----               | ----        |
 | Calf             | Donkey calf raises | 4 x 10-15   |
 | Calf             | Seated calf raises | 3 x 15-20   |
-{: .-headers}
+<!-- {.-headers} -->
 
 ### Day 6: Chest/Arms Hypertrophy
 
@@ -89,4 +89,4 @@ Speed work: with 65-70% of normal 3-5 rep max
 | Extension         | Seated tricep extension with cambered bar | 3 x 8-12    |
 | Extension         | Cable pressdowns with rope attachment     | 2 x 12-15   |
 | Extension         | Cable kickbacks                           | 2 x 15-20   |
-{: .-headers}
+<!-- {.-headers} -->

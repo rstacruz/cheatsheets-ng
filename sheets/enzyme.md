@@ -18,12 +18,12 @@ intro: |
 ## Getting started
 
 ### Mounting
-{: .-prime}
+<!-- {.-prime} -->
 
 ```js
 import {shallow, mount} from 'enzyme'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 wrap = shallow(<MyComponent />)
@@ -50,16 +50,16 @@ Shows HTML for debugging purposes.
 See: [debug()](http://airbnb.io/enzyme/docs/api/ReactWrapper/debug.html)
 
 ## Examples
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Basic example
-{: .-prime}
+<!-- {.-prime} -->
 
 ```js
 import { shallow } from 'enzyme'
 import MyComponent from '../MyComponent'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 it('works', () => {
@@ -145,7 +145,7 @@ npm install --save-dev enzyme \
   enzyme-adapter-react-16 \
   react-test-renderer
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 #### test/setup.js
 
@@ -175,7 +175,7 @@ See: [Installation](http://airbnb.io/enzyme/#installation)
 ```
 npm install --save-dev enzyme-to-json
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 #### package.json
 

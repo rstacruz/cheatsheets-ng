@@ -35,7 +35,7 @@ $ http --form POST example.com \
 ### Options
 
 Print options:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```bash
 -v, --verbose            # same as --print=HhBb --all

@@ -6,7 +6,7 @@ layout: 2017/sheet
 ### Getting started
 
 Sign up for opensauce:
-{: .-setup}
+<!-- {.-setup} -->
 
 - http://saucelabs.com/opensauce
 

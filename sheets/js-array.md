@@ -9,7 +9,7 @@ layout: 2017/sheet
 ```bash
 list = [a,b,c,d,e]
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```bash
 list[1]                 // → b

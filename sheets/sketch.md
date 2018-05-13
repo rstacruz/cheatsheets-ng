@@ -6,12 +6,13 @@ updated: 2017-08-26
 ---
 
 ## Shortcuts
-{: .-three-column}
+
+<!-- {.-three-column} -->
 
 ### Insert
 
 | Shortcut | Description |
-| ---      | ---         |
+| -------- | ----------- |
 | `V`      | Vector      |
 | `P`      | Pencil      |
 | `T`      | Text        |
@@ -19,71 +20,79 @@ updated: 2017-08-26
 | `R`      | Rectangle   |
 | `O`      | Oval        |
 | `U`      | Rounded     |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Show
 
 | Shortcut | Description            |
-| ---      | ---                    |
+| -------- | ---------------------- |
 | `^G`     | Show grid              |
 | `^L`     | Show layout            |
 | `^P`     | Show pixels            |
 | `^H`     | Show selection handles |
 | `^R`     | Show rulers            |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Sidebars
 
 | Shortcut | Description              |
-| ---      | ---                      |
+| -------- | ------------------------ |
 | `⌘⌥1`    | Toggle left (layers)     |
 | `⌘⌥2`    | Toggle right (inspector) |
 | `⌘⌥3`    | Toggle both              |
 | `⌘.`     | Presentation mode        |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Zoom
 
 | Shortcut | Description             |
-| ---      | ---                     |
+| -------- | ----------------------- |
 | `⌘0`     | 100%                    |
 | `⌘1`     | Fit to screen           |
 | `⌘2`     | Fit selection to screen |
 | `⌘3`     | Center selection        |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Arrange
 
 | Shortcut       | Description         |
-| ---            | ---                 |
+| -------------- | ------------------- |
 | `⌘⌥↑` _/_ `↓`  | Forward or backward |
 | `^⌘⌥↑` _/_ `↓` | Front or back       |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Distribute
 
 | Shortcut | Description |
-| ---      | ---         |
+| -------- | ----------- |
 | `^⌘H`    | Horizontal  |
 | `^⌘V`    | Vertical    |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Layers
 
 | Shortcut | Description  |
-| ---      | ---          |
+| -------- | ------------ |
 | `⌘R`     | Rename layer |
 | `⌘F`     | Find layer   |
 | `⌘G`     | Group        |
 | `⌘⇧G`    | Ungroup      |
-{: .-shortcuts}
+
+<!-- {.-shortcuts} -->
 
 ### Font
 
-| Shortcut       | Description    |
-| ---            | ---            |
-| `⌘⌥ +` _/_ `-` | Bigger/smaller |
-| `⌘⇧[`          | Left align     |
-| `⌘⇧\`          | Center align   |
-| `⌘⇧]`          | Right align    |
-{: .-shortcuts}
+| Shortcut             | Description    |
+| -------------------- | -------------- |
+| `⌘⌥ +` _/_ `-`       | Bigger/smaller |
+| `⌘⇧[`                | Left align     |
+| `⌘⇧\` | Center align |
+| `⌘⇧]`                | Right align    |
+
+<!-- {.-shortcuts} -->

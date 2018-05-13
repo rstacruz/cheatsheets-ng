@@ -16,7 +16,7 @@ keywords:
 
 Getting started
 ---------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Example
 
@@ -62,7 +62,7 @@ git commit || echo "Commit failed"
 ```
 
 ### Functions
-{: id='functions-example'}
+<!-- {id='functions-example'} -->
 
 ```bash
 get_name() {
@@ -75,7 +75,7 @@ echo "You are $(get_name)"
 See: [Functions](#functions)
 
 ### Conditionals
-{: id='conditionals-example'}
+<!-- {id='conditionals-example'} -->
 
 ```bash
 if [ -z "$string" ]; then
@@ -111,7 +111,7 @@ See: [Brace expansion](http://wiki.bash-hackers.org/syntax/expansion/brace)
 
 Parameter expansions
 --------------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Basics
 
@@ -208,7 +208,7 @@ The `:` is optional (eg, `${FOO=word}` works)
 
 Loops
 -----
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Basic for loop
 
@@ -252,7 +252,7 @@ done
 
 Functions
 ---------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Defining functions
 
@@ -315,7 +315,7 @@ See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_p
 
 Conditionals
 ------------
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Conditions
 
@@ -636,7 +636,7 @@ read -n 1 ans    # Just one character
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
 ## Also see
-{: .-one-column}
+<!-- {.-one-column} -->
 
 * [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
 * [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_

@@ -35,7 +35,7 @@ $ sudo apt install tig
 You can substitute `git log` → `tig`.
 
 ## Shortcut keys
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Switching views
 
@@ -44,7 +44,7 @@ You can substitute `git log` → `tig`.
 | `t` | Tree (files) |
 | `g` | Grep |
 | `h` | Help |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### All views
 
@@ -60,7 +60,7 @@ You can substitute `git log` → `tig`.
 | ---      | ---                     |
 | `^N`     | Next on parent view     |
 | `^P`     | Previous on parent view |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### `m` - Main view
 
@@ -68,7 +68,7 @@ You can substitute `git log` → `tig`.
 | `A` | Toggle author display modes |
 | `X` | Toggle commit sha           |
 | `C` | Cherry pick a commit        |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### `s` - Stage view
 
@@ -78,14 +78,14 @@ You can substitute `git log` → `tig`.
 | `M`     | Merge                              |
 | `1`     | Stage line                         |
 | `[` `]` | Increase/decrease the diff context |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### `h` - Branch view
 
 | `i` | Change sort header |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 ### `h` - Blame view
 
 | `,` | Parent commit |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->

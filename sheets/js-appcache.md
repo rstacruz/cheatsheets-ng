@@ -5,7 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Reference
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ### applicationCache checking
 

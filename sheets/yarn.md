@@ -17,7 +17,7 @@ tags: [Featurable]
 | `npm install gulp --save-dev --save-exact` | `yarn add gulp --dev --exact` |
 | `npm install -g gulp` | `yarn global add gulp` |
 | `./node_modules/.bin/gulp` | `yarn run gulp` |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 ### yarn install
 
@@ -53,7 +53,7 @@ These options are available for `yarn add`.
 ### Workspaces
 
 In `package.json`:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```json
 "workspaces": [
@@ -70,14 +70,14 @@ jest/
    └─ jest-diff/
       └─ package.json
 ```
-{: .-box-chars}
+<!-- {.-box-chars} -->
 
 (New in 1.0) Allows monorepos to share packages with each other. See: [Introducing workspaces](https://yarnpkg.com/blog/2017/08/02/introducing-workspaces/)
 
 ### Selective version resolution
 
 In `package.json`:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```json
 "resolutions": {

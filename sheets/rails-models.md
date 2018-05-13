@@ -204,7 +204,7 @@ See: [Calculations](http://devdocs.io/rails/activerecord/calculations)
 ### Dynamic attribute-based finders
 
 Given a field called `name`:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```ruby
 # Returns one record
@@ -289,7 +289,7 @@ belongs_to :author,
 ### Many-to-many
 
 If you have a join model:
-{: .-setup}
+<!-- {.-setup} -->
 
 ```ruby
 class Programmer < ActiveRecord::Base
@@ -297,7 +297,7 @@ class Programmer < ActiveRecord::Base
   has_many :projects, :through => :assignments
 end
 ```
-{: data-line="2,3"}
+<!-- {data-line="2,3"} -->
 
 ```ruby
 class Project < ActiveRecord::Base
@@ -305,7 +305,7 @@ class Project < ActiveRecord::Base
   has_many :programmers, :through => :assignments
 end
 ```
-{: data-line="2,3"}
+<!-- {data-line="2,3"} -->
 
 ```ruby
 class Assignment
@@ -313,7 +313,7 @@ class Assignment
   belongs_to :programmer
 end
 ```
-{: data-line="2,3"}
+<!-- {data-line="2,3"} -->
 
 ### Many-to-many (HABTM)
 
@@ -334,14 +334,14 @@ class Post
   has_many :attachments, as: :parent
 end
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```ruby
 class Image
   belongs_to :parent, polymorphic: true
 end
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 And in migrations:
 
@@ -350,7 +350,7 @@ create_table :images do |t|
   t.references :post, polymorphic: true
 end
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Validation
 ----------
@@ -366,7 +366,7 @@ class Person < ActiveRecord::Base
   # Presence
   validates :name,     presence: true
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```ruby
   # Acceptance
@@ -449,7 +449,7 @@ class Person < ActiveRecord::Base
 ```ruby
 end
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ### Custom validations
 
@@ -462,7 +462,7 @@ class Person < ActiveRecord::Base
   end
 end
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ### Errors
 
@@ -532,7 +532,7 @@ class User < ActiveRecord::Base
   serialize :preferences
 end
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```ruby
 user = User.create(
@@ -553,7 +553,7 @@ class User < ActiveRecord::Base
   serialize :preferences, Hash
 end
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 ```ruby
 # Reading it raises SerializationTypeMismatch
@@ -579,7 +579,7 @@ class Song < ActiveRecord::Base
   end
 end
 ```
-{: data-line="4,8"}
+<!-- {data-line="4,8"} -->
 
 See: <http://api.rubyonrails.org/classes/ActiveRecord/Base.html>
 

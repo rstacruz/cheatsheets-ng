@@ -5,7 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Shortcuts
-{: .-left-reference}
+<!-- {.-left-reference} -->
 
 ### Examples
 
@@ -29,6 +29,6 @@ isPublished = !!post.publishedAt
 | Date to UNIX timestamp | `+new Date()` | `new Date().getTime()` |
 | Any to boolean | `!!value` | `Boolean(value)` |
 | Check array contents | `if (~arr.indexOf(v))` | `if (arr.includes(v))` |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 `.includes` is ES6-only, otherwise use `.indexOf(val) !== -1` if you don't polyfill.

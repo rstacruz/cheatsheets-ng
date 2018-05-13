@@ -106,8 +106,8 @@ def expired?
 Place this at the beginning of the file.
 
 ## Also see
-{: .-one-column}
+<!-- {.-one-column} -->
 
 * <http://rdoc.rubyforge.org/RDoc/Markup.html>
 * <http://www.rubydoc.info/gems/yard/file/docs/GettingStarted.md>
-{: .-also-see}
+<!-- {.-also-see} -->

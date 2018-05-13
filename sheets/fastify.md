@@ -10,7 +10,7 @@ intro: |
 ## Getting started
 
 ### Hello world
-{: .-prime}
+<!-- {.-prime} -->
 
 ```js
 const fastify = require('fastify')()
@@ -158,7 +158,7 @@ fastify.get('/', { schema }, (req, reply) => {
   ···
 })
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 #### or (same as above)
 
@@ -170,7 +170,7 @@ fastify.route({
   handler: (req, reply) => { ··· }
 })
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 By defining a JSON schema, you get validation and improved performance.
 
@@ -187,7 +187,7 @@ fastify.register(
   err => { if (err) throw err }
 )
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 #### route.js
 
@@ -287,14 +287,14 @@ fastify.register(require('point-of-view'), {
   }
 })
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 ```js
 fastify.get('/', (req, reply) => {
   reply.view('/templates/index.ejs', { text: 'text' })
 })
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Support `ejs`, `pug`, `handlebars` and `marko`.
 

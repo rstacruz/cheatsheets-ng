@@ -5,7 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Keys
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Buffers
 
@@ -23,7 +23,7 @@ layout: 2017/sheet
 | ---              | ---                              |
 | `A-w A-Left`     | Switch windows                   |
 | `A-w A-b`        | Balance windows                  |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->
 
 (`A-` is alt.)
 
@@ -39,4 +39,4 @@ layout: 2017/sheet
 
 | `^r`              | Search      |
 | `Enter` `^j` `^m` | Stop search |
-{: .-shortcuts}
+<!-- {.-shortcuts} -->

@@ -6,7 +6,7 @@ weight: -1
 ---
 
 ### Basic example
-{: .-prime}
+<!-- {.-prime} -->
 
 ```bash
 rsync -avz ./src /dest

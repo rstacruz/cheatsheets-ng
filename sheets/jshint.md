@@ -9,7 +9,7 @@ updated: 2017-09-12
 
 Enable these options to *not* throw errors in these conditions.
 See: [Relaxing](http://www.jshint.com/docs/options/#relaxing-options)
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 /* jshint asi: true */
@@ -71,7 +71,7 @@ process.env['name_here']
 
 Enable these options to catch more errors.
 See: [Enforcing](http://www.jshint.com/docs/options/#enforcing-options)
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 /* jshint curly: true */

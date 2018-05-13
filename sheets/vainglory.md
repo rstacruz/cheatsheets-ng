@@ -4,7 +4,7 @@ layout: 2017/sheet
 ---
 
 ## T3 items by use
-{: .-one-column}
+<!-- {.-one-column} -->
 
 | Use                    | CP                                | WP                           | Util                                                                           |
 | ---                    | ---                               | ---                          | ---                                                                            |
@@ -20,10 +20,10 @@ layout: 2017/sheet
 | __Slow__               | [Frostburn][FB]                   |                              | [Shiversteel][SS]                                                              |
 | __Reflex block__       |                                   |                              | [Aegis][Aegis] (self/shield) <br> [Crucible][Cru] (team/HP)                    |
 | __Ability repeat__     | [Echo][Echo]                      |                              |                                                                                |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 ## Tier 3 items
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ### Crystal power
 
@@ -37,7 +37,7 @@ layout: 2017/sheet
 | SG: [Shatterglass][SG]        | 3000  | +150 cp | __Raw power__            <br> -                                                        |
 | CW: [Clockwork][CW]           | 2500  | +30% cp | __Cooldown__             <br> *+40% cooldown*, +250 energy, +7.5 recharge              |
 | [Echo][Echo]                  | 2500? |         | __Ability repeat__       <br> +250 energy, +4 recharge                                 |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 [AS]: http://www.vaingloryfire.com/vainglory/wiki/items/aftershock
 [AC]: http://www.vaingloryfire.com/vainglory/wiki/items/alternating-current
@@ -61,7 +61,7 @@ layout: 2017/sheet
 | SB: [Sorrowblade][SB]      | 3100 | +150 wp | __Raw power__     <br> -                                                      |
 | PS: [Poisoned Shiv][PS]    | 2250 | +30 wp  | __Mortal wounds__ <br> *mortal wounds for 2s*, +10% lifesteal, +30% atk speed |
 | SS: Spellsword             | ?    | +90 wp  | __Cooldown__      <br> ?                                                      |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 [BS]: http://www.vaingloryfire.com/vainglory/wiki/items/bonesaw
 [BP]: http://www.vaingloryfire.com/vainglory/wiki/items/breaking-point
@@ -83,7 +83,7 @@ layout: 2017/sheet
 | [Contraption][Con]              | 2100 | +350 hp | 👀 __Vision__       <br> traps/flares, +40% cooldown, +3 recharge      |
 | [Shiversteel][SS]               | 1450 | +500 hp | 🐌 __Slow__         <br> active: slow targets                          |
 | [War Treads][WBoot]             | 2500 | +600 hp | 👟 __Boots__        <br> gives sprint to nearby teammates              |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 ### Defense
 
@@ -95,7 +95,7 @@ layout: 2017/sheet
 | [Metal Jacket][Metal]           | 2100 |         | +170 ar | +35 sh  |                                        |
 | [Crucible][Cru]                 | 1850 | +600 hp |         |         | ✊ __Reflex block__ (team)             |
 | [Slumbering Husk][Husk] (2.0)   | 1600 | +400 hp |         |         | __Fortification__ against burst damage |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 [Fountain]: http://www.vaingloryfire.com/vainglory/wiki/items/fountain-of-renewal
 [Cru]: http://www.vaingloryfire.com/vainglory/wiki/items/aegis
@@ -112,7 +112,7 @@ layout: 2017/sheet
 | [War Treads][WBoot]       | +0.4           | +600 hp | 2s (60s cooldown) <br> incl. nearby teammates   | __HP, assist__ |
 | [Halcyon Chargers][HBoot] | +0.5           |         | 3s (50s cooldown)                               | __Energy__     |
 | [Journey Boots][JBoot]    | +0.6           | +250 hp | 2s (60s cooldown) <br> damaging resets cooldown | __Gap close__  |
-{: .-left-align.-headers}
+<!-- {.-left-align.-headers} -->
 
 [Con]: http://www.vaingloryfire.com/vainglory/wiki/items/contraption
 [HBoot]: http://www.vaingloryfire.com/vainglory/wiki/items/halcyon-chargers

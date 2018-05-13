@@ -8,13 +8,13 @@ updated: 2017-09-15
 ---
 
 ## Getting started
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Hello world
-{: .-prime}
+<!-- {.-prime} -->
 
 #### hello.go
-{: .-file}
+<!-- {.-file} -->
 
 ```go
 package main
@@ -63,7 +63,7 @@ Constants can be character, string, boolean, or numeric values.
 See: [Constants](https://tour.golang.org/basics/15)
 
 ## Basic types
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Strings
 
@@ -125,7 +125,7 @@ func main () {
   fmt.Println("Value is", b)
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 ```go
 func getPointer () (myPointer *int) {
@@ -133,7 +133,7 @@ func getPointer () (myPointer *int) {
   return &a
 }
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 Pointers point to a memory location of a variable. Go is fully garbage-collected.
 
@@ -150,7 +150,7 @@ u := uint(i)
 See: [Type conversions](https://tour.golang.org/basics/13)
 
 ## Flow control
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Conditional
 
@@ -163,7 +163,7 @@ if day == "sunday" || day == "saturday" {
   work()
 }
 ```
-{: data-line="1,3,5"}
+<!-- {data-line="1,3,5"} -->
 
 See: [If](https://tour.golang.org/flowcontrol/5)
 
@@ -174,7 +174,7 @@ if _, err := getResult(); err != nil {
   fmt.Println("Uh oh")
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 A condition in an `if` statement can be preceded with a statement before a `;`.
 
@@ -199,7 +199,7 @@ switch day {
 See: [Switch](https://github.com/golang/go/wiki/Switch)
 
 ## Functions
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Lambdas
 
@@ -208,7 +208,7 @@ myfunc := func() bool {
   return x > 10000
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 Functions are first class objects.
 
@@ -223,7 +223,7 @@ func getMessage() (a string, b string) {
   return "Hello", "World"
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 
 ### Named return values
@@ -235,14 +235,14 @@ func split(sum int) (x, y int) {
   return
 }
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 By defining the return value names in the signature, a `return` (no args) will return variables with those names.
 
 See: [Named return values](https://tour.golang.org/basics/7)
 
 ## Packages
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Importing
 
@@ -267,7 +267,7 @@ See: [Importing](https://tour.golang.org/basics/1)
 ```go
 import r "math/rand"
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```go
 r.Intn()
@@ -294,7 +294,7 @@ package hello
 Every package file has to start with `package`.
 
 ## Concurrency
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Goroutines
 
@@ -314,7 +314,7 @@ func main() {
   fmt.Println(<-ch, <-ch, <-ch)
 }
 ```
-{: data-line="3,6,7,8,13"}
+<!-- {data-line="3,6,7,8,13"} -->
 
 ```go
 func push(name string, ch chan string) {
@@ -322,7 +322,7 @@ func push(name string, ch chan string) {
   ch <- msg
 }
 ```
-{: data-line="3"}
+<!-- {data-line="3"} -->
 
 Channels are concurrency-safe communication objects, used in goroutines.
 
@@ -338,7 +338,7 @@ ch <- 3
 // fatal error:
 // all goroutines are asleep - deadlock!
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 Buffered channels limit the amount of messages it can keep.
 
@@ -354,7 +354,7 @@ ch <- 2
 ch <- 3
 close(ch)
 ```
-{: data-line="4"}
+<!-- {data-line="4"} -->
 
 #### Iterates across a channel until its closed
 
@@ -363,7 +363,7 @@ for i := range ch {
   ···
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 #### Closed if `ok == false`
 
@@ -383,7 +383,7 @@ func main() {
   fmt.Println("Working...")
 }
 ```
-{: data-line="2"}
+<!-- {data-line="2"} -->
 
 Defers running a function until the surrounding function returns.
 The arguments are evaluated immediately, but the function call is not ran until later.
@@ -400,12 +400,12 @@ func main() {
   fmt.Println("Working...")
 }
 ```
-{: data-line="2,3,4"}
+<!-- {data-line="2,3,4"} -->
 
 Lambdas are better suited for defer blocks.
 
 ## Structs
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Defining
 
@@ -415,7 +415,7 @@ type Vertex struct {
   Y int
 }
 ```
-{: data-line="1,2,3,4"}
+<!-- {data-line="1,2,3,4"} -->
 
 ```go
 func main() {
@@ -469,7 +469,7 @@ func (v Vertex) Abs() float64 {
   return math.Sqrt(v.X * v.X + v.Y * v.Y)
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```go
 v: = Vertex{1, 2}
@@ -488,7 +488,7 @@ func (v *Vertex) Scale(f float64) {
   v.y = v.Y * f
 }
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ```go
 v := Vertex{6, 12}

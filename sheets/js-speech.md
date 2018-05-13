@@ -6,7 +6,7 @@ weight: -1
 ---
 
 ## SpeechSynthesisUtterance
-{: .-one-column}
+<!-- {.-one-column} -->
 
 ```js
 function speak (message) {

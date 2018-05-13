@@ -5,7 +5,7 @@ layout: 2017/sheet
 ---
 
 ### Usage
-{: .-prime}
+<!-- {.-prime} -->
 
 ```bash
 find <path> <conditions> <actions>

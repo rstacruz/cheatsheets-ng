@@ -67,7 +67,7 @@ markdown:
   ### On Markdown
 
   I am *Markdown* _text_!
-  {: .classname}
+  <!-- {.classname} -->
 ```
 
 Slim can handle your [Markdown](https://daringfireball.net/projects/markdown/syntax) content for longer content blocks or `code`.

@@ -10,15 +10,15 @@ intro: |
 ---
 
 ## Getting started
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Mounting
-{: .-prime}
+<!-- {.-prime} -->
 
 ```js
 import {shallow, mount} from 'enzyme'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 wrap = shallow(<MyComponent />)
@@ -38,7 +38,7 @@ See: [Shallow rendering](http://airbnb.io/enzyme/docs/api/shallow.html),
 ```js
 import toJson from 'enzyme-to-json'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 it('works', () => {

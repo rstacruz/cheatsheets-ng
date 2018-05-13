@@ -11,7 +11,7 @@ weight: -3
 ```js
 import { createStore } from 'redux'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 // Reducer
@@ -44,7 +44,7 @@ returns a new `state` depending on the `action` it was given.
 ```js
 let store = createStore(counter)
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 // Dispatches an action; this changes the state
@@ -71,7 +71,7 @@ Dispatch actions to change the store's state.
 ```js
 import { Provider } from 'react-redux'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 React.render(
@@ -87,7 +87,7 @@ The `<Provider>` component makes the store available in your React components. Y
 ```js
 import { connect } from 'react-redux'
 ```
-{: .-setup}
+<!-- {.-setup} -->
 
 ```js
 // A functional React component
@@ -185,12 +185,12 @@ const enhancer = applyMiddleware(logger, thunk, ...)
 ```js
 const store = createStore(reducer, {}, enhancer)
 ```
-{: data-line="1"}
+<!-- {data-line="1"} -->
 
 ## References
-{: .-one-column}
+<!-- {.-one-column} -->
 
 * [Redux](https://www.npmjs.com/package/redux) _(npmjs.com)_
 * [React-redux](https://www.npmjs.com/package/react-redux) _(npmjs.com)_
 * [Usage with React](http://redux.js.org/docs/basics/UsageWithReact.html) _(redux.js.org)_
-{: .-also-see}
+<!-- {.-also-see} -->

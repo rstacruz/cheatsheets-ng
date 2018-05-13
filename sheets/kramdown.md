@@ -40,11 +40,11 @@ http://kramdown.gettalong.org/parser/gfm.html
 ### Classes and IDs (Kramdown)
 
     A simple paragraph with an ID attribute.
-    {: #para-one}
+    <!-- {#para-one} -->
 
     > A blockquote with a title
     {:title="The blockquote title"}
-    {: #myid}
+    <!-- {#myid} -->
 
     * {:.cls} This item has the class "cls"
 

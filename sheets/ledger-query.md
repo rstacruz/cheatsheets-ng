@@ -25,6 +25,6 @@ ledger r comment =~ /landline/
 ```
 
 ## References
-{: .-one-column}
+<!-- {.-one-column} -->
 
 - <http://ledger-cli.org/3.0/doc/ledger3.html#Complex-expressions>

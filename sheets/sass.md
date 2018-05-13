@@ -16,7 +16,7 @@ keywords:
 ---
 
 ## Basics
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Variables
 
@@ -357,7 +357,7 @@ map-get($map, key1)
 ```
 
 ## See also
-{: .-one-column}
+<!-- {.-one-column} -->
 
 - <http://sass-lang.com/documentation/Sass/Script/Functions.html>
 - <http://sass-lang.com/documentation/file.SASS_REFERENCE.html#sassscript>

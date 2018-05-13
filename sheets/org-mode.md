@@ -9,7 +9,7 @@ intro: |
 ---
 
 ## Syntax
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Headings
 
@@ -58,7 +58,7 @@ _underline_
 Cycle by using `S-LEFT` / `S-RIGHT`. List all TODO's via `C-c C-v`.
 
 ## Shortcuts
-{: .-three-column}
+<!-- {.-three-column} -->
 
 ### Basic shortcuts
 
