@@ -1,0 +1,36 @@
+# See: https://www.netlifycms.org/docs/add-to-your-site/#configuration
+backend:
+  name: git-gateway
+  branch: master
+
+# Location in the repo
+media_folder: static/images
+
+# Location in devhints.io/
+public_folder: /images
+
+collections:
+  - name: 'sheet'
+    label: 'Sheet'
+    folder: 'sheets'
+    create: true
+    fields:
+      - label: 'Title'
+        name: 'title'
+        widget: 'string'
+
+      - label: 'Path'
+        name: 'path'
+        widget: 'string'
+
+      - label: 'Category'
+        name: 'category'
+        widget: 'string'
+
+      - label: 'Body'
+        name: 'body'
+        widget: 'markdown'
+
+      - label: 'Intro'
+        name: 'intro'
+        widget: 'string'
