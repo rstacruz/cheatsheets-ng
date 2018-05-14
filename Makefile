@@ -11,7 +11,7 @@ public: devhints-engine
 	mv devhints-engine/public ./public
 
 deploy:
-	@if [ -e public ]; then echo 'ERR: public/ not found. Try "make build" first'; exit 1; fi
+	@if [ ! -e public ]; then echo 'ERR: public/ not found. Try "make build" first'; exit 1; fi
 	yarn run gh-pages -d public
 
 devhints-engine:
