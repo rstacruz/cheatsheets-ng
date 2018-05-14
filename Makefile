@@ -5,7 +5,7 @@ develop: devhints-engine
 
 build: public
 build-prefixed:
-	env PREFIX_PATH=/cheatsheets-ng make build
+	env PATH_PREFIX=/cheatsheets-ng make build
 
 public: devhints-engine
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run build
