@@ -4,7 +4,6 @@ category: JavaScript libraries
 vim: ft=javascript
 ---
 
-{% raw %}
 ### [Initialization](http://docs.ractivejs.org/latest/options)
 
     new Ractive({
@@ -235,5 +234,3 @@ This transforms the `list` attribute via a helper function called `sort()`.
         }
       }
     });
-
-{% endraw %}

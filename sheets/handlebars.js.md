@@ -5,8 +5,6 @@ layout: 2017/sheet
 weight: -1
 ---
 
-{% raw %}
-
 ### Helpers
 
 ```js
@@ -32,5 +30,3 @@ Would render:
   <li><a href='/hello-world'>Hello World!</a></li>
 </ul>
 ```
-
-{% endraw %}

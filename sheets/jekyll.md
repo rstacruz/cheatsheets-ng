@@ -7,8 +7,6 @@ category: Jekyll
 updated: 2017-09-01
 ---
 
-{% raw %}
-
 ### Installation
 
 ```bash
@@ -591,5 +589,3 @@ Also see
 * [Liquid: filters](http://docs.shopify.com/themes/liquid-documentation/filters) _shopify.com_
 * [Liquid for designers](https://github.com/Shopify/liquid/wiki/Liquid-for-Designers) _github.com/Shopify_
 <!-- {.-also-see} -->
-
-{% endraw %}

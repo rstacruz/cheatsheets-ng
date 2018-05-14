@@ -6,8 +6,6 @@ tags: [WIP]
 updated: 2017-08-26
 ---
 
-{% raw %}
-
 Jekyll
 ------
 <!-- {.-one-column} -->
@@ -140,6 +138,3 @@ redirect_to:
 
 Place on any page.
 See: [redirect to](https://github.com/jekyll/jekyll-redirect-from#redirect-to)
-
-{% endraw %}
-

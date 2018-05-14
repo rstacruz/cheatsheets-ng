@@ -3,8 +3,6 @@ title: Vue
 category: JavaScript libraries
 ---
 
-{% raw %}
-
 ### Lists
 
 ```html
@@ -108,5 +106,3 @@ Also
 h1(class='red') {{msg}}
 </template>
 ```
-
-{% endraw %}

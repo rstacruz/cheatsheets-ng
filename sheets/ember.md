@@ -3,8 +3,6 @@ title: Ember.js
 category: JavaScript libraries
 ---
 
-{% raw %}
-
 ### Routes
 
     App.Router.map(function() {
@@ -70,5 +68,3 @@ Actions:
     <button {{action invite emailAddresses}}>Invite></button>
 
     <a href="#" {{action set "isEditingContacts" true target="view"}} 
-
-{% endraw %}
