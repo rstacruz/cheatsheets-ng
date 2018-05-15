@@ -104,7 +104,14 @@ class Info extends React.Component {
   }
 }
 ```
-As of React v16.2.0, fragments can be used to return multiple children without adding extra wrapping nodes to the DOM.
+
+<!-- {data-line="5,6,7,8,9,10"} -->
+
+Nest components to separate concerns.
+
+See: [Composing Components](https://reactjs.org/docs/components-and-props.html#composing-components)
+
+### Fragments
 
 ```jsx
 class Info extends React.Component {
@@ -120,13 +127,9 @@ class Info extends React.Component {
   }
 }
 ```
+<!-- {data-line="6,9"} -->
 
-
-<!-- {data-line="5,6,7,8,9,10"} -->
-
-Nest components to separate concerns.
-
-See: [Composing Components](https://reactjs.org/docs/components-and-props.html#composing-components)
+As of React v16.2.0, fragments can be used to return multiple children without adding extra wrapping nodes to the DOM.
 
 ### Children
 
