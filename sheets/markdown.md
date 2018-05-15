@@ -8,7 +8,7 @@ weight: -1
 ---
 
 ## Reference
-{:.-three-column}
+<!-- {.-three-column} -->
 
 ### Headers
 
