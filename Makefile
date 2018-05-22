@@ -3,6 +3,9 @@ SHEET_PATH := $(shell pwd -LP)/sheets
 develop: devhints-engine
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run develop
 
+develop-wip: devhints-engine
+	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run develop
+
 build: public
 build-prefixed:
 	env PATH_PREFIX=/cheatsheets-ng make build
