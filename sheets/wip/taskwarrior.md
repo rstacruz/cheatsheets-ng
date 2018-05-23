@@ -75,6 +75,14 @@ $ task 1 stop
 
 <!-- {data-line="1"} -->
 
+### Editing
+
+```bash
+$ task 1 edit
+```
+
+This opens your `$EDITOR` and lets you edit a task.
+
 ## Command structure
 
 <!-- {.-three-column} -->
