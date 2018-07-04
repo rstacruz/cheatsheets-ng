@@ -13,7 +13,7 @@ git clone https://github.com/rstacruz/cheatsheets-ng.git
 cd cheatsheets-ng
 
 # first time setup
-dr yarn
+dr yarn --force
 
 # start server
 dr yarn develop
@@ -33,7 +33,7 @@ git clone https://github.com/rstacruz/cheatsheets-ng.git
 cd cheatsheets-ng
 
 # first time setup
-yarn
+yarn --force
 
 # start server
 yarn develop
