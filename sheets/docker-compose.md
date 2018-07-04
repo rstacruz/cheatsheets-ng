@@ -147,7 +147,8 @@ web:
 ```
 
 ## Advanced features
-{: .-three-column}
+
+<!-- {.-three-column} -->
 
 ### Labels
 
