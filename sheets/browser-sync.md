@@ -3,24 +3,25 @@ title: Browsersync
 category: JavaScript libraries
 ---
 
-```
+### Installing browser-sync
+
+```bash
 npm i -g browser-sync
 ```
-{:.terminal}
 
 ### Start a server
 
-```sh
+```bash
 browser-sync start --server <path> --files='**/*.html, **/*.css'
 ```
 
 ### Options
 
-```sh
+```bash
   --port=N
   --proxy="http://127.0.0.1:3000"
 ```
 
-### Reference
+### References
 
 * [browsersync.io](http://browsersync.io)
