@@ -17,3 +17,20 @@ yarn
 # start server
 yarn develop
 ```
+
+Unless you override `$PORT`, this opens in <http://localhost:19337/>.
+
+## Linting
+
+**Linters** - this lists files that need updating.
+
+```bash
+yarn run lint:check
+yarn run prettier:check
+```
+
+**Formatters** - this tries to auto-format files.
+
+```bash
+yarn run prettier:fix
+```

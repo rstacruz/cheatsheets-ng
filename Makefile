@@ -1,10 +1,12 @@
 SHEET_PATH := $(shell pwd -LP)/sheets
+PORT := 19337
+HOST := 0.0.0.0
 
 develop: devhints-engine
-	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run develop
+	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run develop --host ${HOST} --port ${PORT}
 
 develop-wip: devhints-engine
-	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run develop
+	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run develop --host ${HOST} --port ${PORT}
 
 build: public
 build-prefixed:
