@@ -55,3 +55,7 @@ yarn run prettier:check
 ```bash
 yarn run prettier:fix
 ```
+
+## Troubleshooting
+
+Clean your cache using `sudo rm -rf node_modules public devhints-engine` if you have problems trying to start the server in Docker.
