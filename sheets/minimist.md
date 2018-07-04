@@ -9,12 +9,13 @@ layout: 2017/sheet
 ```js
 var minimist = require('minimist')
 ```
+
 <!-- {.-setup} -->
 
 ```js
 var args = minimist(process.argv.slice(2), {
-  string: 'lang',           // --lang xml
-  boolean: ['version'],     // --version
+  string: 'lang', // --lang xml
+  boolean: ['version'], // --version
   alias: { v: 'version' }
 })
 ```
@@ -44,6 +45,7 @@ All options are optional.
 ### Result
 
 With `--lang xml --no-pager -h index.js package.json`, you get:
+
 <!-- {.-setup} -->
 
 ```
@@ -61,23 +63,27 @@ args == {
 ### Help and version
 
 Use [meow](https://www.npmjs.com/package/meow) to automatically add support for `--help`, `--version` and more.
+
 <!-- {.-setup} -->
 
 ```js
-meow(`
+meow(
+  `
     Usage:
         $0 FILES [options]
 
     Options:
         -h, --help         print usage information
         -v, --version      show version info and exit
-`, {
-  alias: { h: 'help', v: 'version' }
-  /* minimist options */
-})
+`,
+  {
+    alias: { h: 'help', v: 'version' }
+    /* minimist options */
+  }
+)
 ```
 
 ### Reference
 
- * <https://www.npmjs.org/package/minimist>
- * <https://github.com/substack/minimist>
+* <https://www.npmjs.org/package/minimist>
+* <https://github.com/substack/minimist>

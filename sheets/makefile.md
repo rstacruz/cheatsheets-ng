@@ -33,11 +33,11 @@ also:
 
 ## Command prefixes
 
-| Prefix | Description |
-| ------ | ----------- |
-| `-` | Ignore errors |
-| `@` | Don't print command |
-| `+` | Run even if Make is in 'don't execute' mode |
+| Prefix | Description                                 |
+| ------ | ------------------------------------------- |
+| `-`    | Ignore errors                               |
+| `@`    | Don't print command                         |
+| `+`    | Run even if Make is in 'don't execute' mode |
 
 ```makefile
 build:
@@ -118,4 +118,4 @@ deploy:
 
 ## Further reading
 
- * [isaacs's Makefile](https://gist.github.com/isaacs/62a2d1825d04437c6f08)
+* [isaacs's Makefile](https://gist.github.com/isaacs/62a2d1825d04437c6f08)

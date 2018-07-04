@@ -67,6 +67,7 @@ set_meta_tags follow: true
 set_meta_tags og: { image: ['...'] }
 set_meta_tags twitter: { description: '...' }
 ```
+
 ```ruby
 set_meta_tags separator: '·'   # Site · Page title
 set_meta_tags prefix: ' '      # Around the separator
@@ -99,4 +100,4 @@ set_meta_tags reverse: true    # Site name last
 
 ### Reference
 
-- Accurate as of 2.1.0. See: <https://github.com/kpumuk/meta-tags>
+* Accurate as of 2.1.0. See: <https://github.com/kpumuk/meta-tags>

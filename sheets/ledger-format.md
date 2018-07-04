@@ -24,6 +24,7 @@ Date       Flag    Description    ^ comment/tag
   Assets:Savings     -$300 = $1200  ; assert there's $1200 left after
   Expenses:Rent
 ```
+
 Flags:
 
 ```
@@ -32,6 +33,7 @@ Flags:
 ```
 
 ## Accounts
+
 Only relevant with `--strict` or `--pedantic`
 
 ```

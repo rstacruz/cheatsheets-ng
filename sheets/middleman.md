@@ -30,7 +30,6 @@ category: JavaScript libraries
     # First: gem install coffee-filter
     require 'coffee-filter'
 
-
 ### Page command
 
     # With no layout

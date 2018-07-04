@@ -45,4 +45,4 @@ category: Ruby libraries
 
 ### References
 
- * [https://github.com/notahat/machinist](https://github.com/notahat/machinist)
+* [https://github.com/notahat/machinist](https://github.com/notahat/machinist)

@@ -7,7 +7,7 @@ layout: 2017/sheet
 ### Query characters
 
 | Query           | Description |
-| ---             | ---         |
+| --------------- | ----------- |
 | `@payee`        | Payee       |
 | `%tag`          | Tag         |
 | `=note`         | Note        |
@@ -25,6 +25,7 @@ ledger r comment =~ /landline/
 ```
 
 ## References
+
 <!-- {.-one-column} -->
 
-- <http://ledger-cli.org/3.0/doc/ledger3.html#Complex-expressions>
+* <http://ledger-cli.org/3.0/doc/ledger3.html#Complex-expressions>

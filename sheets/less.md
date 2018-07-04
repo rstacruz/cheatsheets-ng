@@ -39,4 +39,3 @@ title: Less.js
     .image when (not(...)) { }
     .image when (default()) {}
     .image when (e(@shape) = 'circle') { }
-
