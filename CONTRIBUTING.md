@@ -39,7 +39,7 @@ yarn
 yarn develop
 ```
 
-Unless you override `$PORT`, this stars a server in <http://localhost:19337/>.
+Unless you override `$PORT`, this starts a server in <http://localhost:19337/>.
 
 ## Linting
 

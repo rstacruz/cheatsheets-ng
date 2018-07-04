@@ -22,5 +22,5 @@ deploy:
 	yarn run gh-pages -d public
 
 devhints-engine:
-	git clone git@github.com:rstacruz/devhints-engine.git -b master
+	git clone https://github.com/rstacruz/devhints-engine.git -b master
 	cd devhints-engine && yarn
