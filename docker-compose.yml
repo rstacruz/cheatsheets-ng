@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    volumes:
+      - '.:/app'
+    ports:
+      - '19337:19337'
+    command: 'yarn develop'
