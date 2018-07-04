@@ -11,51 +11,51 @@ category: JavaScript libraries
 
 JavaScript
 
- * js
+* js
 
 CSS
 
- * flexbox
- * rgba
- * hsla
- * multiplebgs
- * backgroundsize
- * borderimage
- * borderradius
- * boxshadow
- * textshadow
- * opacity
- * cssanimations
- * csscolumns
- * cssgradients
- * cssreflections
- * csstransforms
- * csstransforms3d
- * csstransitions
- * fontface
- * generatedcontent
+* flexbox
+* rgba
+* hsla
+* multiplebgs
+* backgroundsize
+* borderimage
+* borderradius
+* boxshadow
+* textshadow
+* opacity
+* cssanimations
+* csscolumns
+* cssgradients
+* cssreflections
+* csstransforms
+* csstransforms3d
+* csstransitions
+* fontface
+* generatedcontent
 
 HTML5
 
- * canvas
- * canvastext
- * webgl
- * touch
- * geolocation
- * postmessage
- * websqldatabase
- * indexeddb
- * hashchange
- * history
- * draganddrop
- * websockets
- * video
- * audio
- * localstorage
- * sessionstorage
- * webworkers
- * applicationcache
- * svg
- * inlinesvg
- * smil
- * svgclippaths
+* canvas
+* canvastext
+* webgl
+* touch
+* geolocation
+* postmessage
+* websqldatabase
+* indexeddb
+* hashchange
+* history
+* draganddrop
+* websockets
+* video
+* audio
+* localstorage
+* sessionstorage
+* webworkers
+* applicationcache
+* svg
+* inlinesvg
+* smil
+* svgclippaths

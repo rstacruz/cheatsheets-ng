@@ -48,9 +48,11 @@ console.log(new Intl.DateTimeFormat('en-GB').format(date))
 #### Custom timezone
 
 ```js
-console.log(new Intl.DateTimeFormat('en-AU', {
-  timeZone: 'Australia/Sydney'
-}).format(date))
+console.log(
+  new Intl.DateTimeFormat('en-AU', {
+    timeZone: 'Australia/Sydney'
+  }).format(date)
+)
 // → '19/12/2012'
 ```
 
@@ -59,22 +61,26 @@ console.log(new Intl.DateTimeFormat('en-AU', {
 #### Time
 
 ```js
-console.log(new Intl.DateTimeFormat('default', {
-  hour: 'numeric',
-  minute: 'numeric',
-  second: 'numeric'
-}).format(date))
+console.log(
+  new Intl.DateTimeFormat('default', {
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  }).format(date)
+)
 // → '2:00:00 pm'
 ```
 
 #### Date
 
 ```js
-console.log(new Intl.DateTimeFormat('en-US', {
-  year: 'numeric',
-  month: 'numeric',
-  day: 'numeric'
-}).format(date))
+console.log(
+  new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric'
+  }).format(date)
+)
 // → '12/19/2012'
 ```
 
@@ -105,7 +111,6 @@ To specify options without a locale, use `'default'` as a locale.
 }
 ```
 
-
 ## References
 
-- <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat>
+* <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat>

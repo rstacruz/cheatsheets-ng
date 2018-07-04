@@ -25,7 +25,7 @@ $('.box')
 ### Extending selectors
 
 ```js
-$.expr[':'].inline = function (el) {
+$.expr[':'].inline = function(el) {
   return $(el).css('display') === 'inline'
 }
 ```
@@ -36,14 +36,12 @@ Enables `$(':inline')`
 
 ```js
 $.cssHooks.someCSSProp = {
-  get: function (elem, computed, extra) {
-  },
-  set: function (elem, value) {
-  }
+  get: function(elem, computed, extra) {},
+  set: function(elem, value) {}
 }
 
 // Disable "px"
-$.cssNumber["someCSSProp"] = true
+$.cssNumber['someCSSProp'] = true
 ```
 
 ### fn.animate() hooks

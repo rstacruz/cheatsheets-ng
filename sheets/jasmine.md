@@ -93,7 +93,9 @@ xdescribe('this is a pending block', () => {
 ```js
 spyOn(foo, 'setBar')
 spyOn(foo, 'setBar').andReturn(123)
-spyOn(foo, 'getBar').andCallFake(function() { return 1001; })
+spyOn(foo, 'getBar').andCallFake(function() {
+  return 1001
+})
 foo.setBar(123)
 ```
 
@@ -137,11 +139,12 @@ jasmineEnv.updateInterval = 250
 var htmlReporter = new jasmine.HtmlReporter()
 jasmineEnv.addReporter(htmlReporter)
 
-$(function() { jasmineEnv.execute() })
+$(function() {
+  jasmineEnv.execute()
+})
 ```
 
-Jasmine jQuery
---------------
+## Jasmine jQuery
 
 ### Expectations
 
@@ -159,7 +162,7 @@ expect($('#toolbar')).toBeVisible()
 ```
 
 ```js
-expect($('#popup')).toHaveCss({ margin: "10px" })
+expect($('#popup')).toHaveCss({ margin: '10px' })
 expect($('option')).toBeSelected()
 ```
 
@@ -200,6 +203,7 @@ expect('click').toHaveBeenTriggeredOn($('#some_element'))
 ```
 
 ## References
+
 <!-- {.-one-column} -->
 
 * Also see the [Jest cheatsheet](./jest). Jest uses Jasmine, and therefore has similar API.

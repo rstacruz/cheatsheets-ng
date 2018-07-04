@@ -12,9 +12,11 @@ keywords:
 ---
 
 ## Log format
+
 <!-- {.-three-column} -->
 
 ### Pretty format
+
 <!-- {.-prime} -->
 
 ```bash
@@ -27,35 +29,35 @@ See the next tables on format variables.
 
 #### Commit
 
-| Variable | Description |
-| --- | --- |
-| `%H` | commit hash |
-| `%h` | (abbrev) commit hash |
+| Variable | Description          |
+| -------- | -------------------- |
+| `%H`     | commit hash          |
+| `%h`     | (abbrev) commit hash |
 
 #### Tree
 
-| Variable | Description |
-| --- | --- |
-| `%T` | tree hash |
-| `%t` | (abbrev) tree hash |
+| Variable | Description        |
+| -------- | ------------------ |
+| `%T`     | tree hash          |
+| `%t`     | (abbrev) tree hash |
 
 #### Parent
 
-| Variable | Description |
-| --- | --- |
-| `%P` | parent hash |
-| `%p` | (abbrev) parent hash |
+| Variable | Description          |
+| -------- | -------------------- |
+| `%P`     | parent hash          |
+| `%p`     | (abbrev) parent hash |
 
 ### Commit
 
-| Variable | Description |
-| --- | --- |
-| `%s` | commit subject |
-| `%f` | commit subject, filename style |
-| `%b` | commit body |
-| --- | --- |
-| `%cd` | ref names |
-| `%e` | encoding |
+| Variable | Description                    |
+| -------- | ------------------------------ |
+| `%s`     | commit subject                 |
+| `%f`     | commit subject, filename style |
+| `%b`     | commit body                    |
+| ---      | ---                            |
+| `%cd`    | ref names                      |
+| `%e`     | encoding                       |
 
 ## Author and committer
 
@@ -63,52 +65,52 @@ See the next tables on format variables.
 
 #### Name
 
-| Variable | Description |
-| --- | --- |
-| `%an` | author |
-| `%aN` | author, respecting mailmap |
+| Variable | Description                |
+| -------- | -------------------------- |
+| `%an`    | author                     |
+| `%aN`    | author, respecting mailmap |
 
 #### Email
 
-| Variable | Description |
-| --- | --- |
-| `%ae` | author email |
-| `%aE` | author email, respecting mailmap |
+| Variable | Description                      |
+| -------- | -------------------------------- |
+| `%ae`    | author email                     |
+| `%aE`    | author email, respecting mailmap |
 
 #### Date
 
-| Variable | Description |
-| --- | --- |
-| `%aD` | author date (rfc2882) |
-| `%ar` | author date (relative) |
-| `%at` | author date (unix timestamp) |
-| `%ai` | author date (iso8601) |
+| Variable | Description                  |
+| -------- | ---------------------------- |
+| `%aD`    | author date (rfc2882)        |
+| `%ar`    | author date (relative)       |
+| `%at`    | author date (unix timestamp) |
+| `%ai`    | author date (iso8601)        |
 
 ### Committer
 
 #### Name
 
-| Variable | Description |
-| --- | --- |
-| `%cn` | committer name |
-| `%cN` | committer name, respecting mailmap |
+| Variable | Description                        |
+| -------- | ---------------------------------- |
+| `%cn`    | committer name                     |
+| `%cN`    | committer name, respecting mailmap |
 
 #### Email
 
-| Variable | Description |
-| --- | --- |
-| `%ce` | committer email |
-| `%cE` | committer email, respecting mailmap |
+| Variable | Description                         |
+| -------- | ----------------------------------- |
+| `%ce`    | committer email                     |
+| `%cE`    | committer email, respecting mailmap |
 
 #### Date
 
-| Variable | Description |
-| --- | --- |
-| `%cD` | committer date (rfc2882) |
-| `%cr` | committer date (relative) |
-| `%ct` | committer date (unix timestamp) |
-| `%ci` | committer date (iso8601) |
+| Variable | Description                     |
+| -------- | ------------------------------- |
+| `%cD`    | committer date (rfc2882)        |
+| `%cr`    | committer date (relative)       |
+| `%ct`    | committer date (unix timestamp) |
+| `%ci`    | committer date (iso8601)        |
 
 ## Also see
 
-- [Git log cheatsheet](./git-log)
+* [Git log cheatsheet](./git-log)

@@ -100,4 +100,4 @@ See: [Git log format cheatsheet](./git-log-format)
 
 ## Also see
 
-- [Git log format cheatsheet](./git-log-format)
+* [Git log format cheatsheet](./git-log-format)
