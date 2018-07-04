@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "develop": "make develop",
+    "lint": "./support/lint.sh",
     "prettier:fix": "prettier-eslint --write 'sheets/**/*.md'",
     "prettier:check": "prettier-eslint --list-different 'sheets/**/*.md'"
   },
