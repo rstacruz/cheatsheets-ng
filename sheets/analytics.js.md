@@ -1,7 +1,6 @@
 ---
 title: Google Analytics's analytics.js
 category: Analytics
-layout: 2017/sheet
 updated: 2017-10-29
 intro: |
   Google Analytics's analytics.js is deprecated.
@@ -16,18 +15,18 @@ ga('create', 'UA-XXXX-Y', { userId: 'USER_ID' })
 
 ```js
 ga('send', 'pageview')
-ga('send', 'pageview', { 'dimension15': 'My custom dimension' })
+ga('send', 'pageview', { dimension15: 'My custom dimension' })
 ```
 
 ### Events
 
 ```js
-ga('send', 'event', 'button',  'click', {color: 'red'});
+ga('send', 'event', 'button', 'click', { color: 'red' })
 ```
 
 ```js
-ga('send', 'event', 'button',  'click', 'nav buttons',  4);
-/*                  ^category  ^action  ^label          ^value */
+ga('send', 'event', 'button', 'click', 'nav buttons', 4)
+/*                  ^category ^action  ^label         ^value */
 ```
 
 ### Exceptions
