@@ -138,9 +138,9 @@ See: [Query arguments](http://absinthe-graphql.org/tutorial/query-arguments/)
 #### GraphQL query
 
 ```graphql
-{
-  mutation CreatePost {
-    post(title: "Hello") { id }
+mutation CreatePost {
+  post(title: "Hello") {
+    id
   }
 }
 ```
