@@ -7,6 +7,7 @@ layout: 2017/sheet
 ### Listing scopes
 
 Allows you to filter listings by a certain scope.
+
 <!-- {.-setup} -->
 
 ```ruby
@@ -30,6 +31,7 @@ filter :username
 ### Custom actions
 
 You can define custom actions for models.
+
 <!-- {.-setup} -->
 
 ```ruby
