@@ -12,9 +12,9 @@ intro: |
 
 ### Concepts
 
-- `Schema` - The root. Defines what queries you can do, and what types they return.
-- `Resolver` - Functions that return data.
-- `Type` - A type definition describing the shape of the data you'll return.
+* `Schema` - The root. Defines what queries you can do, and what types they return.
+* `Resolver` - Functions that return data.
+* `Type` - A type definition describing the shape of the data you'll return.
 
 ### Plug
 
@@ -28,6 +28,7 @@ defmodule Blog.Web.Router do
     schema: Blog.Schema
 end
 ```
+
 <!-- {data-line="4,5"} -->
 
 Absinthe is a Plug, and you pass it one **Schema**.
@@ -35,6 +36,7 @@ Absinthe is a Plug, and you pass it one **Schema**.
 See: [Our first query](http://absinthe-graphql.org/tutorial/our-first-query/)
 
 ## Main concepts
+
 <!-- {.-three-column} -->
 
 ### Schema
@@ -54,6 +56,7 @@ defmodule Blog.Schema do
   end
 end
 ```
+
 <!-- {data-line="5,6,7,8,9,10"} -->
 
 This schema will account for `{ posts { ··· } }`. It returns a **Type** of `:post`, and delegates to a **Resolver**.
@@ -69,6 +72,7 @@ defmodule Blog.PostResolver do
   end
 end
 ```
+
 <!-- {data-line="3"} -->
 
 This is the function that the schema delegated the `posts` query to.
@@ -89,6 +93,7 @@ defmodule Blog.Schema.Types do
   end
 end
 ```
+
 <!-- {data-line="4,5,6,7,8,9"} -->
 
 This defines a type `:post`, which is used by the resolver.
@@ -99,7 +104,7 @@ This defines a type `:post`, which is used by the resolver.
 
 #### GraphQL query
 
-```
+```graphql
 { user(id: "1") { ··· } }
 ```
 
@@ -113,6 +118,7 @@ query do
   end
 end
 ```
+
 <!-- {data-line="3"} -->
 
 #### Resolver
@@ -122,6 +128,7 @@ def find(%{id: id} = args, _info) do
   ···
 end
 ```
+
 <!-- {data-line="1"} -->
 
 See: [Query arguments](http://absinthe-graphql.org/tutorial/query-arguments/)
@@ -130,7 +137,7 @@ See: [Query arguments](http://absinthe-graphql.org/tutorial/query-arguments/)
 
 #### GraphQL query
 
-```
+```graphql
 {
   mutation CreatePost {
     post(title: "Hello") { id }
@@ -149,11 +156,12 @@ mutation do
   end
 end
 ```
+
 <!-- {data-line="1"} -->
 
 See: [Mutations](http://absinthe-graphql.org/tutorial/mutations/)
 
 ## References
 
-  - [Absinthe website](http://absinthe-graphql.org/) _(absinthe-graphql.org)_
-  - [GraphQL cheatsheet](./graphql) _(devhints.io)_
+* [Absinthe website](http://absinthe-graphql.org/) _(absinthe-graphql.org)_
+* [GraphQL cheatsheet](./graphql) _(devhints.io)_
