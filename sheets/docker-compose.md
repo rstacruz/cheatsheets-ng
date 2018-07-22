@@ -46,7 +46,8 @@ docker-compose down
 ```
 
 ## Reference
-<!-- {: .-three-column} -->
+
+<!-- {.-three-column} -->
 
 ### Building
 
