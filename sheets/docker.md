@@ -4,8 +4,7 @@ category: Devops
 layout: 2017/sheet
 ---
 
-Manage images
--------------
+## Manage images
 
 ### `docker build`
 
@@ -16,7 +15,6 @@ docker build [options] .
 
 Create an `image` from a Dockerfile.
 
-
 ### `docker run`
 
 ```yml
@@ -26,8 +24,7 @@ docker run [options] IMAGE
 
 Run a command in an `image`.
 
-Manage containers
------------------
+## Manage containers
 
 ### `docker create`
 
@@ -73,7 +70,6 @@ $ docker exec -t -i app_web_1 rails c
 
 Run commands in a `container`.
 
-
 ### `docker start`
 
 ```yml
@@ -86,7 +82,6 @@ docker stop [options] CONTAINER
 
 Start/stop a `container`.
 
-
 ### `docker ps`
 
 ```
@@ -97,8 +92,7 @@ $ docker kill $ID
 
 Manage `container`s using ps/kill.
 
-Images
-------
+## Images
 
 ### `docker images`
 
@@ -123,7 +117,6 @@ docker rmi b750fe78269d
 
 Deletes `image`s.
 
-Also see
---------
+## Also see
 
- * [Getting Started](http://www.docker.io/gettingstarted/) _(docker.io)_
+* [Getting Started](http://www.docker.io/gettingstarted/) _(docker.io)_
