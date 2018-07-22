@@ -32,9 +32,10 @@ Those marked with `*` are non-standard Promise API that only work with Bluebird 
   return [ 'abc', 'def' ]
 })
 .spread(function (abc, def) {
-  ···
+  /*...*/
 })
 ```
+
 <!-- {data-line="4"} -->
 
 Use [Promise.spread](http://bluebirdjs.com/docs/api/promise.spread.html)
@@ -42,45 +43,43 @@ Use [Promise.spread](http://bluebirdjs.com/docs/api/promise.spread.html)
 ### Multiple promises
 
 ```js
-Promise.join(
-  getPictures(),
-  getMessages(),
-  getTweets(),
-  function (pics, msgs, tweets) {
-    return ···
-  }
-)
+Promise.join(getPictures(), getMessages(), getTweets(), function(
+  pics,
+  msgs,
+  tweets
+) {
+  return /*...*/
+})
 ```
+
 <!-- {data-line="1"} -->
 
 Use [Promise.join](http://bluebirdjs.com/docs/api/promise.join.html)
 
 ### Multiple promises (array)
 
-- [Promise.all](http://bluebirdjs.com/docs/api/promise.all.html)([p]) - expect all to pass
-- [Promise.some](http://bluebirdjs.com/docs/api/promise.some.html)([p], count) - expect `count` to pass
-- [Promise.any](http://bluebirdjs.com/docs/api/promise.any.html)([p]) - same as `some([p], 1)`
-- [Promise.race](http://bluebirdjs.com/docs/api/promise.race.html)([p], count) - use `.any` instead
-- [Promise.map](http://bluebirdjs.com/docs/api/promise.map.html)([p], fn, options) - supports concurrency
+* [Promise.all](http://bluebirdjs.com/docs/api/promise.all.html)([p]) - expect all to pass
+* [Promise.some](http://bluebirdjs.com/docs/api/promise.some.html)([p], count) - expect `count` to pass
+* [Promise.any](http://bluebirdjs.com/docs/api/promise.any.html)([p]) - same as `some([p], 1)`
+* [Promise.race](http://bluebirdjs.com/docs/api/promise.race.html)([p], count) - use `.any` instead
+* [Promise.map](http://bluebirdjs.com/docs/api/promise.map.html)([p], fn, options) - supports concurrency
 
 ```js
-Promise.all([ promise1, promise2 ])
-  .then(results => {
-    results[0]
-    results[1]
-  })
+Promise.all([promise1, promise2]).then(results => {
+  results[0]
+  results[1]
+})
 
 // succeeds if one succeeds first
-Promise.any(promises)
-  .then(results => {
-  })
+Promise.any(promises).then(results => {})
 ```
+
 <!-- {data-line="1,8"} -->
 
 ```js
-Promise.map(urls, url => fetch(url))
-  .then(···)
+Promise.map(urls, url => fetch(url)).then(/*...*/)
 ```
+
 <!-- {data-line="1"} -->
 
 Use [Promise.map](http://bluebirdjs.com/docs/api/promise.map.html) to "promisify" a list of values.
@@ -91,12 +90,12 @@ Use [Promise.map](http://bluebirdjs.com/docs/api/promise.map.html) to "promisify
 Promise.props({
   photos: get('photos'),
   posts: get('posts')
-})
-.then(res => {
+}).then(res => {
   res.photos
   res.posts
 })
 ```
+
 <!-- {data-line="1"} -->
 
 Use [Promise.props](http://bluebirdjs.com/docs/api/promise.props.html).
@@ -113,6 +112,7 @@ function getPhotos() {
 
 getPhotos().then(···)
 ```
+
 <!-- {data-line="2"} -->
 
 Use [Promise.try](http://bluebirdjs.com/docs/api/promise.try.html).
@@ -123,6 +123,7 @@ Use [Promise.try](http://bluebirdjs.com/docs/api/promise.try.html).
 var readFile = Promise.promisify(fs.readFile)
 var fs = Promise.promisifyAll(require('fs'))
 ```
+
 <!-- {data-line="2"} -->
 
 See [Promisification](http://bluebirdjs.com/docs/api/promisification.html).
@@ -131,12 +132,12 @@ See [Promisification](http://bluebirdjs.com/docs/api/promisification.html).
 
 ```js
 User.login = Promise.method((email, password) => {
-  if (!valid)
-    throw new Error("Email not valid")
+  if (!valid) throw new Error('Email not valid')
 
   return /* promise */
 })
 ```
+
 <!-- {data-line="1"} -->
 
 See [Promise.method](http://bluebirdjs.com/docs/api/promise.method.html).
@@ -144,11 +145,12 @@ See [Promise.method](http://bluebirdjs.com/docs/api/promise.method.html).
 ### Generators
 
 ```js
-User.login = Promise.coroutine(function* (email, password) {
-  let user = yield User.find({email: email}).fetch()
+User.login = Promise.coroutine(function*(email, password) {
+  let user = yield User.find({ email: email }).fetch()
   return user
 })
 ```
+
 <!-- {data-line="1"} -->
 
 See [Promise.coroutine](http://bluebirdjs.com/docs/api/promise.coroutine.html).
