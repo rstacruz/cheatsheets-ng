@@ -1,9 +1,10 @@
 ---
 title: Cryptography
+tags: [WIP]
 ---
 
- * [PBKDF2](http://en.wikipedia.org/wiki/PBKDF2) - password-based key derivation 
- function
+## Password algorithms
 
- * [HMAC](http://en.wikipedia.org/wiki/HMAC) - Hash-based message authentication 
- code
+ * [PBKDF2](http://en.wikipedia.org/wiki/PBKDF2) - password-based key derivation function
+
+ * [HMAC](http://en.wikipedia.org/wiki/HMAC) - Hash-based message authentication code

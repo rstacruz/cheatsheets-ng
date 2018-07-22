@@ -7,6 +7,7 @@ weight: -3
 ---
 
 ## Format
+
 <!-- {.-two-column} -->
 
 ### Format
@@ -14,6 +15,7 @@ weight: -3
 ```
 Min  Hour Day  Mon  Weekday
 ```
+
 <!-- {.-setup} -->
 
 ```
@@ -28,12 +30,13 @@ Min  Hour Day  Mon  Weekday
 │    └────────────────  Hour     (0..23)
 └─────────────────────  Minute   (0..59)
 ```
+
 <!-- {.-setup.-box-chars} -->
 
 ### Examples
 
 | Example        | Description           |
-| ---            | ---                   |
+| -------------- | --------------------- |
 | `0 * * * *`    | every hour            |
 | `*/15 * * * *` | every 15 mins         |
 | `0 */2 * * *`  | every 2 hours         |
