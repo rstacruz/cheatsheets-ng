@@ -13,6 +13,7 @@ keywords:
 ---
 
 ## Basics
+
 <!-- {.-three-column} -->
 
 ### Selectors
@@ -22,6 +23,7 @@ keywords:
   font-weight: bold;
 }
 ```
+
 <!-- {.-setup} -->
 
 | Selector          | Description |
@@ -82,9 +84,11 @@ keywords:
 | `:last-child`     |
 | `:nth-child(2)`   |
 | `:only-child`     |
+
 <!-- {.-left-align} -->
 
 ## Fonts
+
 <!-- {.-left-reference} -->
 
 ### Properties
@@ -102,15 +106,18 @@ keywords:
 | ---                | ---                                  |
 | `text-align:`      | `left` `right` `center` `justify`    |
 | `text-transform:`  | `capitalize` `uppercase` `lowercase` |
+
 <!-- {.-key-values} -->
 
 ### Shorthand
+
 <!-- {.-prime} -->
 
 |         | style    | weight | size (required) |     | line-height | family            |
 | ------- | -------- | ------ | --------------- | --- | ----------- | ----------------- |
 | `font:` | `italic` | `400`  | `14px`          | `/` | `1.5`       | `sans-serif`      |
 |         | style    | weight | size (required) |     | line-height | family (required) |
+
 <!-- {.-css-breakdown} -->
 
 ### Example
@@ -132,6 +139,7 @@ text-transform: lowercase; /* hello */
 ```
 
 ## Background
+
 <!-- {.-left-reference} -->
 
 ### Properties
@@ -147,6 +155,7 @@ text-transform: lowercase; /* hello */
 | `background-clip:`       | `border-box` `padding-box` `content-box` |
 | `background-repeat:`     | `no-repeat` `repeat-x` `repeat-y`        |
 | `background-attachment:` | `scroll` `fixed` `local`                 |
+
 <!-- {.-key-values} -->
 
 ### Shorthand
@@ -156,6 +165,7 @@ text-transform: lowercase; /* hello */
 | `background:` | `#ff0` | `url(bg.jpg)` | `left`    | `top`     | `/` | `100px` `auto` | `no-repeat` | `fixed;`   |
 | `background:` | `#abc` | `url(bg.png)` | `center`  | `center`  | `/` | `cover`        | `repeat-x`  | `local;`   |
 |               | color  | image         | positionX | positionY |     | size           | repeat      | attachment |
+
 <!-- {.-css-breakdown} -->
 
 ### Multiple backgrounds
@@ -166,6 +176,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 ```
 
 ## Animation
+
 <!-- {.-left-reference} -->
 
 ### Properties
@@ -179,6 +190,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 | `animation-direction:`       | `normal` `reverse` `alternate` `alternate-reverse` |
 | `animation-iteration-count:` | `infinite` `<number>`                              |
 | `animation-timing-function:` | `ease` `linear` `ease-in` `ease-out` `ease-in-out` |
+
 <!-- {.-key-values} -->
 
 ### Shorthand
@@ -187,6 +199,7 @@ background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 | ------------ | -------- | -------- | --------------- | ------- | ---------- | ------------------- |
 | `animation:` | `bounce` | `300ms`  | `linear`        | `100ms` | `infinite` | `alternate-reverse` |
 |              | name     | duration | timing-function | delay   | count      | direction           |
+
 <!-- {.-css-breakdown} -->
 
 ### Example
