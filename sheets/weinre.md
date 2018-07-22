@@ -3,7 +3,7 @@ title: Weinre
 category: JavaScript libraries
 ---
 
- * [Weinre](http://people.apache.org/~pmuellr/weinre/)
+* [Weinre](http://people.apache.org/~pmuellr/weinre/)
 
 Install:
 

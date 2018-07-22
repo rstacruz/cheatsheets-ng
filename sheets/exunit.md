@@ -83,7 +83,6 @@ end
 
 ### Setup
 
-
 ```elixir
 describe "a block" do
   setup [:my_hook]
@@ -94,8 +93,8 @@ defp my_hook(context) do
 end
 ```
 
-
 ## Also see
+
 <!-- {.-one-column} -->
 
-- <http://devdocs.io/elixir/ex_unit/exunit#configure/1>
+* <http://devdocs.io/elixir/ex_unit/exunit#configure/1>
