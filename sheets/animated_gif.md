@@ -5,6 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Animated GIFs
+
 <!-- {.-one-column} -->
 
 ### Convert MP4 to GIF

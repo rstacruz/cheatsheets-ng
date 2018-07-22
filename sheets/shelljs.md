@@ -5,7 +5,7 @@ layout: 2017/sheet
 updated: 2017-10-27
 weight: -1
 intro: |
-  [ShellJS](https://github.com/shelljs/shelljs) is a portable (Windows/Linux/OS X) implementation of Unix shell commands on top of the Node.js API. 
+  [ShellJS](https://github.com/shelljs/shelljs) is a portable (Windows/Linux/OS X) implementation of Unix shell commands on top of the Node.js API.
 ---
 
 ### Example
@@ -30,7 +30,7 @@ shell.cp('-R', 'stuff/', 'out/Release')
 ```js
 // Replace macros in each .js file
 shell.cd('lib')
-shell.ls('*.js').forEach(function (file) {
+shell.ls('*.js').forEach(function(file) {
   shell.sed('-i', 'BUILD_VERSION', 'v0.1.2', file)
   shell.sed('-i', /^.*REMOVE_THIS_LINE.*$/, '', file)
   shell.sed('-i', /.*REPLACE_LINE_WITH_MACRO.*\n/, shell.cat('macro.js'), file)
@@ -79,7 +79,7 @@ sh.rm('-rf', 'file')
 
 ```js
 sh.mv('src', 'dest')
-sh.mv(['src1','src2'], 'dest')
+sh.mv(['src1', 'src2'], 'dest')
 ```
 
 ```js
@@ -91,11 +91,11 @@ sh.chmod('u+x', 'file')
 ### Tests
 
 ```js
-sh.test('-b', 'path')  // block device
-sh.test('-d', 'path')  // dir
-sh.test('-e', 'path')  // exists
-sh.test('-f', 'path')  // file
-sh.test('-L', 'path')  // symlink
+sh.test('-b', 'path') // block device
+sh.test('-d', 'path') // dir
+sh.test('-e', 'path') // exists
+sh.test('-f', 'path') // file
+sh.test('-L', 'path') // symlink
 ```
 
 ### Cat and output
@@ -141,7 +141,7 @@ sh.tempdir()
 ```
 
 ```js
-sh.error()  // null if no error
+sh.error() // null if no error
 ```
 
 ## Also see

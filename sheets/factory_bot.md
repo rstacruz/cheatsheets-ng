@@ -16,6 +16,7 @@ intro: |
 ---
 
 ## Factories
+
 <!-- {.-three-column} -->
 
 ### Defining factories
@@ -32,6 +33,7 @@ FactoryBot.define do
   end
 end
 ```
+
 <!-- {data-line="2"} -->
 
 See: [Defining factories](http://www.rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md#Defining_factories)
@@ -94,6 +96,7 @@ factory :post do
   association :author, factory: [:user, :admin]
 end
 ```
+
 <!-- {data-line="2,3"} -->
 
 #### or
@@ -114,9 +117,11 @@ factory :post do
   end
 end
 ```
+
 <!-- {data-line="2"} -->
 
 ## Other features
+
 <!-- {.-three-column} -->
 
 ### Traits
@@ -128,6 +133,7 @@ factory :user do
   end
 end
 ```
+
 <!-- {data-line="2,3,4"} -->
 
 ```ruby
@@ -148,6 +154,7 @@ factory :user do
   end
 end
 ```
+
 <!-- {data-line="4,5,6"} -->
 
 ```ruby
@@ -169,6 +176,7 @@ factory :sample_user, parent: :user do
   first_name { FFaker::Name.first_name }
 end
 ```
+
 <!-- {data-line="1"} -->
 
 ```ruby
@@ -190,6 +198,7 @@ factory :user do
   end
 end
 ```
+
 <!-- {data-line="2,3,4"} -->
 
 ```ruby
@@ -203,13 +212,15 @@ See: [Transient attributes](http://www.rubydoc.info/gems/factory_bot/file/GETTIN
 
 * test/factories.rb
 * spec/factories.rb
-* test/factories/*.rb
-* spec/factories/*.rb
+* test/factories/\*.rb
+* spec/factories/\*.rb
 
 Place your factories in these locations.
+
 <!-- {.-setup} -->
 
 ## See also
+
 <!-- {.-one-column} -->
 
 * <http://rubydoc.info/gems/factory_bot/file/GETTING_STARTED.md>

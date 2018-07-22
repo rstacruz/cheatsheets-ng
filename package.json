@@ -1,17 +1,18 @@
 {
   "name": "cheatsheets",
   "version": "1.0.0",
-  "main": "index.js",
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "prettier-eslint-cli": "^4.7.1"
+  },
   "license": "MIT",
+  "main": "index.js",
   "scripts": {
     "develop": "make develop",
     "lint:check": "./support/check.sh",
     "lint:fix": "./support/format.sh",
+    "prettier:check": "prettier-eslint --list-different 'sheets/**/*.md'",
     "prettier:fix": "prettier-eslint --write 'sheets/**/*.md'",
-    "prettier:check": "prettier-eslint --list-different 'sheets/**/*.md'"
-  },
-  "devDependencies": {
-    "gh-pages": "^1.1.0",
-    "prettier-eslint-cli": "^4.7.1"
+    "status": "./support/status.sh"
   }
 }
