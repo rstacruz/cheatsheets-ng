@@ -19,7 +19,7 @@ vows
         assert.equal number, 100
 
   .export(module)
-  ```
+```
 
 ### Running
 
