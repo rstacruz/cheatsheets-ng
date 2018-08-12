@@ -7,24 +7,25 @@ weight: -1
 ---
 
 ## Reference
+
 <!-- {.-three-column} -->
 
 ### Inlines
 
-| Code | Description |
-| --- | --- |
-| `_em_` | |
-| `*strong*` | |
-| `__bold-italic__` | |
-| `@code@` | |
-| `??citation??` | |
-| --- | --- |
-| `-strikethrough-` | |
-| `+insertion+` | |
-| --- | --- |
-| `%span%` | HTML tag |
-| `%{color:red}formatting%` | CSS styles |
-| --- | --- |
+| Code                      | Description |
+| ------------------------- | ----------- |
+| `_em_`                    |             |
+| `*strong*`                |             |
+| `__bold-italic__`         |             |
+| `@code@`                  |             |
+| `??citation??`            |             |
+| ---                       | ---         |
+| `-strikethrough-`         |             |
+| `+insertion+`             |             |
+| ---                       | ---         |
+| `%span%`                  | HTML tag    |
+| `%{color:red}formatting%` | CSS styles  |
+| ---                       | ---         |
 
 ### Blocks
 
@@ -60,20 +61,20 @@ p(#id). ID.
 
 ### Links
 
-| Code | Description |
-| --- | --- |
-| `"Hypertext":index.html` | Link |
-| --- | --- |
+| Code                                            | Description        |
+| ----------------------------------------------- | ------------------ |
+| `"Hypertext":index.html`                        | Link               |
+| ---                                             | ---                |
 | `"Text link":link` <br> `[link]http://link.com` | Link via reference |
 
 ### Images
 
-| Code | Description |
-| --- | --- |
-| `!image.jpg!` | Image |
-| `!image.jpg(title text)!` | |
-| `!image.jpg!:link.html` | |
-| `!>right.jpg!` | |
+| Code                      | Description |
+| ------------------------- | ----------- |
+| `!image.jpg!`             | Image       |
+| `!image.jpg(title text)!` |             |
+| `!image.jpg!:link.html`   |             |
+| `!>right.jpg!`            |             |
 
 ### Escaped HTML
 

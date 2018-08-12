@@ -6,28 +6,29 @@ category: JavaScript libraries
 ### Basic usage
 
 ```js
-var argv = require('yargs').argv;
+var argv = require('yargs').argv
 
-argv._         // [ ... ]
-argv.$0        // "node bin/mybin"
-argv.verbose   // --verbose
+argv._ //       [ ... ]
+argv.$0 //      "node bin/mybin"
+argv.verbose // --verbose
 ```
 
 ### Help and version
 
 ```js
 var argv = require('yargs')
-
   // version
   .alias('v', 'version')
-  .version(function() { return require('../package').version; })
+  .version(function() {
+    return require('../package').version
+  })
   .describe('v', 'show version information')
 
   // help text
   .alias('h', 'help')
   .help('help')
   .usage('Usage: $0 -x [num]')
-  .showHelpOnFail(false, "Specify --help for available options")
+  .showHelpOnFail(false, 'Specify --help for available options')
 ```
 
 ### Options

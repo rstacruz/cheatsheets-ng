@@ -21,7 +21,7 @@ $ sudo apt install tig
 ### Invocation
 
 | Command             | Description                                  |
-| ---                 | ---                                          |
+| ------------------- | -------------------------------------------- |
 | `tig`               |                                              |
 | ---                 | ---                                          |
 | `tig status`        | Status                                       |
@@ -35,23 +35,27 @@ $ sudo apt install tig
 You can substitute `git log` → `tig`.
 
 ## Shortcut keys
+
 <!-- {.-three-column} -->
 
 ### Switching views
 
-| `m` | Main view |
-| `s` | Status |
-| `t` | Tree (files) |
-| `g` | Grep |
-| `h` | Help |
+| Shortcut | Description  |
+| -------- | ------------ |
+| `m`      | Main view    |
+| `s`      | Status       |
+| `t`      | Tree (files) |
+| `g`      | Grep         |
+| `h`      | Help         |
+
 <!-- {.-shortcuts} -->
 
 ### All views
 
 | Shortcut | Description             |
-| ---      | ---                     |
-| `j`  `k` | Up/down                 |
-| `J`  `K` | Next/previous           |
+| -------- | ----------------------- |
+| `j` `k`  | Up/down                 |
+| `J` `K`  | Next/previous           |
 | ---      | ---                     |
 | `<`      | Back                    |
 | `R`      | Refresh                 |
@@ -60,32 +64,45 @@ You can substitute `git log` → `tig`.
 | ---      | ---                     |
 | `^N`     | Next on parent view     |
 | `^P`     | Previous on parent view |
+
 <!-- {.-shortcuts} -->
 
 ### `m` - Main view
 
-| `D` | Toggle date display modes   |
-| `A` | Toggle author display modes |
-| `X` | Toggle commit sha           |
-| `C` | Cherry pick a commit        |
+| Shortcut | Description                 |
+| -------- | --------------------------- |
+| `D`      | Toggle date display modes   |
+| `A`      | Toggle author display modes |
+| `X`      | Toggle commit sha           |
+| `C`      | Cherry pick a commit        |
+
 <!-- {.-shortcuts} -->
 
 ### `s` - Stage view
 
-| `u`     | Stage/unstage file or chunk        |
-| `!`     | Revert file or chunk               |
-| `C`     | Commit                             |
-| `M`     | Merge                              |
-| `1`     | Stage line                         |
-| `[` `]` | Increase/decrease the diff context |
+| Shortcut | Description                        |
+| -------- | ---------------------------------- |
+| `u`      | Stage/unstage file or chunk        |
+| `!`      | Revert file or chunk               |
+| `C`      | Commit                             |
+| `M`      | Merge                              |
+| `1`      | Stage line                         |
+| `[` `]`  | Increase/decrease the diff context |
+
 <!-- {.-shortcuts} -->
 
 ### `h` - Branch view
 
-| `i` | Change sort header |
+| Shortcut | Description        |
+| -------- | ------------------ |
+| `i`      | Change sort header |
+
 <!-- {.-shortcuts} -->
 
 ### `h` - Blame view
 
-| `,` | Parent commit |
+| Shortcut | Description   |
+| -------- | ------------- |
+| `,`      | Parent commit |
+
 <!-- {.-shortcuts} -->
