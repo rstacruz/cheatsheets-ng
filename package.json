@@ -8,6 +8,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
+    "build": "make public",
+    "deploy:gh-pages": "gh-pages -d public",
     "develop": "make develop",
     "lint:check": "./support/check.sh",
     "lint:fix": "./support/format.sh",
