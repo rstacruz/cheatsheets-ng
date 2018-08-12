@@ -314,13 +314,17 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 
 ### Counters
 
-| `<C-A>` | increment number |
-| `<C-X>` | decrement |
+| Shortcut | Description      |
+| -------- | ---------------- |
+| `<C-A>`  | increment number |
+| `<C-X>`  | decrement        |
 
 <!-- {.-shortcuts} -->
 
 ### Windows
 
+| Shortcut        | Description                          |
+| --------------- | ------------------------------------ |
 | `z{height}<Cr>` | Resize pane to `{height}` lines tall |
 
 ### Tags
@@ -356,15 +360,15 @@ Do these in visual or normal mode.
 
 ### Marks
 
-| Shortcut | Description                                         |
-| -------- | --------------------------------------------------- |
-| `` `^ `` | Last position of cursor in insert mode              |
-| `` `. `` | Last change                                         |
-| ` `` `   | Last jump                                           |
-| ---      | ---                                                 |
-| `ma`     | Mark this cursor position as `a`                    |
-| `` `a `` | Jump to the cursor position `a`                     |
-| `'a`     | Jump to the beginning of the line with position `a` |
+| Shortcut           | Description                                         |
+| ------------------ | --------------------------------------------------- |
+| `` `^ ``           | Last position of cursor in insert mode              |
+| `` `. ``           | Last change                                         |
+| ` `` ` | Last jump |
+| ---                | ---                                                 |
+| `ma`               | Mark this cursor position as `a`                    |
+| `` `a ``           | Jump to the cursor position `a`                     |
+| `'a`               | Jump to the beginning of the line with position `a` |
 
 <!-- {.-shortcuts} -->
 
