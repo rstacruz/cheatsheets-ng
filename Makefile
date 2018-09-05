@@ -16,10 +16,12 @@ public: devhints-engine
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run build
 	rm -rf ./public
 	mv devhints-engine/public ./public
+	echo "next.devhints.io" > public/CNAME
 
 # Build
 build-prefixed:
 	env PATH_PREFIX=/cheatsheets-ng make build
+	rm -f public/CNAME
 
 # Deploys. Be sure to 'make build' (or 'make build-prefixed') first
 deploy:
