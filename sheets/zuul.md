@@ -1,14 +1,15 @@
 ---
-title: Saucelabs
-layout: 2017/sheet
+title: Zuul
+category: JavaScript libraries
 ---
 
 ### Getting started
 
 Sign up for opensauce:
+
 <!-- {.-setup} -->
 
-- http://saucelabs.com/opensauce
+* http://saucelabs.com/opensauce
 
 Install [zuul](https://npmjs.com/package/zuul):
 
