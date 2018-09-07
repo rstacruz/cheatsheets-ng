@@ -18,19 +18,21 @@ intro: |
 ## Getting started
 
 ### Mounting
+
 <!-- {.-prime} -->
 
 ```js
-import {shallow, mount} from 'enzyme'
+import { shallow, mount } from 'enzyme'
 ```
+
 <!-- {.-setup} -->
 
 ```js
-wrap = shallow(<MyComponent />)
+const wrap = shallow(<MyComponent />)
 ```
 
 ```js
-wrap = mount(<MyComponent />)
+const wrap = mount(<MyComponent />)
 ```
 
 Shallow wrapping doesn't descend down to sub-components.
@@ -50,22 +52,23 @@ Shows HTML for debugging purposes.
 See: [debug()](http://airbnb.io/enzyme/docs/api/ReactWrapper/debug.html)
 
 ## Examples
+
 <!-- {.-three-column} -->
 
 ### Basic example
+
 <!-- {.-prime} -->
 
 ```js
 import { shallow } from 'enzyme'
 import MyComponent from '../MyComponent'
 ```
+
 <!-- {.-setup} -->
 
 ```js
 it('works', () => {
-  const wrap = shallow(
-    <MyComponent name='Groot' />
-  )
+  const wrap = shallow(<MyComponent name="Groot" />)
 
   expect(wrap.text()).toEqual('I am Groot')
 })
@@ -95,11 +98,7 @@ expect('show' in wrap.state()).toEqual(true)
 ### Matching elements
 
 ```js
-expect(
-  wrap.containsMatchingElement(
-    <span>I am groot</span>
-  )
-).toBeTruthy()
+expect(wrap.containsMatchingElement(<span>I am groot</span>)).toBeTruthy()
 ```
 
 `containsMatchingElement()` is probably the most useful assertion in Jest.
@@ -115,9 +114,7 @@ Be sure you've set up enzyme-to-json for snapshots (see [Installing](#installing
 ### Traversions
 
 ```js
-expect(
-  wrap.find('button').text()
-).toEqual('Submit')
+expect(wrap.find('button').text()).toEqual('Submit')
 ```
 
 Use `.find()` to traverse down to nodes. It will return wrapper objects, too.
@@ -145,6 +142,7 @@ npm install --save-dev enzyme \
   enzyme-adapter-react-16 \
   react-test-renderer
 ```
+
 <!-- {.-setup} -->
 
 #### test/setup.js
@@ -175,6 +173,7 @@ See: [Installation](http://airbnb.io/enzyme/#installation)
 ```
 npm install --save-dev enzyme-to-json
 ```
+
 <!-- {.-setup} -->
 
 #### package.json
@@ -205,23 +204,23 @@ See: [enzyme-to-json](https://www.npmjs.com/package/enzyme-to-json)
 ### Traversing
 
 ```js
-wrap.find('button')   // → ReactWrapper
+wrap.find('button') //   → ReactWrapper
 wrap.filter('button') // → ReactWrapper
-wrap.not('span')      // → ReactWrapper (inverse of filter())
-wrap.children()       // → ReactWrapper
-wrap.parent()         // → ReactWrapper
-wrap.closest('div')   // → ReactWrapper
-wrap.childAt(0)       // → ReactWrapper
-wrap.at(0)            // → ReactWrapper
-wrap.first()          // → ReactWrapper
-wrap.last()           // → ReactWrapper
+wrap.not('span') //      → ReactWrapper (inverse of filter())
+wrap.children() //       → ReactWrapper
+wrap.parent() //         → ReactWrapper
+wrap.closest('div') //   → ReactWrapper
+wrap.childAt(0) //       → ReactWrapper
+wrap.at(0) //            → ReactWrapper
+wrap.first() //          → ReactWrapper
+wrap.last() //           → ReactWrapper
 ```
 
 ```js
-wrap.get(0)           // → ReactElement
-wrap.getNode()        // → ReactElement
-wrap.getNodes()       // → Array<ReactElement>
-wrap.getDOMNode()     // → DOMComponent
+wrap.get(0) //       → ReactElement
+wrap.getNode() //    → ReactElement
+wrap.getNodes() //   → Array<ReactElement>
+wrap.getDOMNode() // → DOMComponent
 ```
 
 See: [Full rendering API](http://airbnb.io/enzyme/docs/api/mount.html)
@@ -235,25 +234,31 @@ wrap.simulate('click')
 ### React components
 
 ```js
-wrap.setState({ ··· })
-wrap.setProps({ ··· })
-wrap.setContext({ ··· })
+wrap.setState({
+  /*...*/
+})
+wrap.setProps({
+  /*...*/
+})
+wrap.setContext({
+  /*...*/
+})
 ```
 
 ```js
-wrap.state()         // get full state
-wrap.props()         // get full props
-wrap.context()       // get full context
+wrap.state() //   get full state
+wrap.props() //   get full props
+wrap.context() // get full context
 ```
 
 ```js
-wrap.state('key')    // → any
-wrap.props('key')    // → any
-wrap.context('key')  // → any
+wrap.state('key') //   → any
+wrap.props('key') //   → any
+wrap.context('key') // → any
 ```
 
 ```js
-wrap.instance()      // → ReactComponent
+wrap.instance() // → ReactComponent
 ```
 
 ### Mount
@@ -261,32 +266,32 @@ wrap.instance()      // → ReactComponent
 ```js
 wrap.mount()
 wrap.unmount()
-wrap.update()      // calls forceUpdate()
+wrap.update() // calls forceUpdate()
 ```
 
 ### Tests
 
 ```js
-wrap.debug()               // → string
-wrap.html()                // → string
-wrap.text()                // → string
-wrap.type()                // → string | function
-wrap.name()                // → string
-wrap.is('.classname')      // → boolean
-wrap.hasClass('class')     // → boolean
-wrap.exists()              // → boolean
-wrap.contains(<div />)     // → boolean
-wrap.contains([ <div /> ]) // → boolean
-wrap.some('.child')        // → boolean
+wrap.debug() //             → string
+wrap.html() //              → string
+wrap.text() //              → string
+wrap.type() //              → string | function
+wrap.name() //              → string
+wrap.is('.classname') //    → boolean
+wrap.hasClass('class') //   → boolean
+wrap.exists() //            → boolean
+wrap.contains(<div />) //   → boolean
+wrap.contains([<div />]) // → boolean
+wrap.some('.child') //      → boolean
 
 wrap.someWhere(n => n.hasClass('foo'))
 
-wrap.containsMatchingElement(<div />)         // → boolean
-wrap.containsAllMatchingElements([ <div /> ]) // → boolean
-wrap.containsAnyMatchingElements([ <div /> ]) // → boolean
+wrap.containsMatchingElement(<div />) //       → boolean
+wrap.containsAllMatchingElements([<div />]) // → boolean
+wrap.containsAnyMatchingElements([<div />]) // → boolean
 ```
 
 ## References
 
-- [Enzyme website](https://airbnb.io/enzyme) _(airbnb.io)_
-- [Enzyme v2 cheatsheet](./enzyme@2) _(devhints.io)_ (old version)
+* [Enzyme website](https://airbnb.io/enzyme) _(airbnb.io)_
+* [Enzyme v2 cheatsheet](./enzyme@2) _(devhints.io)_ (old version)

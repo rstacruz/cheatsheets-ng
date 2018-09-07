@@ -8,19 +8,22 @@ tags: [Featurable]
 ---
 
 ## Getting started
+
 <!-- {.-three-column} -->
 
 ### Simple example
+
 <!-- {.-prime} -->
 
 ```js
 /* @flow */
-function square (n: number) {
+function square(n: number) {
   return n * n
 }
 
 const four = square(2)
 ```
+
 <!-- {data-line="1,2"} -->
 
 Most of what you need to do is to simply add annotations to function arguments!
@@ -30,10 +33,11 @@ See: [flow.org docs](https://flow.org/en/docs/)
 ### Type inference
 
 ```js
-function square (n: number) {
+function square(n: number) {
   const result = n * n
 }
 ```
+
 <!-- {data-line="2"} -->
 
 `result` is inferred to be a number because `number * number` will result in a number. There's no need to give it annotations.
@@ -48,6 +52,7 @@ type Person = {
   likes: Array<string>
 }
 ```
+
 <!-- {data-line="1,2,3,4,5,6"} -->
 
 ```js
@@ -55,6 +60,7 @@ function greet(user: Person) {
   console.log('hello', user.name)
 }
 ```
+
 <!-- {data-line="1"} -->
 
 ```js
@@ -108,12 +114,13 @@ type Album = {
   name: ?string
 }
 ```
+
 <!-- {data-line="2"} -->
 
 ```js
-const a: Album = { }                 // ✗ Error
-const a: Album = { name: 'Blue' }    // ✓ OK
-const a: Album = { name: null }      // ✓ OK
+const a: Album = {} // ✗ Error
+const a: Album = { name: 'Blue' } // ✓ OK
+const a: Album = { name: null } // ✓ OK
 const a: Album = { name: undefined } // ✓ OK
 ```
 
@@ -128,13 +135,14 @@ type Album = {
   name?: string
 }
 ```
+
 <!-- {data-line="2"} -->
 
 ```js
-const a: Album = { } // ✓ OK
-a.name = 'Blue'      // ✓ OK
-a.name = null        // ✓ Error
-a.name = undefined   // ✓ OK
+const a: Album = {} // ✓ OK
+a.name = 'Blue' // ✓ OK
+a.name = null // ✓ Error
+a.name = undefined // ✓ OK
 ```
 
 This makes an `Album` valid even if `name` is not part of the keys. This is different from "maybe" types.
@@ -142,6 +150,7 @@ This makes an `Album` valid even if `name` is not part of the keys. This is diff
 See: [Optional properties](https://flow.org/en/docs/types/primitives/#toc-optional-object-properties)
 
 ## Objects
+
 <!-- {.-three-column} -->
 
 ### Extra object fields
@@ -161,6 +170,7 @@ const a: Artist = {
 
 a.genre = 'House' // ✓ OK
 ```
+
 <!-- {data-line="6"} -->
 
 You can add more fields to an object.
@@ -175,12 +185,14 @@ type Artist = {|
   label: string
 |}
 ```
+
 <!-- {data-line="1,4"} -->
 
 ```js
 const a: Artist = { ··· }
 a.genre = 'House' // ✗ Error
 ```
+
 <!-- {data-line="2"} -->
 
 Exact object types prevent extra properties from being added to an object.
@@ -194,6 +206,7 @@ type Items = {
   [key: string]: Item
 }
 ```
+
 <!-- {data-line="2"} -->
 
 See: [Dynamic object keys](https://flow.org/docs/objects.html#objects-as-maps)
@@ -203,7 +216,7 @@ See: [Dynamic object keys](https://flow.org/docs/objects.html#objects-as-maps)
 ### Primitives
 
 | Type            | Description                  |
-| ---             | ---                          |
+| --------------- | ---------------------------- |
 | `any`           |                              |
 | `boolean`       |                              |
 | `mixed`         |                              |
@@ -226,12 +239,12 @@ See: [Dynamic object keys](https://flow.org/docs/objects.html#objects-as-maps)
 ### Enums
 
 ```js
-type Suit = "Diamonds" | "Clubs" | "Hearts" | "Spades"
+type Suit = 'Diamonds' | 'Clubs' | 'Hearts' | 'Spades'
 
 const countries = {
-  US: "United States",
-  IT: "Italy",
-  FR: "France"
+  US: 'United States',
+  IT: 'Italy',
+  FR: 'France'
 }
 
 type Country = $Keys<typeof countries>
@@ -247,7 +260,9 @@ type Tree = {
   bar: number,
   qux: (foo: string, bar: number) => boolean
 }
+```
 
+```js
 type Generic<T> = {
   foo: T
 }
@@ -262,7 +277,9 @@ class GenericClass<T> {
   x: T
   constructor (x: T) { ... }
 }
+```
 
+```js
 var n: GenericClass<number> = new GenericClass(0)
 ```
 
@@ -272,14 +289,20 @@ See: [Generic classes](https://flow.org/docs/quick-reference.html#generics)
 
 ```js
 interface Jsonable {
-  toJSON(): string
+  toJSON(): string;
 }
+```
 
+```js
 class Foo {
-  toJSON() { return '{}' }
+  toJSON() {
+    return '{}'
+  }
 }
+```
 
-(new Foo: Jsonable)
+```js
+new Foo(): Jsonable
 ```
 
 See: [Interfaces](https://flow.org/docs/quick-reference.html#interfaces)
@@ -287,7 +310,7 @@ See: [Interfaces](https://flow.org/docs/quick-reference.html#interfaces)
 ### Functions
 
 ```js
-const callback: () => void = function () {}
+const callback: () => void = function() {}
 ```
 
 ```js
@@ -326,11 +349,11 @@ function add(n /*: number */) { ... }
 
 ```js
 type Props = {
-  bar: number,
+  bar: number
 }
 
 type State = {
-  open: boolean,
+  open: boolean
 }
 
 class Foo extends React.Component<Props, State> {
@@ -344,9 +367,11 @@ class Foo extends React.Component<Props, State> {
 
 ```js
 var myNumbers: Array<number> = [42]
-function foo(): any { return 42 }
+function foo(): any {
+  return 42
+}
 var b: boolean = false
-var b: ?boolean = false  /* maybe */
+var b: ?boolean = false /* maybe */
 var b: string | boolean = false
 
 var a: Class<MyClass> = MyClass
@@ -365,6 +390,6 @@ function fetch (callback: Callback) {
 
 ## References
 
-- [Flow website](https://www.saltycrane.com/flow-type-cheat-sheet/latest/) _(flow.org)_
-- [Getting started with Flow](https://flow.org/en/docs/getting-started/) _(flow.org)_
-- [Flow type cheatsheet](https://www.saltycrane.com/flow-type-cheat-sheet/latest/) _(saltycrane.com)_
+* [Flow website](https://www.saltycrane.com/flow-type-cheat-sheet/latest/) _(flow.org)_
+* [Getting started with Flow](https://flow.org/en/docs/getting-started/) _(flow.org)_
+* [Flow type cheatsheet](https://www.saltycrane.com/flow-type-cheat-sheet/latest/) _(saltycrane.com)_

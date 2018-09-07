@@ -32,25 +32,31 @@ users.project(users[:id])
 ```
 
 ### `join`
+
 #### basic join
+
 In ActiveRecord (without Arel), if `:photos` is the name of the association, use `joins`
+
 ```rb
 users.joins(:photos)
 ```
 
 In Arel, if `photos` is defined as the Arel table,
+
 ```rb
 photos = Photo.arel_table
-users.join(photos) 
+users.join(photos)
 users.join(photos, Arel::Nodes::OuterJoin).on(users[:id].eq(photos[:user_id]))
 ```
 
 #### join with conditions
+
 ```rb
 users.joins(:photos).merge(Photo.where(published: true))
 ```
 
 If the simpler version doesn't help and you want to add more SQL statements to it:
+
 ```rb
 users.join(
    users.join(photos, Arel::Nodes::OuterJoin)
@@ -59,20 +65,28 @@ users.join(
 ```
 
 #### advanced join
+
 multiple `joins` with the same table but different meanings and/or conditions
+
 ```rb
 creators = User.arel_table.alias('creators')
 updaters = User.arel_table.alias('updaters')
 photos = Photo.arel_table
+```
 
+```rb
 photos_with_credits = photos
 .join(photos.join(creators, Arel::Nodes::OuterJoin).on(photos[:created_by_id].eq(creators[:id])))
 .join(photos.join(updaters, Arel::Nodes::OuterJoin).on(photos[:assigned_id].eq(updaters[:id])))
 .project(photos[:name], photos[:created_at], creators[:name].as('creator'), updaters[:name].as('editor'))
+```
 
+```rb
 photos_with_credits.to_sql
 # => "SELECT `photos`.`name`, `photos`.`created_at`, `creators`.`name` AS creator, `updaters`.`name` AS editor FROM `photos` INNER JOIN (SELECT FROM `photos` LEFT OUTER JOIN `users` `creators` ON `photos`.`created_by_id` = `creators`.`id`) INNER JOIN (SELECT FROM `photos` LEFT OUTER JOIN `users` `updaters` ON `photos`.`updated_by_id` = `updaters`.`id`)"
+```
 
+```rb
 # after the request is done, you can use the attributes you named
 # it's as if every Photo record you got has "creator" and "editor" fields, containing creator name and editor name
 photos_with_credits.map{|x|
@@ -113,11 +127,13 @@ User.where(id: 1).arel
 ### Clean code with arel
 
 Most of the clever stuff should be in scopes, e.g. the code above could become:
+
 ```rb
 photos_with_credits = Photo.with_creator.with_editor
 ```
 
 You can store requests in variables then add SQL segments:
+
 ```rb
 all_time      = photos_with_credits.count
 this_month    = photos_with_credits.where(photos[:created_at].gteq(Date.today.beginning_of_month))

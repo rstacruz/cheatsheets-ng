@@ -39,7 +39,7 @@ See: [Installation](https://github.com/rbenv/rbenv#installation)
 ### Managing versions
 
 | Command                 | Description                 |
-| ---                     | ---                         |
+| ----------------------- | --------------------------- |
 | `rbenv install -l`      | List all available versions |
 | ---                     | ---                         |
 | `rbenv install 2.2.1`   | Install Ruby _2.2.1_        |
@@ -52,12 +52,13 @@ See: [Installation](https://github.com/rbenv/rbenv#installation)
 | `rbenv rehash`          | Re-write binstubs           |
 
 ## Using versions
+
 <!-- {.-three-column} -->
 
 ### Locally
 
 | Command               | Description                 |
-| ---                   | ---                         |
+| --------------------- | --------------------------- |
 | `rbenv local 2.2.2`   | Use Ruby _2.2.2_ in project |
 | `rbenv local --unset` | Undo above                  |
 
@@ -66,7 +67,7 @@ Application-specific version numbers are stored in `.ruby-version`.
 ### Globally
 
 | Command                | Description               |
-| ---                    | ---                       |
+| ---------------------- | ------------------------- |
 | `rbenv global 2.2.2`   | Use Ruby _2.2.2_ globally |
 | `rbenv global --unset` | Undo above                |
 
@@ -75,7 +76,7 @@ Global version numbers are stored in `~/.rbenv/version`.
 ### Shell
 
 | Command               | Description               |
-| ---                   | ---                       |
+| --------------------- | ------------------------- |
 | `rbenv shell 2.2.2`   | Use Ruby _2.2.2_ in shell |
 | `rbenv shell --unset` | Undo above                |
 
@@ -83,5 +84,5 @@ Shell-local version numbers are stored as environment variables.
 
 ## References
 
-- [rbenv project page](https://github.com/rbenv/rbenv) _(github.com)_
-- [rbenv ubuntu server cheatsheet](https://gist.github.com/rahul286/7160839f4425a3b7e718) _(gist.github.com)_
+* [rbenv project page](https://github.com/rbenv/rbenv) _(github.com)_
+* [rbenv ubuntu server cheatsheet](https://gist.github.com/rahul286/7160839f4425a3b7e718) _(gist.github.com)_

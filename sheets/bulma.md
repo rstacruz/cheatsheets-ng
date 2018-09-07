@@ -24,7 +24,9 @@ description: |
 ```css
 .container
 ```
+
 Wrap as many `.column`'s' as you like in a `.columns` wrapper
+
 ```html
 <div class="columns">
     <div class="column"></div>
@@ -49,6 +51,7 @@ The following CSS classes affect the **colour**.
 ```
 
 The following classes modify the **size**.
+
 ```css
 .is-small
 .is-medium
@@ -56,30 +59,30 @@ The following classes modify the **size**.
 ```
 
 The following classes modify the **state**.
+
 ```scss
 .is-outlined
 .is-loading
 ```
 
-
 ### Typography Helpers
 
 The following classes modify the **font-size**
 
-| Class         | Font-size             |
-| ---           | ---                   |
-| `.is-size-1`  | 3rem                  |
-| `.is-size-2`  | 2.5rem                |
-| `.is-size-3`  | 2rem                  |
-| `.is-size-4`  | 1.5rem                |
-| `.is-size-5`  | 1.25rem               |
-| `.is-size-6`  | 1rem                  |
-| `.is-size-7`  | 0.75rem               |
+| Class        | Font-size |
+| ------------ | --------- |
+| `.is-size-1` | 3rem      |
+| `.is-size-2` | 2.5rem    |
+| `.is-size-3` | 2rem      |
+| `.is-size-4` | 1.5rem    |
+| `.is-size-5` | 1.25rem   |
+| `.is-size-6` | 1rem      |
+| `.is-size-7` | 0.75rem   |
 
 The following classes **align** the text
 
 | Class                 | Alignment                             |
-| ---                   | ---                                   |
+| --------------------- | ------------------------------------- |
 | `.has-text-centered`  | Makes the text **centered**           |
 | `.has-text-justified` | Makes the text **justified**          |
 | `.has-text-left`.     | Makes the text align to the **left**  |
@@ -87,8 +90,8 @@ The following classes **align** the text
 
 The following classes **transform** the text
 
-| Class              | Transformation        |
-| ---                | ---                   |
-| `.is-capitalized`  | Transforms the **first character** of each word to **uppercase**   |
-| `.is-lowercase`    | Transforms **all** characters to **lowercase**                     |
-| `.is-uppercase`    | Transforms **all** characters to **uppercase**                     |
+| Class             | Transformation                                                   |
+| ----------------- | ---------------------------------------------------------------- |
+| `.is-capitalized` | Transforms the **first character** of each word to **uppercase** |
+| `.is-lowercase`   | Transforms **all** characters to **lowercase**                   |
+| `.is-uppercase`   | Transforms **all** characters to **uppercase**                   |

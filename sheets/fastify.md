@@ -10,6 +10,7 @@ intro: |
 ## Getting started
 
 ### Hello world
+
 <!-- {.-prime} -->
 
 ```js
@@ -88,8 +89,7 @@ fastify.get('/', options, async (req, reply) => {
 
 When using async functions, you can either `return` data or use `reply.send`.
 
-Request/reply
--------------
+## Request/reply
 
 ### Request
 
@@ -98,7 +98,7 @@ request.query
 request.body
 request.params
 request.headers
-request.req  // Node.js core
+request.req // Node.js core
 request.log.info('hello')
 ```
 
@@ -158,6 +158,7 @@ fastify.get('/', { schema }, (req, reply) => {
   ···
 })
 ```
+
 <!-- {data-line="1"} -->
 
 #### or (same as above)
@@ -170,23 +171,23 @@ fastify.route({
   handler: (req, reply) => { ··· }
 })
 ```
+
 <!-- {data-line="4"} -->
 
 By defining a JSON schema, you get validation and improved performance.
 
 See: [Validation and serialize](https://github.com/fastify/fastify/blob/master/docs/Validation-And-Serialize.md)
 
-Plugins
--------
+## Plugins
 
 ### With function
 
 ```js
-fastify.register(
-  require('./route'),
-  err => { if (err) throw err }
-)
+fastify.register(require('./route'), err => {
+  if (err) throw err
+})
 ```
+
 <!-- {data-line="3"} -->
 
 #### route.js
@@ -198,18 +199,18 @@ module.exports = (fastify, options, next) => {
 }
 ```
 
-
 See: [Register](https://github.com/fastify/fastify/blob/master/docs/Getting-Started.md#register)
 
 ### Multiple
 
 ```js
-fastify.register([
-  require('./another-route'),
-  require('./yet-another-route')
-], opts, (err) => {
-  if (err) throw err
-})
+fastify.register(
+  [require('./another-route'), require('./yet-another-route')],
+  opts,
+  err => {
+    if (err) throw err
+  }
+)
 ```
 
 You can pass arrays to `register()`.
@@ -217,10 +218,7 @@ You can pass arrays to `register()`.
 ### Register with prefix
 
 ```js
-fastify.register(
-  require('./route'),
-  { prefix: '/v1' }
-)
+fastify.register(require('./route'), { prefix: '/v1' })
 ```
 
 This prefixes all routes in that module.
@@ -254,8 +252,7 @@ See: [fastify-plugin](https://github.com/fastify/fastify-plugin)
 
 ### Decorators
 
-Middleware
-----------
+## Middleware
 
 ### Middleware
 
@@ -273,8 +270,7 @@ Compatible with Express and Restify middlewares. (Don't use these middleware, th
 
 See: [Middlewares](https://github.com/fastify/fastify/blob/master/docs/Middlewares.md)
 
-Template rendering
-------------------
+## Template rendering
 
 ### point-of-view
 
@@ -287,6 +283,7 @@ fastify.register(require('point-of-view'), {
   }
 })
 ```
+
 <!-- {data-line="3"} -->
 
 ```js
@@ -294,6 +291,7 @@ fastify.get('/', (req, reply) => {
   reply.view('/templates/index.ejs', { text: 'text' })
 })
 ```
+
 <!-- {data-line="2"} -->
 
 Support `ejs`, `pug`, `handlebars` and `marko`.
