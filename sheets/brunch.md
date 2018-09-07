@@ -3,16 +3,22 @@ title: Brunch
 category: JavaScript libraries
 ---
 
-## Paths
+## Brunch
 
-    /
-      app/
-        assets/
-      vendor/
-      public/
-      config.coffee
+<!-- {.three-column} -->
 
-## Config
+### Paths
+
+```
+/
+  app/
+    assets/
+  vendor/
+  public/
+  config.coffee
+```
+
+### Config
 
 ```js
 module.exports = {
@@ -61,37 +67,45 @@ module.exports = {
   onCompile: (files, assets) => { ... }
 ```
 
-## Plugins
+### Plugins
 
-    plugins:
-      uglify:
-        mangle: true
-        compress:
-          global_defs:
-            DEBUG: false
+```js
+{
+  plugins: {
+    uglify: {
+      mangle: true
+    }
+    compress: {
+      global_defs: {
+        DEBUG: false
+      }
+    }
+  }
+}
+```
 
-## Extensions
+### Extensions
 
-Compile to CSS
+#### Compile to CSS
 
-  * stylus-brunch
-  * less-brunch
-  * sass-brunch
+* stylus-brunch
+* less-brunch
+* sass-brunch
 
-Compile to HTML
+#### Compile to HTML
 
-  * static-jade-brunch
+* static-jade-brunch
 
-Embedded templates
+#### Embedded templates
 
-  * emblem-brunch
+* emblem-brunch
 
-Etc
+#### Etc
 
-  * uglify-js-brunch
-  * jshint-brunch
-  * imageoptimizer-brunch
+* uglify-js-brunch
+* jshint-brunch
+* imageoptimizer-brunch
 
-## References
+### References
 
-  * <https://github.com/brunch/brunch/blob/master/docs/config.md>
+* <https://github.com/brunch/brunch/blob/master/docs/config.md>
