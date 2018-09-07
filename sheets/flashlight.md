@@ -5,6 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Commands
+
 <!-- {.-three-column} -->
 
 ### Events and reminders
