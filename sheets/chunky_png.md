@@ -4,6 +4,10 @@ category: Ruby libraries
 layout: 2017/sheet
 ---
 
+## Chunky PNG
+
+<!-- {.three-column} -->
+
 ### Loading
 
 ```ruby
@@ -14,7 +18,7 @@ image = ChunkyPNG::Image.from_file('file.png')
 
 ```ruby
 image = ChunkyPNG::Image.from_blob(File.read('file.png'))
-image = ChunkyPNG::Image.from_io(io) 
+image = ChunkyPNG::Image.from_io(io)
 ```
 
 Loads from `file.png`.
