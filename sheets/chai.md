@@ -14,15 +14,16 @@ description: |
 ```js
 const { assert } = require('chai')
 ```
+
 <!-- {.-setup} -->
 
 ```js
 assert(val)
 assert.fail(actual, expected)
-assert.ok(val)                        // is truthy
-assert.equal(actual, expected)        // compare with ==
-assert.strictEqual(actual, expected)  // compare with ===
-assert.deepEqual(actual, expected)    // deep equal check
+assert.ok(val) //                       is truthy
+assert.equal(actual, expected) //       compare with ==
+assert.strictEqual(actual, expected) // compare with ===
+assert.deepEqual(actual, expected) //   deep equal check
 ```
 
 ```js
@@ -46,7 +47,7 @@ assert.isBoolean(val)
 ```js
 assert.typeOf(/tea/, 'regexp') // Object.prototype.toString()
 assert.instanceOf(chai, Tea)
-assert.include([ a,b,c ], a)
+assert.include([a, b, c], a)
 assert.match(val, /regexp/)
 assert.property(obj, 'tea') // 'tea' in object
 assert.deepProperty(obj, 'tea.green')
@@ -73,12 +74,13 @@ See: [Assert API](http://chaijs.com/api/assert/) _(chaijs.com)_
 ```js
 const { expect } = require('chai')
 ```
+
 <!-- {.-setup} -->
 
 ```js
 expect(object)
   .to.equal(expected)
-  .to.eql(expected)        // deep equality
+  .to.eql(expected) // deep equality
   .to.deep.equal(expected) // same as .eql
   .to.be.a('string')
   .to.include(val)
@@ -145,6 +147,7 @@ expect(object).not.equal('x')
 global.jQuery = ···
 chai.use(require('chai-jquery'))
 ```
+
 <!-- {.-setup} -->
 
 ```js
