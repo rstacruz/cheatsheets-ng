@@ -1,32 +1,46 @@
 ---
 title: ZNC bouncer
+intro: ZNC is an IRC bouncer.
 ---
 
-## Start
+### Start
 
-    /msg *status addserver irc.undernet.org [6667]
-    /msg *status connect
+```
+/msg *status addserver irc.undernet.org [6667]
+/msg *status connect
+```
 
-    /msg *status loadmod webadmin
-    /msg *status loadmod admin
-    /msg *status loadmod away
-    /msg *status loadmod awaynick
-    /msg *status loadmod clientnotify    # Notifies when another client logs
-    /msg *status loadmod keepnick
-    /msg *status loadmod kickrejoin
+```
+/msg *status loadmod webadmin
+/msg *status loadmod admin
+/msg *status loadmod away
+/msg *status loadmod awaynick
+/msg *status loadmod clientnotify    # Notifies when another client logs
+/msg *status loadmod keepnick
+/msg *status loadmod kickrejoin
+```
 
-## Away
+### Away
 
-    /msg *status loadmod away
-    /msg *away away
-    /msg *away back
-    /msg *away show   #=> Show messages
-    /msg *away delete all
+```
+/msg *status loadmod away
+```
 
-## Watch
+```
+/msg *away away
+/msg *away back
+/msg *away show   #=> Show messages
+/msg *away delete all
+```
 
-    /msg *status loadmod watch
-    /msg *watch list
-    /msg *watch add * *watch *rico*
-    /msg *watch add * *watch *%nick%*
+### Watch
 
+```
+/msg *status loadmod watch
+```
+
+```
+/msg *watch list
+/msg *watch add * *watch *rico*
+/msg *watch add * *watch *%nick%*
+```
