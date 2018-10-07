@@ -27,7 +27,8 @@ flynn key add  # (adds your pubkey to AWS)
 
 ### Using a flynn cluster
 
-Managed in `~/.flynnrc`:
+#### Managed in `~/.flynnrc`:
+
 <!-- {.-setup} -->
 
 ```bash
@@ -94,6 +95,6 @@ flynn meta
 flynn meta set foo=baz
 ```
 
-## Also see
+## References
 
-- [Flynn website](https://flynn.io/) _(flynn.io)_
+* [Flynn website](https://flynn.io/) _(flynn.io)_
