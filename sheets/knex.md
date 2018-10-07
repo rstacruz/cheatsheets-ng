@@ -159,24 +159,24 @@ knex.from('books').select('title', 'author', 'year')
   .where('title', 'Hello')
   .where({ title: 'Hello' })
   .whereIn('id', [1, 2, 3])
-  .whereNot(···)
+  .whereNot(/* ... */)
 ```
 
 #### Where conditions
 
 ```js
   .whereNull('updated_at')
-  .whereNotNull(···)
+  .whereNotNull(/* ... */)
 ```
 
 ```js
   .whereExists('updated_at')
-  .whereNotExists(···)
+  .whereNotExists(/* ... */)
 ```
 
 ```js
   .whereBetween('votes', [1, 100])
-  .whereNotBetween(···)
+  .whereNotBetween(/* ... */)
 ```
 
 ```js
@@ -217,13 +217,13 @@ knex('users')
 #### Directions
 
 ```js
-  .leftJoin(···)
-  .leftOuterJoin(···)
-  .rightJoin(···)
-  .rightOuterJoin(···)
-  .outerJoin(···)
-  .fullOuterJoin(···)
-  .crossJoin(···)
+  .leftJoin(/* ... */)
+  .leftOuterJoin(/* ... */)
+  .rightJoin(/* ... */)
+  .rightOuterJoin(/* ... */)
+  .outerJoin(/* ... */)
+  .fullOuterJoin(/* ... */)
+  .crossJoin(/* ... */)
 ```
 
 #### Raw
@@ -241,15 +241,15 @@ knex('users')
       .orOn('accounts.owner_id', '=', 'users.id')
 
       .onIn('accounts.id', [1, 2, 3, 5, 8])
-      .onNotIn(···)
+      .onNotIn(/* ... */)
 
       .onNull('accounts.email')
-      .onNotNull(···)
+      .onNotNull(/* ... */)
 
       .onExists(function () {
-        this.select(···)
+        this.select(/* ... */)
       })
-      .onNotExists(···)
+      .onNotExists(/* ... */)
   })
 ```
 
@@ -293,9 +293,9 @@ knex('users').distinct()
 
 ```js
   .union(function() {
-    this.select(···)
+    this.select(/* ... */)
   })
-  .unionAll(···)
+  .unionAll(/* ... */)
 ```
 
 See: [Query builder](http://knexjs.org/#Builder)
@@ -305,13 +305,17 @@ See: [Query builder](http://knexjs.org/#Builder)
 ```js
 knex('users')
   .pluck('id')
-  .then(ids => { ··· })
+  .then(ids => {
+    /* ... */
+  })
 ```
 
 ```js
 knex('users')
   .first()
-  .then(user => { ··· })
+  .then(user => {
+    /* ... */
+  })
 ```
 
 #### Booleans
@@ -361,17 +365,16 @@ table.uuid('id').primary()
 #### Constraints
 
 ```js
-  table.unique('email')
-  table.unique(['email', 'company_id'])
-  table.dropUnique(···)
+table.unique('email')
+table.unique(['email', 'company_id'])
+table.dropUnique(/* ... */)
 ```
 
 #### Indices
 
 ```js
-  table.foreign('company_id')
-    .references('companies.id')
-  table.dropForeign(···)
+table.foreign('company_id').references('companies.id')
+table.dropForeign(/* ... */)
 ```
 
 #### Variations
@@ -385,7 +388,7 @@ table
 
 ```js
 })
-.then(() => ···)
+.then(() => /* ... */)
 ```
 
 <!-- {.-setup} -->
@@ -433,8 +436,8 @@ knex.schema.renameTable('persons', 'people').dropTable('persons')
 ```
 
 ```js
-  .hasTable('users').then(exists => ···)
-  .hasColumn('users', 'id').then(exists => ···)
+  .hasTable('users').then(exists => /* ... */)
+  .hasColumn('users', 'id').then(exists => /* ... */)
 ```
 
 See: [Schema builder](http://knexjs.org/#Schema)
