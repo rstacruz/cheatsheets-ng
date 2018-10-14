@@ -17,7 +17,7 @@ description: |
    (phone)   (tablet)        (laptop)       (desktop)
 ```
 
-Min:
+#### Min:
 
 ```scss
 @media (min-width: @screen-sm-min) // >= 768px (small tablet)
@@ -25,7 +25,7 @@ Min:
 @media (min-width: @screen-lg-min) // >= 1200px (large desktop)
 ```
 
-Max:
+#### Max:
 
 ```scss
 @media (max-width: @screen-xs-max) { // < 768px (xsmall phone)
@@ -48,7 +48,7 @@ Max:
 .col-md-offset-1
 ```
 
-Mixins:
+#### Mixins:
 
 ```scss
 @include make-xs-column(12);

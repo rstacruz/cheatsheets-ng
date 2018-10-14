@@ -3,7 +3,7 @@ title: Virtual-dom
 category: JavaScript libraries
 ---
 
-See <https://www.npmjs.com/package/virtual-dom>
+### Importing
 
 ```js
 var h = require('virtual-dom/h')
@@ -15,15 +15,25 @@ var createElement = require('virtual-dom/create-element')
 ### Rendering
 
 ```js
-tree = h('div', { style: { color: 'blue' } }, [ 'hello' ])
-el = createElement(tree)
-document.body.appendChild(root)
+const tree = h('div', { style: { color: 'blue' } }, ['hello'])
+let el = createElement(tree)
+document.body.appendChild(el)
 ```
+
+Use `createElement()` to create the root DOM node.
 
 ### Updating
 
 ```js
-tree2 = h('div', { style: { color: 'blue' } }, [ 'hello world' ])
-delta = diff(tree, tree2)
-el = patch(el, delta) // patch() modifies el
+const tree2 = h('div', { style: { color: 'blue' } }, ['hello world'])
+const delta = diff(tree, tree2)
+
+// Update `el` that was made by `createElement()`
+el = patch(el, delta)
 ```
+
+Use `patch()` to update the DOM.
+
+### References
+
+* [virtual-dom](https://www.npmjs.com/package/virtual-dom) _(npmjs.com)_

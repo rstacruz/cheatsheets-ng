@@ -1,31 +1,36 @@
 ---
 title: Rspec-rails
 category: Ruby
+prism_languages: [ruby]
 ---
 
 ### Spec tasks
 
-    rake spec:controllers
-    rake spec:helpers
-    rake spec:lib
-    rake spec:mailers
-    rake spec:models
-    rake spec:requests
-    rake spec:routing
-    rake spec:views
+```rb
+rake spec:controllers
+rake spec:helpers
+rake spec:lib
+rake spec:mailers
+rake spec:models
+rake spec:requests
+rake spec:routing
+rake spec:views
+```
 
 ### Models
 
+#### spec/models/\*.rb
+
 ```rb
-# spec/models/*.rb
 describe MyModel do
 end
 ```
 
 ### Controllers
 
+#### spec/controllers/\*.rb
+
 ```rb
-# spec/controllers/*.rb
 describe MyController do
   describe "POST update" do
     render_views #optional
@@ -52,8 +57,9 @@ end
 
 ### Request
 
+#### spec/requests/\*.rb
+
 ```js
-# spec/requests/*.rb
 describe "home page" do
   it "displays the user's username after successful login" do
     get "/login"
@@ -70,8 +76,9 @@ end
 
 ### Routing
 
+#### spec/routing/\*.rb
+
 ```rb
-# spec/routing/*.rb
 describe "routing to profiles" do
   it "routes /profile/:username to profile#show for username" do
     expect(get: "/profiles/jsmith").to route_to(
@@ -89,8 +96,9 @@ end
 
 ### Helpers
 
+#### spec/helpers/\*.rb
+
 ```rb
-# spec/helpers/*.rb
 describe EventsHelper do
   describe "#link_to_event" do
     it "displays the title, and formatted date" do
@@ -106,8 +114,9 @@ end
 
 ### Features
 
+#### spec/features/\*.rb
+
 ```rb
-# spec/features/*.rb
 feature 'Signing in' do
   given(:something) { "hi" }
 
@@ -119,6 +128,8 @@ feature 'Signing in' do
   end
 end
 ```
+
+## Helpers
 
 ### Matchers
 
@@ -135,7 +146,7 @@ have_http_status(:created)
 
 ### Time helpers
 
-```
+```rb
 travel_to Time.new(2014, 11, 14, 01, 04, 44)
 ...
 travel_back
