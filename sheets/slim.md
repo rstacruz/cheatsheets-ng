@@ -2,17 +2,17 @@
 title: Slim
 category: Ruby libraries
 layout: 2017/sheet
-prism_languages: [jade]
+prism_languages: [slim]
 weight: -1
 ---
 
 ### Example
 
-```jade
+```slim
 doctype html
 html
   head
-    title Slim Examples
+    title Slim examples
     meta[charset='utf-8']
     meta(name="keywords" content="template language")
     meta name="author" content=author
@@ -25,17 +25,17 @@ html
 
 ### Attributes
 
-```jade
+```slim
 meta[charset='utf-8']
 meta(name="keywords" content="template language")
 meta name="author" content=author
 ```
 
-You can use parentheses, brackets, or none at all.
+You can use parentheses `()`, brackets `[]`, or none at all.
 
 ### Ruby attributes
 
-```jade
+```slim
 a class=[:menu,:highlight]
 ```
 
@@ -43,7 +43,7 @@ You can use Ruby expressions in attributes.
 
 ### Hash attributes
 
-```jade
+```slim
 .card *{'data-url' => place_path(place)}
 ```
 
@@ -51,7 +51,7 @@ You can destructure Ruby hashes as attributes.
 
 ### Inline Ruby
 
-```jade
+```slim
 ruby:
   def foobar
     "hello"
@@ -62,7 +62,7 @@ div= foobar
 
 ### Inline Markdown
 
-```jade
+```slim
 markdown:
   ### On Markdown
 
@@ -75,22 +75,21 @@ Depending on your parser, like [Kramdown](https://kramdown.gettalong.org/quickre
 
 ### Embedded JavaScript
 
-```jade
+```slim
 javascript:
   alert('Slim supports embedded javascript!')
 ```
 
-
 ### Comments
 
-```jade
+```slim
 / Comment
 /! HTML comment
 ```
 
 ### Ruby
 
-```jade
+```slim
 == yield
 = t('.hello')
 - 3.times do |i|
@@ -99,7 +98,7 @@ javascript:
 
 ### Verbatim text
 
-```jade
+```slim
 div
   | This is text
     it is nice
@@ -107,7 +106,7 @@ div
 
 ### Inline HTML
 
-```jade
+```slim
 <div class='foo'>
   - if articles.empty?
     | Nothing here
@@ -116,11 +115,11 @@ div
 
 ### Inline tags
 
-```jade
+```slim
 ul
   li: a(href='/') Home
 ```
 
 ### References
 
-- <http://slim-lang.com/>
+* <http://slim-lang.com/>
