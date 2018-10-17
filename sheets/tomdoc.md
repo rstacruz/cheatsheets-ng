@@ -4,7 +4,8 @@ category: Markup
 layout: 2017/sheet
 ---
 
-### Tomdoc
+### Basic example
+
 <!-- {.-prime} -->
 
 ```ruby
@@ -28,9 +29,9 @@ See [tomdoc.org](http://tomdoc.org/).
 
 ### Tags
 
-- `Deprecated`
-- `Internal`
-- `Public`
+* `Deprecated`
+* `Internal`
+* `Public`
 
 ### Options
 
