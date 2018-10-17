@@ -24,16 +24,19 @@ intro: |
 
 ### Query
 
-| Command              | Description                            |
-| -------------------- | -------------------------------------- |
-| `pacman -Qe`         | List explictly-installed packages      |
-| ---                  | ---                                    |
-| `pacman -Ql <pkg>`   | What files does this package have?     |
-| `pacman -Qii <pkg>`  | List information on package            |
-| ---                  | ---                                    |
-| `pacman -Qo <file>`  | Who owns this file?                    |
-| ---                  | ---                                    |
-| `pacman -Qs <query>` | Search installed packages for keywords |
+| Command                | Description                                    |
+| ---------------------- | ---------------------------------------------- |
+| `pacman -Qe`           | List explictly-installed packages              |
+| ---                    | ---                                            |
+| `pacman -Ql <pkg>`     | What files does this _installed_ package have? |
+| `pacman -Qii <pkg>`    | List information on package                    |
+| ---                    | ---                                            |
+| `pacman -Qo <file>`    | Who owns this file?                            |
+| ---                    | ---                                            |
+| `pacman -Qs <query>`   | Search installed packages for keywords         |
+| ---                    | ---                                            |
+| `pkgfile -s <command>` | What package provides this command?            |
+| `pkgfile -l <package>` | What files does this package have?             |
 
 ### Orphans
 
