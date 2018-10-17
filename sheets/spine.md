@@ -1,183 +1,282 @@
 ---
 title: Spine
 category: JavaScript libraries
-vim: ft=python
+tags: [Outdated]
 ---
 
 ## Models
 
-    class User extends Spine.Model
-      @configure "User", "name", "address"
+### Basic example
 
-      fullName: ->
-        [@first, @last].join ' '
+```coffee
+class User extends Spine.Model
+  @configure "User", "name", "address"
 
-### JavaScript
+  fullName: ->
+    [@first, @last].join ' '
+```
 
-    // Subclassing
-    User = Spine.Model.sub()
+### Subclassing models
+
+```coffee
+User = Spine.Model.sub()
+```
 
 ### Class methods
 
-    .configure 'modelname', attributes...
+```coffee
+User
+  .configure('modelname', attributes...)
+```
 
-    # Inheritance
-    .include(Module)
-    .extend(Module)
+#### Inheritance
 
-    .create(name: "John")
+```coffee
+.include(Module)
+.extend(Module)
+```
 
-    .count()
+```coffee
+.create(name: "John")
+```
 
-    # Events
-    .on 'refresh change', (user) -> ...
-    .trigger 'event'
+```coffee
+.count()
+```
 
-    .change (user) -> ...  # same as on('change')
-    .fetch (user) -> ...   # same as on('fetch')
+#### Events
 
-    # JSON
-    .toJSON()         # all records
-    .fromJSON(json)   # from json string
-    .fromForm(el)
+```coffee
+.on 'refresh change', (user) -> # ...
+.trigger 'event'
+```
 
-    # Data
-    .records     # Hash of instances
-    .attributes  # array of attributes (from .configure)
+```coffee
+.change (user) -> # ...  same as on('change')
+.fetch (user) -> # ...   same as on('fetch')
+```
 
-    # Convenience
-    .toString()  #=> "User"
+#### JSON
 
-    # Find by ID
-    .exists(1)
-    .find(1)     # throws error
+```coffee
+.toJSON()         # all records
+.fromJSON(json)   # from json string
+.fromForm(el)
+```
 
-    # Find by something
-    .select (u) u.name == 'bob'
-    .findByAttribute 'name', 'bob'
-    .findAllByAttribute 'name', 'bob'
+#### Data
 
-    .all()
-    .slice(6, 13)  # cloned copies of instances
+```coffee
+.records     # Hash of instances
+.attributes  # array of attributes (from .configure)
+```
 
-    # Iterating
-    .each (user) ->
+#### Convenience
 
-    # Ends
-    .first()
-    .last()
+```coffee
+.toString()  #=> "User"
+```
 
-    # Deleting
-    .deleteAll()
-    .destroyAll()
-    .destroyAll({ ..options.. })
-    .destroy(2)
+#### Find by ID
+
+```coffee
+.exists(1)
+.find(1)     # throws error
+```
+
+#### Find by something
+
+```coffee
+.select((u) u.name == 'bob')
+.findByAttribute('name', 'bob')
+.findAllByAttribute('name', 'bob')
+```
+
+```coffee
+.all()
+.slice(6, 13)  # cloned copies of instances
+```
+
+#### Iterating
+
+```coffee
+.each (user) ->
+  # ...
+```
+
+#### Ends
+
+```coffee
+.first()
+.last()
+```
+
+#### Deleting
+
+```coffee
+.deleteAll()
+.destroyAll()
+.destroyAll({ ..options.. })
+.destroy(2)
+```
 
 ### Instance methods
 
-    user = new User();
+```coffee
+user = new User()
+```
 
-    user
-    .isNew()
-    .exists()
+```coffee
+user
+.isNew()
+.exists()
+```
 
-    # Validation
-    .isValid()
-    .validate()    # validate = (-> "Name required" unless @name)
+#### Validation
 
-    .attributes()  # hash of attr values
-    .eql(other)    # equality check
+```coffee
+.isValid()
+.validate()    # validate = (-> "Name required" unless @name)
+```
 
-    # Update
-    .load(attrs)
-    .reload()
-    .fromForm(form)
-    .updateAttribute("name", "john")
-    .updateAttributes(name: "John")
+```coffee
+.attributes()  # hash of attr values
+.eql(other)    # equality check
+```
 
-    # Event
-    .on 'event', -> ...
-    .trigger 'event'
+#### Update
 
-    # Retrieve
-    .toJSON()
+```coffee
+.load(attrs)
+.reload()
+.fromForm(form)
+.updateAttribute("name", "john")
+.updateAttributes(name: "John")
+```
 
-    # Persistence
-    .save()
+#### Event
 
-    .destroy()
-    .dup()         # clone as unsaved
+```coffee
+.on 'event', -> ...
+.trigger 'event'
+```
+
+#### Retrieve
+
+```coffee
+.toJSON()
+```
+
+#### Persistence
+
+```coffee
+.save()
+```
+
+#### Other
+
+```coffee
+.destroy()
+.dup()         # clone as unsaved
+```
 
 ### Mixins
 
-    class User extends Spine.Model
-      @include MyModule
-      @extend MyModule
+```coffee
+class User extends Spine.Model
+  @include MyModule
+  @extend MyModule
+```
 
 ### Events
 
-    .on 'create'
-    .on 'update'
-    .on 'destroy'
+```coffee
+.on 'create'
+.on 'update'
+.on 'destroy'
+```
 
-    .on 'save'    # create / update
-    .on 'change'  # create / update / destroy
+```coffee
+.on 'save'    # create / update
+.on 'change'  # create / update / destroy
+```
 
-    .on 'refresh'
-    .on 'error'    # validation error
+```coffee
+.on 'refresh'
+.on 'error'    # validation error
+```
 
 ## Ajax
 
-    class User extends Spine.Model
-      @extend Spine.Model.Ajax
+```coffee
+class User extends Spine.Model
+  @extend Spine.Model.Ajax
 
-      @url: '/users'
-      @url: -> '/users'
-      scope: '2013'
+  @url: '/users'
+  @url: -> '/users'
+  scope: '2013'
+```
 
 ### Using
 
-    User.fetch()
-    user = new User()
+```coffee
+User.fetch()
+user = new User()
+```
 
-    user.url()            #=> "/users"
-    user.url('bands')     #=> "/users/bands"
+```coffee
+user.url()            #=> "/users"
+user.url('bands')     #=> "/users/bands"
+```
 
-    user.scope = 'admin'
-    user.url()            #=> "/admin/users"
+```coffee
+user.scope = 'admin'
+user.url()            #=> "/admin/users"
+```
 
 ### Host
 
-    Spine.Model.host = 'http://endpoint'
+```coffee
+Spine.Model.host = 'http://endpoint'
+```
 
 ### Ajax mapping
 
-    read    → GET    /collection
-    create  → POST   /collection (201 created)
-    update  → PUT    /collection/id
-    destroy → DELETE /collection/id
+```
+read    → GET    /collection
+create  → POST   /collection (201 created)
+update  → PUT    /collection/id
+destroy → DELETE /collection/id
+```
 
 ### Associations
 
-    class Photo extends Spine.Model
-      @belongsTo 'album', 'Album'          # window['Album']
-      @belongsTo 'album', 'models/album'   # via require.js
+```coffee
+class Photo extends Spine.Model
+  @belongsTo 'album', 'Album'          # window['Album']
+  @belongsTo 'album', 'models/album'   # via require.js
+```
 
-    class Album
-      @hasMany 'photos', 'models/photo'
+```coffee
+class Album
+  @hasMany 'photos', 'models/photo'
+```
 
-    album.photos().all()
-    album.photos().create(name: "Vacation")
-    album.photos().find(id)
+```coffee
+album.photos().all()
+album.photos().create(name: "Vacation")
+album.photos().find(id)
+```
 
-    photo = Photo.create(album: album)
-    photo.album()
-    photo.album_id
+```coffee
+photo = Photo.create(album: album)
+photo.album()
+photo.album_id
+```
 
+### See also
 
-### See
-
- * http://spinejs.com/api/index
- * http://spinejs.com/api/models
- * http://spinejs.com/docs/ajax
+* http://spinejs.com/api/index
+* http://spinejs.com/api/models
+* http://spinejs.com/docs/ajax
 * http://spinejs.com/docs/relations
