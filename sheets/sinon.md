@@ -14,8 +14,8 @@ fn()
 ```
 
 ```js
-fn.calledOnce == true
-fn.callCount == 1
+fn.calledOnce === true
+fn.callCount === 1
 ```
 
 ### Spying/stubbing
@@ -25,12 +25,14 @@ sinon.spy($, 'ajax')
 ```
 
 ```js
-$.ajax();
-$.ajax.calledOnce == true
+$.ajax()
+$.ajax.calledOnce === true
 ```
 
 ```js
-sinon.stub($, 'ajax', function () { ... }) // function optional
+sinon.stub($, 'ajax', function() {
+  /* (function is optional) */
+})
 ```
 
 ```js
@@ -41,10 +43,8 @@ $.ajax.restore()
 ### Spy/stub properties
 
 ```js
-spy
-  .args        //=> [ [..], [..] ] one per call
-  .thisValues
-  .returnValues
+spy.args.thisValues.returnValues
+//=> [ [..], [..] ] one per call
 ```
 
 ```js
@@ -66,19 +66,21 @@ spy
 
 ```js
 stub = sinon.stub().returns(42)
-stub() == 42
+stub() === 42
 ```
 
 ```js
 stub
-  .withArgs(42).returns(1)
-  .withArgs(43).throws("TypeError")
+  .withArgs(42)
+  .returns(1)
+  .withArgs(43)
+  .throws('TypeError')
 ```
 
 ```js
 stub
   .returns(1)
-  .throws("TypeError")
+  .throws('TypeError')
   .returnsArg(0) // Return 1st argument
   .callsArg(0)
 ```
@@ -86,7 +88,7 @@ stub
 ### Fake date
 
 ```js
-sinon.useFakeTimers(+new Date(2011,9,1));
+sinon.useFakeTimers(+new Date(2011, 9, 1))
 ```
 
 ### Fake server
