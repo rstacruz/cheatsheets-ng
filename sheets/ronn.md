@@ -10,6 +10,7 @@ intro: |
 ---
 
 ## Getting started
+
 <!-- {.-left-reference} -->
 
 ### Installation
@@ -34,8 +35,7 @@ Ronn is a Ruby gem.
 ### Basic template
 
 ```markdown
-name(1) -- short, single-sentence description
-=============================================
+# name(1) -- short, single-sentence description
 
 ## SYNOPSIS
 
@@ -48,11 +48,11 @@ or more line endings just like Markdown.
 
 ## OPTIONS
 
- * `-h`, `--help` :
-   Displays the help screen.
+* `-h`, `--help` :
+  Displays the help screen.
 
- * `--version` : 
-   Displays version information.
+* `--version` :
+  Displays version information.
 
 ## EXAMPLES
 
@@ -115,24 +115,25 @@ markdown(7)
 ```
 
 ## Frequently-used sections
+
 <!-- {.-one-column} -->
 
 ### Sections
 
-- `## SYNOPSIS`
-- `## DESCRIPTION`
-- `## OPTIONS`
-- `## SYNTAX`
-- `## ENVIRONMENT`
-- `## RETURN VALUES`
-- `## STANDARDS`
-- `## SECURITY CONSIDERATIONS`
-- `## BUGS`
-- `## HISTORY`
-- `## AUTHOR`
-- `## COPYRIGHT`
-- `## SEE ALSO`
-<!-- {.-four-column} -->
+* `## SYNOPSIS`
+* `## DESCRIPTION`
+* `## OPTIONS`
+* `## SYNTAX`
+* `## ENVIRONMENT`
+* `## RETURN VALUES`
+* `## STANDARDS`
+* `## SECURITY CONSIDERATIONS`
+* `## BUGS`
+* `## HISTORY`
+* `## AUTHOR`
+* `## COPYRIGHT`
+* `## SEE ALSO`
+  <!-- {.-four-column} -->
 
 ## Other CLI options
 
@@ -164,7 +165,7 @@ markdown(7)
 ## Sections
 
 | Section | Description                                   |
-| ---     | ---                                           |
+| ------- | --------------------------------------------- |
 | `1`     | General commands                              |
 | `2`     | System calls                                  |
 | `3`     | C standard lib                                |
@@ -181,6 +182,7 @@ See [Man page sections](http://www.december.com/unix/ref/mansec.html) (december.
 ### npm scripts
 
 Place manual files in `man/xxx.1.md`, then in package.json:
+
 <!-- {.-setup} -->
 
 ```json
@@ -206,4 +208,3 @@ marked-man foo.1.md > foo.1
 * Can't use `<br>`
 
 See [marked-man](https://github.com/kapouer/marked-man).
-
