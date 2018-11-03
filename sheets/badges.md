@@ -14,10 +14,8 @@ Here are some badges for open source projects.
 
 #### CodeClimate (shields.io)
 
-
 ```md
-[![CodeClimate](http://img.shields.io/codeclimate/github/rstacruz/REPO.svg?style=flat)](https://codeclimate.com/github/rstacruz/REPO 
-"CodeClimate")
+[![CodeClimate](http://img.shields.io/codeclimate/github/rstacruz/REPO.svg?style=flat)](https://codeclimate.com/github/rstacruz/REPO 'CodeClimate')
 ```
 
 #### Coveralls (shields.io)
@@ -29,19 +27,19 @@ Here are some badges for open source projects.
 #### Travis (shields.io)
 
 ```md
-[![Status](http://img.shields.io/travis/rstacruz/REPO/master.svg?style=flat)](https://travis-ci.org/rstacruz/REPO "See test builds")
+[![Status](http://img.shields.io/travis/rstacruz/REPO/master.svg?style=flat)](https://travis-ci.org/rstacruz/REPO 'See test builds')
 ```
 
 #### NPM (shields.io)
 
 ```md
-[![npm version](http://img.shields.io/npm/v/REPO.svg?style=flat)](https://npmjs.org/package/REPO "View this project on npm")
+[![npm version](http://img.shields.io/npm/v/REPO.svg?style=flat)](https://npmjs.org/package/REPO 'View this project on npm')
 ```
 
 #### Ruby gem (shields.io)
 
 ```md
-[![Gem](https://img.shields.io/gem/v/GEMNAME.svg?style=flat)](http://rubygems.org/gems/GEMNAME "View this project in Rubygems")
+[![Gem](https://img.shields.io/gem/v/GEMNAME.svg?style=flat)](http://rubygems.org/gems/GEMNAME 'View this project in Rubygems')
 ```
 
 ### Etc
@@ -49,7 +47,8 @@ Here are some badges for open source projects.
 #### Gitter chat
 
 ```md
-[![Gitter chat](https://badges.gitter.im/USER/REPO.png)](https://gitter.im/USER/REPO "Gitter chat")
+[![Gitter chat](https://badges.gitter.im/USER/REPO.png)](https://gitter.im/USER/REPO 'Gitter chat')
+```
 
 #### Gitter chat (shields.io)
 
@@ -71,9 +70,13 @@ Here are some badges for open source projects.
 
 ### Links
 
- * Everything: <http://shields.io/>
- * Version badge (gems, npm): <http://badge.fury.io/>
- * Dependencies (ruby): <http://gemnasium.com/>
- * CI: <http://travis-ci.org/>
- * Code quality (ruby): <http://codeclimate.com/>
- * Test coverage: <https://coveralls.io/>
+* Everything: <http://shields.io/>
+* Version badge (gems, npm): <http://badge.fury.io/>
+* Dependencies (ruby): <http://gemnasium.com/>
+* CI: <http://travis-ci.org/>
+* Code quality (ruby): <http://codeclimate.com/>
+* Test coverage: <https://coveralls.io/>
+
+```
+
+```
