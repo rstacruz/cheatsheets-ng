@@ -47,13 +47,12 @@ get(function (err, res) { ... })
 
 Use [unyield]. (You can [thunkify] this later)
 
-
 ### Node callback → Thunk
 
 ```js
 var readFile = thunkify(fs.readFile)
 
-co(function * () {
+co(function*() {
   var data = yield readFile('index.txt', 'utf-8')
 })
 ```

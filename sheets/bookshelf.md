@@ -3,14 +3,13 @@ title: Bookshelf.js
 category: JavaScript libraries
 ---
 
-Model
------
+## Model
 
 ```js
 Summary = bookshelf.Model.extend({
   tableName: 'summaries',
   hasTimestamps: true,
-  hasTimestamps: ['created_at', 'updated_at'],
+  hasTimestamps: ['created_at', 'updated_at']
 })
 ```
 
@@ -18,10 +17,10 @@ Summary = bookshelf.Model.extend({
 
 ```js
 Summary = bookshelf.Model.extend({
-  book () {
+  book() {
     return this.belongsTo(Book)
   },
-  author () {
+  author() {
     return this.hasOne(Author)
   }
   // belongsToMany
@@ -33,8 +32,8 @@ Summary = bookshelf.Model.extend({
 ### CRUD
 
 ```js
-Book.create({ title: '..' }).save()
-new Book({ title: '..' }).save()
+Book.create({ title: '...' }).save()
+new Book({ title: '...' }).save()
 
 new Book({ id: 1 }).fetch()
 

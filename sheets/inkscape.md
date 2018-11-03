@@ -18,26 +18,24 @@ tags: [WIP]
 ### Select tool (F1)
 
 | Shortcut | Description |
-| --- | --- |
-| `[ ]` | Rotate
+| -------- | ----------- |
+| `[ ]`    | Rotate      |
 
 <!-- {.-shortcuts} -->
 
 ### Edit path (F2)
 
 | Shortcut | Description |
-| --- | --- |
-| `Ctrl` | constraint
+| -------- | ----------- |
+| `Ctrl`   | constraint  |
 
 <!-- {.-shortcuts} -->
 
 ### Dragging an anchor handle
 
-| Shortcut | Description |
-| --- | --- |
-| `Ctrl` | snap to 15 degrees
-| `Alt` | ?
+| Shortcut | Description        |
+| -------- | ------------------ |
+| `Ctrl`   | snap to 15 degrees |
+| `Alt`    | ?                  |
 
 <!-- {.-shortcuts} -->
-
-### Bezier (Shift F6)
