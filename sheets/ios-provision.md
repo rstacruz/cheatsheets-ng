@@ -1,17 +1,18 @@
 ---
 title: iOS Provisioning Profiles
+tags: [Outdated]
 ---
 
 ### Types of profiles
 
- * __Development__ - deploy to an iPhone via XCode
- * __Adhoc__ - deploy via testflightapp.com
- * __Appstore__ - only used for submitting to the app store
+* **Development** - deploy to an iPhone via XCode
+* **Adhoc** - deploy via testflightapp.com
+* **Appstore** - only used for submitting to the app store
 
 ### Requirements
 
 | What            | Dev | Adhoc | Appstore |
-|-----------------|-----|-------|----------|
+| --------------- | --- | ----- | -------- |
 | CSR file        |     | √     | √        |
 | Device UDIDs    | √   | √     |          |
 | Developers list | √   |       |          |
@@ -20,45 +21,43 @@ title: iOS Provisioning Profiles
 
 Needed for Adhoc & Appstore builds.
 
- * Open *Keychain Access.app*
- * *Keychain Access* menu -> *Certificate Assistant* menu -> *Request a 
- certificate...*
-   * User email address is *your email*
-   * Common name is *your name*
-   * CA Email address is *blank*
-   * Request is *Saved to disk*
+* Open _Keychain Access.app_
+* _Keychain Access_ menu -> _Certificate Assistant_ menu -> _Request a certificate..._
+  * User email address is _your email_
+  * Common name is _your name_
+  * CA Email address is _blank_
+  * Request is _Saved to disk_
 
 ### Get the `.cer` files
 
 Needed for Adhoc & Appstore builds.
 
- * in the iOS dev portal, go to *Certificates*, and download the certificate.  
- Install it on the dev machine.
+* in the iOS dev portal, go to _Certificates_, and download the certificate.  
+  Install it on the dev machine.
 
 ### Obtaining device UDIDs
 
 Needed for Dev and Adhoc builds.
 
- * via iTunes: http://whatsmyudid.com
- * via XCode: cmd+shift+2 (Organizer), Devices
+* via iTunes: http://whatsmyudid.com
+* via XCode: cmd+shift+2 (Organizer), Devices
 
-For developers
---------------
+## For developers
 
-Don't ever ask Xcode to *Fix issue...* for you.
+Don't ever ask Xcode to _Fix issue..._ for you.
 
 ### Using a provisioning profile
 
 No need to use `.mobileprovision` files since XCode 5.
 
- * Open the `*.mobileprovision` file using Finder
- * XCode Project -> *Build settings* tab -> *Code signing* section -> 
- *Provisioning Profile* section
-   * Set *Debug* to the *development* profile
-   * Set *Release* to the *ad-hoc* profile
+* Open the `*.mobileprovision` file using Finder
+* XCode Project -> _Build settings_ tab -> _Code signing_ section ->
+  _Provisioning Profile_ section
+  * Set _Debug_ to the _development_ profile
+  * Set _Release_ to the _ad-hoc_ profile
 
 ### Building an .ipa (Adhoc or Appstore)
 
-  * In the toolbar, select "iOS Device" as the target
-  * *Product* menu -> *Archive*
-  * In the Organizer (Cmd+Shift+2) -> *Archives* tab -> *Distribute...* button
+* In the toolbar, select "iOS Device" as the target
+* _Product_ menu -> _Archive_
+* In the Organizer (Cmd+Shift+2) -> _Archives_ tab -> _Distribute..._ button
