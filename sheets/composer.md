@@ -14,36 +14,34 @@ All composer commands, depending on your install, may need to use `php composer.
 
 ### Package management
 
-| Command                                | Description                                                  |
-| ---                                    | ---                                                          |
-| `composer install`                     | Install everything in composer.json                          |
-| ---                                    | ---                                                          |
-| `composer install laravel`             | Install a package                                            |
-| `composer install laravel --dry-run`   | Simulates the install without installing anything            |
-| `composer install laravel --no-scripts`| Skips post-download scripts                                  |
+| Command                                 | Description                                       |
+| --------------------------------------- | ------------------------------------------------- |
+| `composer install`                      | Install everything in composer.json               |
+| ---                                     | ---                                               |
+| `composer install laravel`              | Install a package                                 |
+| `composer install laravel --dry-run`    | Simulates the install without installing anything |
+| `composer install laravel --no-scripts` | Skips post-download scripts                       |
 
 ### Updating
 
-| Command                   | Description                     |
-| ---                       | ---                             |
-| `composer update`         | Update all packages             |
-| ---                       | ---                             |
-| `composer update laravel` | Update a certain package        |
-| `composer update vendor/*`| Update all packages in a folder |
-| `composer update --lock`  | Update lock file hash without updating any packages |
-
-
+| Command                    | Description                                         |
+| -------------------------- | --------------------------------------------------- |
+| `composer update`          | Update all packages                                 |
+| ---                        | ---                                                 |
+| `composer update laravel`  | Update a certain package                            |
+| `composer update vendor/*` | Update all packages in a folder                     |
+| `composer update --lock`   | Update lock file hash without updating any packages |
 
 ### Requiring
 
-| Command                          | Description                                                 |
-| ---                              | ---                                                         |
-| `composer require laravel`.      | Add new package to composer.json and install it             |
-| ---                              | ---                                                         |
-| `composer require laravel --dev` | Add new package to `require-dev` and install it.            |
+| Command                          | Description                                     |
+| -------------------------------- | ----------------------------------------------- |
+| `composer require laravel`       | Add new package to composer.json and install it |
+| ---                              | ---                                             |
+| `composer require laravel --dev` | Add new package to `require-dev` and install it |
 
 ### Removing
 
-| Command                   | Description                                                 |
-| ---                       | ---                                                         |
-| `composer remove laravel` | Remove new package to composer.json and uninstall it        |
+| Command                   | Description                                          |
+| ------------------------- | ---------------------------------------------------- |
+| `composer remove laravel` | Remove new package to composer.json and uninstall it |
