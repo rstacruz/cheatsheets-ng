@@ -33,4 +33,4 @@ watchman watch-del ~/src
 
 ## Also see
 
- * [Documentation](https://facebook.github.io/watchman/docs/install.html) _(facebook.github.io)_
+* [Documentation](https://facebook.github.io/watchman/docs/install.html) _(facebook.github.io)_

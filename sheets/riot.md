@@ -9,10 +9,7 @@ layout: default-ad
 ```js
 /* tag-name.tag */
 <tag-name>
-  <div>
-    hello {name}
-  </div>
-
+  <div>hello {name}</div>
   this.name = opts.name
 </tag-name>
 ```
@@ -42,6 +39,7 @@ layout: default-ad
 ```
 
 ### Conditional
+
 ```
 <div if={error}>
 <div show={error}> /* show using display: '' */
@@ -89,30 +87,29 @@ riot.update() // update all
 ## Nested HTML
 
 ```js
-<yield/>
+<yield />
 ```
 
 ### Yield to/from
 
 ```js
 <post>
-  <yield to='title'>Hello</yield>
-  <yield to='body'>Hey there world</yield>
+  <yield to="title">Hello</yield>
+  <yield to="body">Hey there world</yield>
 </post>
 ```
 
 ```js
 <post>
-  <yield from='title'/>
-  <yield from='body'/>
+  <yield from="title" />
+  <yield from="body" />
 </post>
 ```
 
 ## Router
 
 ```js
-riot.route('customers/*/edit', (id) => {
-})
+riot.route('customers/*/edit', id => {})
 riot.route('customers/234/edit')
 riot.route.start()
 riot.route.start(true) // exec the current url
@@ -122,31 +119,31 @@ riot.route.start(true) // exec the current url
 
 ```js
 this.on('before-mount', function() {
-// before the tag is mounted
+  // before the tag is mounted
 })
 
 this.on('mount', function() {
-// right after the tag is mounted on the page
+  // right after the tag is mounted on the page
 })
 
 this.on('update', function() {
-// allows recalculation of context data before the update
+  // allows recalculation of context data before the update
 })
 
 this.on('updated', function() {
-// right after the tag template is updated
+  // right after the tag template is updated
 })
 
 this.on('before-unmount', function() {
-// before the tag is removed
+  // before the tag is removed
 })
 
 this.on('unmount', function() {
-// when the tag is removed from the page
+  // when the tag is removed from the page
 })
 
 // curious about all events ?
 this.on('all', function(eventName) {
-console.info(eventName)
+  console.info(eventName)
 })
 ```
