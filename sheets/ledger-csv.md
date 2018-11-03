@@ -5,11 +5,13 @@ layout: 2017/sheet
 ---
 
 ## Ledger CSV format
+
 <!-- {.-one-column} -->
 
 ```
 $ ledger csv
 ```
+
 <!-- {.-setup} -->
 
 ```csv
