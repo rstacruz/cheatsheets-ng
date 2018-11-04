@@ -1,19 +1,22 @@
 ---
 title: CircleCI
+tags: [Outdated]
+messages:
+  - Deprecated: This sheet describes v1= style configuration for CircleCI, which has since been ceded by their v2 API.
 ---
 
-## circle.yml
+### circle.yml sections
 
-* __machine__: adjusting the VM to your preferences and requirements
-* __checkout__: checking out and cloning your git repo
-* __dependencies__: setting up your project's language-specific dependencies
-* __database__: preparing the databases for your tests
-* __test__: running your tests
-* __deployment__: deploying your code to your web servers
+* **machine**: adjusting the VM to your preferences and requirements
+* **checkout**: checking out and cloning your git repo
+* **dependencies**: setting up your project's language-specific dependencies
+* **database**: preparing the databases for your tests
+* **test**: running your tests
+* **deployment**: deploying your code to your web servers
 
 See: <https://circleci.com/docs/configuration>
 
-## Sample
+### Sample configuration
 
 ```yml
 ## Customize the test machine
