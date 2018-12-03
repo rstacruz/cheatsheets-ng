@@ -4,7 +4,7 @@ category: React
 layout: 2017/sheet
 ads: true
 tags: [Featured]
-updated: 2017-10-10
+updated: 2018-10-04
 weight: -10
 keywords:
   - React.Component
@@ -46,20 +46,40 @@ ReactDOM.render(<Hello name='John' />, el)
 
 Use the [React.js jsfiddle](http://jsfiddle.net/reactjs/69z2wepo/) to start hacking. (or the unofficial [jsbin](http://jsbin.com/yafixat/edit?js,output))
 
+### Import multiple exports
+{: .-prime}
+
+```jsx
+import React, {Component} from 'react'
+import ReactDOM from 'react-dom'
+```
+{: .-setup}
+
+```jsx
+class Hello extends Component {
+  ...
+}
+```
+
 ### Properties
 
 ```html
-<Video fullscreen={true} />
+<Video fullscreen={true} autoplay={false} />
 ```
 <!-- {.-setup} -->
 
 ```jsx
 render () {
   this.props.fullscreen
+  const { fullscreen, autoplay } = this.props
   ···
 }
 ```
+<<<<<<< HEAD:sheets/react.md
 <!-- {data-line="2"} -->
+=======
+{: data-line="2,3"}
+>>>>>>> upstream/master:react.md
 
 Use `this.props` to access properties passed to the component.
 
@@ -70,7 +90,7 @@ See: [Properties](https://reactjs.org/docs/tutorial.html#using-props)
 ```jsx
 constructor(props) {
   super(props)
-  this.state = {}
+  this.state = { username: undefined }
 }
 ```
 
@@ -81,19 +101,34 @@ this.setState({ username: 'rstacruz' })
 ```jsx
 render () {
   this.state.username
+  const { username } = this.state
   ···
 }
 ```
+<<<<<<< HEAD:sheets/react.md
 <!-- {data-line="2"} -->
+=======
+{: data-line="2,3"}
+>>>>>>> upstream/master:react.md
 
 Use states (`this.state`) to manage dynamic data.
 
+With [Babel](https://babeljs.io/) you can use [proposal-class-fields](https://github.com/tc39/proposal-class-fields) and get rid of constructor
+
+```jsx
+class Hello extends Component {
+  state = { username: undefined };
+  ...
+}
+```
+
 See: [States](https://reactjs.org/docs/tutorial.html#reactive-state)
+
 
 ### Nesting
 
 ```jsx
-class Info extends React.Component {
+class Info extends Component {
   render () {
     const { avatar, username } = this.props
 
@@ -114,15 +149,20 @@ See: [Composing Components](https://reactjs.org/docs/components-and-props.html#c
 ### Fragments
 
 ```jsx
-class Info extends React.Component {
+import React, {
+  Component,
+  Fragment
+} from 'react'
+
+class Info extends Component {
   render () {
     const { avatar, username } = this.props
 
     return (
-      <React.Fragment>
+      <Fragment>
         <UserAvatar src={avatar} />
         <UserProfile username={username} />
-      </React.Fragment>
+      </Fragment>
     )
   }
 }
@@ -141,7 +181,7 @@ As of React v16.2.0, fragments can be used to return multiple children without a
 <!-- {data-line="2"} -->
 
 ```jsx
-class AlertBox extends React.Component {
+class AlertBox extends Component {
   render () {
     return <div className='alert-box'>
       {this.props.children}
@@ -170,7 +210,7 @@ See: [defaultProps](https://reactjs.org/docs/react-component.html#defaultprops)
 ### Setting default state
 
 ```jsx
-class Hello extends React.Component {
+class Hello extends Component {
   constructor (props) {
     super(props)
     this.state = { visible: true }
@@ -181,13 +221,24 @@ class Hello extends React.Component {
 
 Set the default state in the `constructor()`.
 
+And without constructor using [Babel](https://babeljs.io/) with [proposal-class-fields](https://github.com/tc39/proposal-class-fields).
+
+```jsx
+class Hello extends Component {
+    state = { visible: true }
+  }
+}
+```
+
+{: data-line="2"}
+
 See: [Setting the default state](https://reactjs.org/docs/react-without-es6.html#setting-the-initial-state)
 
 Other components
 ----------------
 <!-- {.-three-column} -->
 
-### Function components
+### Functional components
 
 ```jsx
 function MyComponent ({ name }) {
@@ -205,11 +256,17 @@ See: [Function and Class Components](https://reactjs.org/docs/components-and-pro
 ### Pure components
 
 ```jsx
-class MessageBox extends React.PureComponent {
+import React, {PureComponent} from 'react'
+
+class MessageBox extends PureComponent {
   ···
 }
 ```
+<<<<<<< HEAD:sheets/react.md
 <!-- {data-line="1"} -->
+=======
+{: data-line="3"}
+>>>>>>> upstream/master:react.md
 
 Performance-optimized version of `React.Component`. Doesn't rerender if props/state hasn't changed.
 
@@ -223,6 +280,7 @@ this.forceUpdate()
 
 ```jsx
 this.setState({ ... })
+this.setState(state => { ... })
 ```
 
 ```jsx
@@ -258,9 +316,8 @@ Add DOM event handlers, timers (etc) on `componentDidMount()`, then remove them 
 
 | Method | Description |
 | --- | --- |
-| `componentWillReceiveProps` *(newProps)* | Use `setState()` here |
+| `componentDidUpdate` *(prevProps, prevState, snapshot)* | Use `setState()` here, but remember to compare props |
 | `shouldComponentUpdate` *(newProps, newState)* | Skips `render()` if returns false |
-| `componentWillUpdate` *(newProps, newState)* | Can't use `setState()` here |
 | `render()` | Render |
 | `componentDidUpdate` *(prevProps, prevState)* | Operate on the DOM here |
 
@@ -275,7 +332,7 @@ DOM nodes
 ### References
 
 ```jsx
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   render () {
     return <div>
       <input ref={el => this.input = el} />
@@ -296,7 +353,7 @@ See: [Refs and the DOM](https://reactjs.org/docs/refs-and-the-dom.html)
 ### DOM Events
 
 ```jsx
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   render () {
     <input type="text"
         value={this.state.value}
@@ -324,7 +381,7 @@ See: [Events](https://reactjs.org/docs/events.html)
 <!-- {.-setup} -->
 
 ```jsx
-class VideoPlayer extends React.Component {
+class VideoPlayer extends Component {
   render () {
     return <VideoEmbed {...this.props} />
   }
@@ -364,7 +421,7 @@ JSX patterns
 ### Style shorthand
 
 ```jsx
-var style = { height: 10 }
+const style = { height: 10 }
 return <div style={style}></div>
 ```
 
@@ -386,7 +443,7 @@ See: [Dangerously set innerHTML](https://reactjs.org/tips/dangerously-set-inner-
 ### Lists
 
 ```jsx
-class TodoList extends React.Component {
+class TodoList extends Component {
   render () {
     const { items } = this.props
 
@@ -404,19 +461,20 @@ Always supply a `key` property.
 ### Conditionals
 
 ```jsx
-<div>
+<Fragment>
   {showMyComponent
     ? <MyComponent />
     : <OtherComponent />}
-</div>
+</Fragment>
 ```
 
 ### Short-circuit evaluation
 
 ```jsx
-<div>
+<Fragment>
   {showPopup && <Popup />}
-</div>
+  ...
+</Fragment>
 ```
 
 New features
@@ -445,10 +503,10 @@ render () {
 render () {
   // Fragments don't require keys!
   return (
-    <React.Fragment>
+    <Fragment>
       <li>First item</li>
       <li>Second item</li>
-    </React.Fragment>
+    </Fragment>
   )
 }
 ```
@@ -472,7 +530,7 @@ See: [Fragments and strings](https://reactjs.org/blog/2017/09/26/react-v16.0.htm
 ### Errors
 
 ```js
-class MyComponent extends React.Component {
+class MyComponent extends Component {
   ···
   componentDidCatch (error, info) {
     this.setState({ error })

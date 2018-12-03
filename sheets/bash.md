@@ -3,7 +3,7 @@ title: Bash scripting
 category: CLI
 layout: 2017/sheet
 tags: [Featured]
-updated: 2017-08-26
+updated: 2018-11-19
 keywords:
   - Variables
   - Functions
@@ -14,8 +14,8 @@ keywords:
   - Command substitution
 ---
 
-Getting started
----------------
+## Getting started
+
 <!-- {.-three-column} -->
 
 ### Example
@@ -62,6 +62,7 @@ git commit || echo "Commit failed"
 ```
 
 ### Functions
+
 <!-- {id='functions-example'} -->
 
 ```bash
@@ -75,6 +76,7 @@ echo "You are $(get_name)"
 See: [Functions](#functions)
 
 ### Conditionals
+
 <!-- {id='conditionals-example'} -->
 
 ```bash
@@ -108,9 +110,8 @@ echo {A,B}.js
 
 See: [Brace expansion](http://wiki.bash-hackers.org/syntax/expansion/brace)
 
+## Parameter expansions
 
-Parameter expansions
---------------------
 <!-- {.-three-column} -->
 
 ### Basics
@@ -154,25 +155,25 @@ echo ${STR:-5:5}  # "world"
 
 ```bash
 SRC="/path/to/foo.cpp"
-BASE=${STR##*/}   #=> "foo.cpp" (basepath)
-DIR=${SRC%$BASE}  #=> "/path/to" (dirpath)
+BASE=${SRC##*/}   #=> "foo.cpp" (basepath)
+DIR=${SRC%$BASE}  #=> "/path/to/" (dirpath)
 ```
 
 ### Substitution
 
-| Code | Description |
-| --- | --- |
-| `${FOO%suffix}` | Remove suffix |
-| `${FOO#prefix}` | Remove prefix |
-| --- | --- |
-| `${FOO%%suffix}` | Remove long suffix |
-| `${FOO##prefix}` | Remove long prefix |
-| --- | --- |
-| `${FOO/from/to}` | Replace first match |
-| `${FOO//from/to}` | Replace all |
-| --- | --- |
-| `${FOO/%from/to}` | Replace suffix |
-| `${FOO/#from/to}` | Replace prefix |
+| Code              | Description         |
+| ----------------- | ------------------- |
+| `${FOO%suffix}`   | Remove suffix       |
+| `${FOO#prefix}`   | Remove prefix       |
+| ---               | ---                 |
+| `${FOO%%suffix}`  | Remove long suffix  |
+| `${FOO##prefix}`  | Remove long prefix  |
+| ---               | ---                 |
+| `${FOO/from/to}`  | Replace first match |
+| `${FOO//from/to}` | Replace all         |
+| ---               | ---                 |
+| `${FOO/%from/to}` | Replace suffix      |
+| `${FOO/#from/to}` | Replace prefix      |
 
 ### Comments
 
@@ -190,24 +191,30 @@ comment
 
 ### Substrings
 
+| Code          | Description                    |
+| ------------- | ------------------------------ |
 | `${FOO:0:3}`  | Substring _(position, length)_ |
-| `${FOO:-3:3}` | Substring from the right |
+| `${FOO:-3:3}` | Substring from the right       |
 
 ### Length
 
+| Code      | Description      |
+| --------- | ---------------- |
 | `${#FOO}` | Length of `$FOO` |
 
 ### Default values
 
-| `${FOO:-val}`        | `$FOO`, or `val` if not set |
-| `${FOO:=val}`        | Set `$FOO` to `val` if not set |
-| `${FOO:+val}`        | `val` if `$FOO` is set |
-| `${FOO:?message}`    | Show error message and exit if `$FOO` is not set |
+| Code              | Description                                      |
+| ----------------- | ------------------------------------------------ |
+| `${FOO:-val}`     | `$FOO`, or `val` if not set                      |
+| `${FOO:=val}`     | Set `$FOO` to `val` if not set                   |
+| `${FOO:+val}`     | `val` if `$FOO` is set                           |
+| `${FOO:?message}` | Show error message and exit if `$FOO` is not set |
 
 The `:` is optional (eg, `${FOO=word}` works)
 
-Loops
------
+## Loops
+
 <!-- {.-three-column} -->
 
 ### Basic for loop
@@ -250,8 +257,8 @@ while true; do
 done
 ```
 
-Functions
----------
+## Functions
+
 <!-- {.-three-column} -->
 
 ### Defining functions
@@ -305,7 +312,7 @@ fi
 ### Arguments
 
 | Expression | Description                        |
-| ---        | ---                                |
+| ---------- | ---------------------------------- |
 | `$#`       | Number of arguments                |
 | `$*`       | All arguments                      |
 | `$@`       | All arguments, starting from first |
@@ -313,14 +320,16 @@ fi
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
-Conditionals
-------------
+## Conditionals
+
 <!-- {.-three-column} -->
 
 ### Conditions
 
 | Condition                | Description           |
-| ---                      | ---                   |
+| ------------------------ | --------------------- |
+| `[ STRING = STRING ]`    | Equal                 |
+| `[ STRING != STRING ]`   | Not Equal             |
 | `[ -z STRING ]`          | Empty string          |
 | `[ -n STRING ]`          | Not empty string      |
 | ---                      | ---                   |
@@ -336,7 +345,7 @@ Conditionals
 | `(( NUM < NUM ))`        | Numeric conditions    |
 
 | Condition          | Description              |
-| ---                | ---                      |
+| ------------------ | ------------------------ |
 | `[ -o noclobber ]` | If OPTIONNAME is enabled |
 | ---                | ---                      |
 | `[ ! EXPR ]`       | Not                      |
@@ -346,7 +355,7 @@ Conditionals
 ### File conditions
 
 | Condition             | Description             |
-| ---                   | ---                     |
+| --------------------- | ----------------------- |
 | `[ -e FILE ]`         | Exists                  |
 | `[ -r FILE ]`         | Readable                |
 | `[ -h FILE ]`         | Symlink                 |
@@ -379,6 +388,11 @@ fi
 ```
 
 ```bash
+# Equal
+if [[ "$A" == "$B" ]]
+```
+
+```bash
 # Regex
 if [[ "A" =~ "." ]]
 ```
@@ -393,8 +407,7 @@ if [ -e "file.txt" ]; then
 fi
 ```
 
-Arrays
-------
+## Arrays
 
 ### Defining arrays
 
@@ -423,6 +436,7 @@ echo ${Fruits[@]:3:2}       # Range (from position 3, length 2)
 
 ```bash
 Fruits=("${Fruits[@]}" "Watermelon")    # Push
+Fruits+=('Watermelon')                  # Also Push
 Fruits=( ${Fruits[@]/Ap*/} )            # Remove by regex match
 unset Fruits[2]                         # Remove one item
 Fruits=("${Fruits[@]}")                 # Duplicate
@@ -438,8 +452,7 @@ for i in "${arrayName[@]}"; do
 done
 ```
 
-Options
--------
+## Options
 
 ### Options
 
@@ -463,42 +476,50 @@ set -o globstar    # Allow ** for recursive matches ('lib/**/*.rb' => 'lib/a/b/c
 Set `GLOBIGNORE` as a colon-separated list of patterns to be removed from glob
 matches.
 
-History
--------
+## History
 
 ### Commands
 
-| `history` | Show history |
+| Command               | Description                               |
+| --------------------- | ----------------------------------------- |
+| `history`             | Show history                              |
 | `shopt -s histverify` | Don't execute expanded result immediately |
 
 ### Expansions
 
-| `!$` | Expand last parameter of most recent command |
-| `!*` | Expand all parameters of most recent command |
-| `!-n` | Expand `n`th most recent command |
-| `!n` | Expand `n`th command in history |
+| Expression   | Description                                          |
+| ------------ | ---------------------------------------------------- |
+| `!$`         | Expand last parameter of most recent command         |
+| `!*`         | Expand all parameters of most recent command         |
+| `!-n`        | Expand `n`th most recent command                     |
+| `!n`         | Expand `n`th command in history                      |
 | `!<command>` | Expand most recent invocation of command `<command>` |
 
 ### Operations
 
-| `!!:s/<FROM>/<TO>/` | Replace first occurrence of `<FROM>` to `<TO>` in most recent command |
-| `!!:gs/<FROM>/<TO>/` | Replace all occurrences of `<FROM>` to `<TO>` in most recent command |
-| `!$:t` | Expand only basename from last parameter of most recent command |
-| `!$:h` | Expand only directory from last parameter of most recent command |
+| Expression           | Description                                                           |
+| -------------------- | --------------------------------------------------------------------- |
+| `!!`                 | Execute last command again                                            |
+| `!!:s/<FROM>/<TO>/`  | Replace first occurrence of `<FROM>` to `<TO>` in most recent command |
+| `!!:gs/<FROM>/<TO>/` | Replace all occurrences of `<FROM>` to `<TO>` in most recent command  |
+| `!$:t`               | Expand only basename from last parameter of most recent command       |
+| `!$:h`               | Expand only directory from last parameter of most recent command      |
 
 `!!` and `!$` can be replaced with any valid expansion.
 
 ### Slices
 
-| `!!:n` | Expand only `n`th token from most recent command (command is `0`; first param is `1`) |
-| `!!:n-m` | Expand range of tokens from most recent command |
-| `!!:n-$` | Expand `n`th token to last from most recent command |
+| Expression | Description                                                                              |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| `!!:n`     | Expand only `n`th token from most recent command (command is `0`; first argument is `1`) |
+| `!^`       | Expand first argument from most recent command                                           |
+| `!$`       | Expand last token from most recent command                                               |
+| `!!:n-m`   | Expand range of tokens from most recent command                                          |
+| `!!:n-$`   | Expand `n`th token to last from most recent command                                      |
 
 `!!` can be replaced with any valid expansion i.e. `!cat`, `!-2`, `!42`, etc.
 
-
-Miscellaneous
--------------
+## Miscellaneous
 
 ### Numeric calculations
 
@@ -629,13 +650,26 @@ read -n 1 ans    # Just one character
 
 ### Special variables
 
-| `$?` | Exit status of last task |
-| `$!` | PID of last background task |
-| `$$` | PID of shell |
+| Expression | Description                 |
+| ---------- | --------------------------- |
+| `$?`       | Exit status of last task    |
+| `$!`       | PID of last background task |
+| `$$`       | PID of shell                |
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
+### Go to previous directory
+
+```bash
+pwd # /home/user/foo
+cd bar/
+pwd # /home/user/foo/bar
+cd -
+pwd # /home/user/foo
+```
+
 ## Also see
+
 <!-- {.-one-column} -->
 
 * [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
