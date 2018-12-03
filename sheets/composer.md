@@ -34,14 +34,14 @@ All composer commands, depending on your install, may need to use `php composer.
 
 ### Requiring
 
-| Command                          | Description                                     |
-| -------------------------------- | ----------------------------------------------- |
-| `composer require laravel`       | Add new package to composer.json and install it |
-| ---                              | ---                                             |
-| `composer require laravel --dev` | Add new package to `require-dev` and install it |
+| Command                          | Description                                      |
+| -------------------------------- | ------------------------------------------------ |
+| `composer require laravel`.      | Add new package to composer.json and install it  |
+| ---                              | ---                                              |
+| `composer require laravel --dev` | Add new package to `require-dev` and install it. |
 
 ### Removing
 
-| Command                   | Description                                          |
-| ------------------------- | ---------------------------------------------------- |
-| `composer remove laravel` | Remove new package to composer.json and uninstall it |
+| Command                   | Description                                            |
+| ------------------------- | ------------------------------------------------------ |
+| `composer remove laravel` | Remove new package from composer.json and uninstall it |

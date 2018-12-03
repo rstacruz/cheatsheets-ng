@@ -28,7 +28,7 @@ updated: 2017-09-20
 
 ```bash
 -X POST          # --request
--L               # follow link if page redirects 
+-L               # follow link if page redirects
 ```
 
 ### Data
@@ -63,6 +63,7 @@ updated: 2017-09-20
 ```
 
 ## Examples
+
 <!-- {.-one-column} -->
 
 ```bash

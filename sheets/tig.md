@@ -45,6 +45,7 @@ You can substitute `git log` → `tig`.
 | `m`      | Main view    |
 | `s`      | Status       |
 | `t`      | Tree (files) |
+| `y`      | Stash view   |
 | `g`      | Grep         |
 | `h`      | Help         |
 

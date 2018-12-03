@@ -139,10 +139,11 @@ type Album = {
 <!-- {data-line="2"} -->
 
 ```js
-const a: Album = {} // ✓ OK
-a.name = 'Blue' // ✓ OK
-a.name = null // ✓ Error
-a.name = undefined // ✓ OK
+const a: Album = { } // ✓ OK
+a.name = 'Blue' //      ✓ OK
+a.name = null //        ✗ Error
+a.name = undefined //   ✓ OK
+>>>>>>> upstream/master:flow.md
 ```
 
 This makes an `Album` valid even if `name` is not part of the keys. This is different from "maybe" types.
