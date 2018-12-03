@@ -3,10 +3,11 @@ title: Vim
 category: Vim
 layout: 2017/sheet
 tags: [Featured]
-updated: 2017-08-26
+updated: 2018-09-11
 weight: -10
 intro: |
-  [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.
+ [Vim](http://www.vim.org/) is a very efficient text editor. This reference was made for Vim 8.0.   
+ For shortcut notation, see `:help key-notation`.
 ---
 
 ## Getting started
@@ -92,6 +93,19 @@ intro: |
 
 <!-- {.-shortcuts} -->
 
+#### Tab pages
+
+| Shortcut          | Description                    |
+| ----------------- | ------------------------------ |
+| `:tabedit [file]` | Edit file in a new tab         |
+| `:tabfind [file]` | Open file if exists in new tab |
+| `:tabclose`       | Close current tab              |
+| `:tabs`           | List all tabs                  |
+| `:tabfirst`       | Go to first tab                |
+| `:tablast`        | Go to last tab                 |
+| `:tabn`           | Go to next tab                 |
+| `:tabp`           | Go to previous tab             |
+
 ### Editing
 
 | Shortcut | Description                         |
@@ -117,7 +131,23 @@ intro: |
 | `Esc` _/_ `<C-[>` | Exit insert mode                            |
 | `<C-C>`           | Exit insert mode, and abort current command |
 
-<!-- {.-shortcuts} -->
+# <!-- {.-shortcuts} -->
+
+| --- | --- |
+| `u` | Undo changes |
+| `<C-R>` | Redo changes |
+{: .-shortcuts}
+
+### Exiting insert mode
+
+| Shortcut          | Description                                 |
+| ----------------- | ------------------------------------------- |
+| `Esc` _/_ `<C-[>` | Exit insert mode                            |
+| `<C-C>`           | Exit insert mode, and abort current command |
+
+{: .-shortcuts}
+
+> > > > > > > upstream/master:vim.md
 
 ### Clipboard
 
@@ -265,6 +295,12 @@ Text objects let you operate (with an _operator_) in or around text blocks (_obj
 
 See [Operators](#operators) for other things you can do.
 
+### Diff
+
+| Shortcut                       | Description                            |
+| ------------------------------ | -------------------------------------- |
+| `gvimdiff file1 file2 [file3]` | See differencies between files, in HMI |
+
 ## Misc
 
 ### Folds
@@ -293,11 +329,11 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 
 | Shortcut       | Description                |
 | -------------- | -------------------------- |
-| `[(` `[{` `[<` | previous `(` or `{` or `<` |
-| `])`           | next                       |
+| `[(` `[{` `[<` | Nrevious `(` or `{` or `<` |
+| `])`           | Next                       |
 | ---            | ---                        |
-| `[m`           | previous method start      |
-| `[M`           | previous method end        |
+| `[m`           | Previous method start      |
+| `[M`           | Previous method end        |
 
 <!-- {.-shortcuts} -->
 
@@ -308,7 +344,7 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 | `<C-O>`  | Go back to previous location |
 | `<C-I>`  | Go forward                   |
 | ---      | ---                          |
-| `gf`     | go to file in cursor         |
+| `gf`     | Go to file in cursor         |
 
 <!-- {.-shortcuts} -->
 
@@ -316,8 +352,8 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 
 | Shortcut | Description      |
 | -------- | ---------------- |
-| `<C-A>`  | increment number |
-| `<C-X>`  | decrement        |
+| `<C-A>`  | Increment number |
+| `<C-X>`  | Decrement        |
 
 <!-- {.-shortcuts} -->
 
@@ -347,12 +383,12 @@ Uppercase ones are recursive (eg, `zO` is open recursively).
 
 | Shortcut | Description                          |
 | -------- | ------------------------------------ |
-| `~`      | toggle case (Case => cASE)           |
-| `gU`     | uppercase                            |
-| `gu`     | lowercase                            |
+| `~`      | Toggle case (Case => cASE)           |
+| `gU`     | Uppercase                            |
+| `gu`     | Lowercase                            |
 | ---      | ---                                  |
-| `gUU`    | uppercase current line (also `gUgU`) |
-| `guu`    | lowercase current line (also `gugu`) |
+| `gUU`    | Uppercase current line (also `gUgU`) |
+| `guu`    | Lowercase current line (also `gugu`) |
 
 <!-- {.-shortcuts} -->
 
@@ -376,7 +412,7 @@ Do these in visual or normal mode.
 
 | Shortcut | Description                               |
 | -------- | ----------------------------------------- |
-| `.`      | repeat last command                       |
+| `.`      | Repeat last command                       |
 | `]p`     | paste under the current indentation level |
 
 <!-- {.-shortcuts} -->
@@ -385,8 +421,9 @@ Do these in visual or normal mode.
 
 | Shortcut     | Description                               |
 | ------------ | ----------------------------------------- |
-| `<C-R><C-W>` | insert current word into the command line |
-| `<C-R>"`     | paste from " register                     |
+| `<C-R><C-W>` | Insert current word into the command line |
+| `<C-R>"`     | Paste from " register                     |
+| `<C-X><C-F>` | Auto-completion of path in insert mode    |
 
 <!-- {.-shortcuts} -->
 
@@ -402,9 +439,9 @@ See `:help formatting`
 
 ### Calculator
 
-```
-<C-R>=128/2
-```
+| Shortcut      | Description                            |
+| ------------- | -------------------------------------- |
+| `<C-R>=128/2` | Shows the result of the division: '64' |
 
 Do this in insert mode.
 
@@ -416,6 +453,22 @@ Do this in insert mode.
 ```
 
 Works like `:qa`, but throws an error. Great for aborting Git commands.
+
+### Spell checking
+
+| Shortcut                     | Description                                            |
+| ---------------------------- | ------------------------------------------------------ |
+| `:set spell spelllang=en_us` | Turn on US English spell checking                      |
+| `]s`                         | Move to next misspelled word after the cursor          |
+| `[s`                         | Move to previous misspelled word before the cursor     |
+| `z=`                         | Suggest spellings for the word under/after the cursor  |
+| `zg`                         | Add word to spell list                                 |
+| `zw`                         | Mark word as bad/mispelling                            |
+| `zu` / `C-X (Insert Mode)`   | Suggest words for bad word under cursor from spellfile |
+
+<!-- {.-shortcuts} -->
+
+See `:help spell`
 
 ## Also see
 
