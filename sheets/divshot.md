@@ -1,5 +1,6 @@
 ---
 title: Divshot
+tags: [Outdated]
 ---
 
 ## Getting started
@@ -78,10 +79,10 @@ divshot open [<env>]
 ```
 
 ### Config
+
 Edits `divshot.json`
 
 ```
-
 divshot config:add name your-app-name
 divshot config:remove name
 ```
@@ -103,6 +104,7 @@ divshot status
 divshot destroy
 ```
 
+```
 divshot apps
 divshot account
 ```
@@ -110,7 +112,7 @@ divshot account
 ### Password protect
 
 ```sh
-divshot protect <env> <username:password>
+ivshot protect <env> <username:password>
 ```
 
 ## Custom domains

@@ -91,7 +91,7 @@ end
 
 describe "a block" do
   setup [:my_hook]
-  
+
   test "John's age", context do
     assert context[:name] == "John"
     assert context[:age] == 54

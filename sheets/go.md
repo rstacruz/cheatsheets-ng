@@ -8,12 +8,15 @@ updated: 2017-09-15
 ---
 
 ## Getting started
+
 <!-- {.-three-column} -->
 
 ### Hello world
+
 <!-- {.-prime} -->
 
 #### hello.go
+
 <!-- {.-file} -->
 
 ```go
@@ -63,6 +66,7 @@ Constants can be character, string, boolean, or numeric values.
 See: [Constants](https://tour.golang.org/basics/15)
 
 ## Basic types
+
 <!-- {.-three-column} -->
 
 ### Strings
@@ -125,6 +129,7 @@ func main () {
   fmt.Println("Value is", b)
 }
 ```
+
 <!-- {data-line="2"} -->
 
 ```go
@@ -133,6 +138,7 @@ func getPointer () (myPointer *int) {
   return &a
 }
 ```
+
 <!-- {data-line="3"} -->
 
 Pointers point to a memory location of a variable. Go is fully garbage-collected.
@@ -150,6 +156,7 @@ u := uint(i)
 See: [Type conversions](https://tour.golang.org/basics/13)
 
 ## Flow control
+
 <!-- {.-three-column} -->
 
 ### Conditional
@@ -163,6 +170,7 @@ if day == "sunday" || day == "saturday" {
   work()
 }
 ```
+
 <!-- {data-line="1,3,5"} -->
 
 See: [If](https://tour.golang.org/flowcontrol/5)
@@ -174,6 +182,7 @@ if _, err := getResult(); err != nil {
   fmt.Println("Uh oh")
 }
 ```
+
 <!-- {data-line="1"} -->
 
 A condition in an `if` statement can be preceded with a statement before a `;`.
@@ -220,6 +229,7 @@ See: [For loops](https://tour.golang.org/flowcontrol/1)
 See: [For-Range loops](https://gobyexample.com/range)
 
 ## Functions
+
 <!-- {.-three-column} -->
 
 ### Lambdas
@@ -229,6 +239,7 @@ myfunc := func() bool {
   return x > 10000
 }
 ```
+
 <!-- {data-line="1"} -->
 
 Functions are first class objects.
@@ -244,8 +255,8 @@ func getMessage() (a string, b string) {
   return "Hello", "World"
 }
 ```
-<!-- {data-line="2"} -->
 
+<!-- {data-line="2"} -->
 
 ### Named return values
 
@@ -256,6 +267,7 @@ func split(sum int) (x, y int) {
   return
 }
 ```
+
 <!-- {data-line="4"} -->
 
 By defining the return value names in the signature, a `return` (no args) will return variables with those names.
@@ -263,6 +275,7 @@ By defining the return value names in the signature, a `return` (no args) will r
 See: [Named return values](https://tour.golang.org/basics/7)
 
 ## Packages
+
 <!-- {.-three-column} -->
 
 ### Importing
@@ -288,6 +301,7 @@ See: [Importing](https://tour.golang.org/basics/1)
 ```go
 import r "math/rand"
 ```
+
 <!-- {data-line="1"} -->
 
 ```go
@@ -315,6 +329,7 @@ package hello
 Every package file has to start with `package`.
 
 ## Concurrency
+
 <!-- {.-three-column} -->
 
 ### Goroutines
@@ -335,6 +350,7 @@ func main() {
   fmt.Println(<-ch, <-ch, <-ch)
 }
 ```
+
 <!-- {data-line="3,6,7,8,13"} -->
 
 ```go
@@ -343,6 +359,7 @@ func push(name string, ch chan string) {
   ch <- msg
 }
 ```
+
 <!-- {data-line="3"} -->
 
 Channels are concurrency-safe communication objects, used in goroutines.
@@ -359,6 +376,7 @@ ch <- 3
 // fatal error:
 // all goroutines are asleep - deadlock!
 ```
+
 <!-- {data-line="1"} -->
 
 Buffered channels limit the amount of messages it can keep.
@@ -375,6 +393,7 @@ ch <- 2
 ch <- 3
 close(ch)
 ```
+
 <!-- {data-line="4"} -->
 
 #### Iterates across a channel until its closed
@@ -384,6 +403,7 @@ for i := range ch {
   ···
 }
 ```
+
 <!-- {data-line="1"} -->
 
 #### Closed if `ok == false`
@@ -404,6 +424,7 @@ func main() {
   fmt.Println("Working...")
 }
 ```
+
 <!-- {data-line="2"} -->
 
 Defers running a function until the surrounding function returns.
@@ -421,11 +442,13 @@ func main() {
   fmt.Println("Working...")
 }
 ```
+
 <!-- {data-line="2,3,4"} -->
 
 Lambdas are better suited for defer blocks.
 
 ## Structs
+
 <!-- {.-three-column} -->
 
 ### Defining
@@ -436,6 +459,7 @@ type Vertex struct {
   Y int
 }
 ```
+
 <!-- {data-line="1,2,3,4"} -->
 
 ```go
@@ -490,6 +514,7 @@ func (v Vertex) Abs() float64 {
   return math.Sqrt(v.X * v.X + v.Y * v.Y)
 }
 ```
+
 <!-- {data-line="1"} -->
 
 ```go
@@ -509,6 +534,7 @@ func (v *Vertex) Scale(f float64) {
   v.Y = v.Y * f
 }
 ```
+
 <!-- {data-line="1"} -->
 
 ```go
@@ -523,10 +549,10 @@ See: [Pointer receivers](https://tour.golang.org/methods/4)
 
 ## References
 
-- [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
-- [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
-- [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
-- [Go by Example](https://gobyexample.com/) _(gobyexample.com)_
-- [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
-- [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
-- [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _(github.com)_
+* [A tour of Go](https://tour.golang.org/welcome/1) _(tour.golang.org)_
+* [Golang wiki](https://github.com/golang/go/wiki/) _(github.com)_
+* [Awesome Go](https://awesome-go.com/) _(awesome-go.com)_
+* [Go by Example](https://gobyexample.com/) _(gobyexample.com)_
+* [Effective Go](https://golang.org/doc/effective_go.html) _(golang.org)_
+* [JustForFunc Youtube](https://www.youtube.com/channel/UC_BzFbxG2za3bp5NRRRXJSw) _(youtube.com)_
+* [Style Guide](https://github.com/golang/go/wiki/CodeReviewComments) _(github.com)_

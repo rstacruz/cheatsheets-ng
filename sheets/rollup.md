@@ -26,6 +26,7 @@ export default {
   }
 }
 ```
+
 #### Terminal
 
 ```bash
@@ -33,7 +34,7 @@ npm install -D rollup
 ```
 
 | Command                                | Description         |
-| ---                                    | ---                 |
+| -------------------------------------- | ------------------- |
 | `rollup -c -o bundle.js`               | bundle using config |
 | `rollup main.js --o bundle.js --f cjs` | bundle              |
 | `rollup --watch`                       | bundle continuously |
@@ -90,17 +91,18 @@ export default {
   },
   plugins [ json() ]
 }
-
 ```
 
 ### npm packages
 
 #### Terminal
+
 ```bash
 npm install --save-dev rollup-plugin-node-resolve
 ```
 
 #### rollup.config.js
+
 ```js
 import resolve from 'rollup-plugin-node-resolve'
 
@@ -110,7 +112,7 @@ export default {
     file: 'bundle.js',
     format: 'cjs'
   },
-  plugins: [ resolve() ]
+  plugins: [resolve()]
 }
 ```
 
@@ -135,12 +137,14 @@ export default {
     file: 'bundle.js',
     format: 'cjs'
   },
-  plugins: [resolve({
-    // pass custom options to the resolve plugin
-    customResolveOptions: {
-      moduleDirectory: 'node_modules'
-    }
-  })],
+  plugins: [
+    resolve({
+      // pass custom options to the resolve plugin
+      customResolveOptions: {
+        moduleDirectory: 'node_modules'
+      }
+    })
+  ],
   // indicate which modules should be treated as external
   external: ['lodash']
 }

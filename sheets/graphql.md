@@ -7,19 +7,25 @@ updated: 2017-09-23
 ## Intro
 
 ## Queries
+
 <!-- {.-three-column} -->
 
 ### Basic query
 
 ```js
-{ status }
+{
+  status
+}
 ```
 
 #### ↓
 
 ```js
-{ status: 'available' }
+{
+  status: 'available'
+}
 ```
+
 <!-- {.-setup} -->
 
 ### Nesting
@@ -35,6 +41,7 @@ updated: 2017-09-23
     { name: "Luke Skywalker",
       height: 1.74 } }
 ```
+
 <!-- {.-setup} -->
 
 ### Lists
@@ -46,11 +53,11 @@ updated: 2017-09-23
 #### ↓
 
 ```js
-{ friends:
-    [ { name: "Luke Skywalker" },
-      { name: "Han Solo" },
-      { name: "R2D2" } ] }
+{
+  friends: [{ name: 'Luke Skywalker' }, { name: 'Han Solo' }, { name: 'R2D2' }]
+}
 ```
+
 <!-- {.-setup} -->
 
 GraphQL queries look the same for both single items or lists of items.
@@ -70,6 +77,7 @@ GraphQL queries look the same for both single items or lists of items.
     { id: "1000",
     { name: "Luke Skywalker" } }
 ```
+
 <!-- {.-setup} -->
 
 ### Aliases
@@ -89,11 +97,13 @@ GraphQL queries look the same for both single items or lists of items.
     han:
     { name: "Han Solo" } }
 ```
+
 <!-- {.-setup} -->
 
 ### Operation names and variables
 
 #### Query
+
 ```js
 query FindHero($id: String!) {
   hero(id: $id) { name }
@@ -105,7 +115,9 @@ Just to make things less ambiguous. Also, to use variables, you need an operatio
 #### Variables
 
 ```js
-{ id: '1000' }
+{
+  id: '1000'
+}
 ```
 
 ### Mutations
@@ -119,13 +131,21 @@ Just to make things less ambiguous. Also, to use variables, you need an operatio
 #### Variables
 
 ```js
-{ review: { stars: 5 } }
+{
+  review: {
+    stars: 5
+  }
+}
 ```
 
 #### ↓
 
 ```js
-{ createReview: { id: 5291 } }
+{
+  createReview: {
+    id: 5291
+  }
+}
 ```
 
 Mutations are just fields that do something when queried.
@@ -144,9 +164,7 @@ Mutations are just fields that do something when queried.
 
 Great for searching.
 
-
-Over HTTP
----------
+## Over HTTP
 
 #### GET
 
@@ -166,8 +184,8 @@ fetch('http://myapi/graphql', {
 })
 ```
 
-Schema
-------
+## Schema
+
 <!-- {.-three-column} -->
 
 ### Basic schemas
@@ -246,6 +264,7 @@ type Root {
   direction: DIRECTION!
 }
 ```
+
 <!-- {data-line="1,2,3,4"} -->
 
 ### Unions
@@ -260,10 +279,10 @@ type Query {
   search(q: String) [Result]
 }
 ```
+
 <!-- {data-line="4"} -->
 
-References
-----------
+## References
 
-- <http://graphql.org/learn/queries/>
-- <http://graphql.org/learn/serving-over-http/>
+* <http://graphql.org/learn/queries/>
+* <http://graphql.org/learn/serving-over-http/>

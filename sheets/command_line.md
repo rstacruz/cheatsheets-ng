@@ -8,13 +8,14 @@ title: Command line stuff
 
 ### Format
 
-| Switch | Description |
-|---|---|
-| `-1` | One entry per line |
-| `-l` | Long view |
-| `-o` | Long view (without groups) |
-| `-C` | Multicolumn (sorted horizontally) |
-| `-x` | Multicolumn (sorted vertically) |
+| Switch | Description                       |
+| ------ | --------------------------------- |
+| `-1`   | One entry per line                |
+| `-l`   | Long view                         |
+| `-o`   | Long view (without groups)        |
+| `-C`   | Multicolumn (sorted horizontally) |
+| `-x`   | Multicolumn (sorted vertically)   |
+
 |---
 | `-F` | Add / after directories |
 | `-G` | Color |
@@ -29,14 +30,15 @@ title: Command line stuff
 
 ### Sorting
 
-| Switch | Description |
-|---|---|
-| `-r` | reverse order |
-| `-S` | sort by size |
-| `-t` | sort by time modified |
-| `-u` | sort by time accessed |
-| `-U` | sort by time created |
-| `-c` | sort by time status was changed |
+| Switch | Description                     |
+| ------ | ------------------------------- |
+| `-r`   | reverse order                   |
+| `-S`   | sort by size                    |
+| `-t`   | sort by time modified           |
+| `-u`   | sort by time accessed           |
+| `-U`   | sort by time created            |
+| `-c`   | sort by time status was changed |
+
 |---
 | `-h` | Human-readable size (3k) |
 {:.shortcuts}
@@ -56,10 +58,10 @@ title: Command line stuff
 
 ### Options
 
-| `-bN` | N*512 bytes |
+| `-bN` | N\*512 bytes |
 | `-cN` | N bytes |
 | `-nN` | N lines |
-| `+N`  | Start from line N |
+| `+N` | Start from line N |
 {:.shortcuts}
 
 <br>
@@ -98,10 +100,11 @@ sudo [options] <command>
 
 ### Interactive
 
-| Switch | Description |
-|---|---|
+| Switch     | Description                         |
+| ---------- | ----------------------------------- |
 | `-i [cmd]` | Interactive shell without variables |
-| `-s [cmd]` | Interactive shell |
+| `-s [cmd]` | Interactive shell                   |
+
 |----
 | `-u user` | run as this user |
 | `-g group` | run as this group |
@@ -144,9 +147,10 @@ grep [options] [pattern] [file ...]
 
 ### Options
 
-| Switch | Description |
-|---|---|
+| Switch   | Description                           |
+| -------- | ------------------------------------- |
 | `-A num` | Print `num` lines of training context |
+
 |----
 | `-G` | --basic-regexp (default) |
 | `-E` | --extended-regexp |

@@ -7,6 +7,7 @@ updated: 2017-09-04
 ---
 
 ### Short example
+
 <!-- {.-prime} -->
 
 ```ini
@@ -71,4 +72,4 @@ indent_size = 2
 
 ### References
 
-- <http://EditorConfig.org>
+* [EditorConfig website](http://EditorConfig.org) _(editorconfig.org)_

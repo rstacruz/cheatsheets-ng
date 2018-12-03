@@ -1,21 +1,29 @@
 ---
-title: Gmail
+title: Gmail settings
 ---
 
-### IMAP
+### IMAP settings
 
- * `imap.gmail.com:993`
- * SSL: yes
- * Username: full `username@gmail.com`
+| Key      | Value                     |
+| -------- | ------------------------- |
+| Host     | `imap.gmail.com`          |
+| Port     | `993`                     |
+| SSL      | `Yes`                     |
+| Username | full `username@gmail.com` |
 
-### SMTP
+### SMTP settings
 
- * `smtp.gmail.com`
- * SSL port: 465
- * TLS/STARTTLS port: 587
- * Use authentication: yes
+| Key                | Value            |
+| ------------------ | ---------------- |
+| Host               | `smtp.gmail.com` |
+| SSL port           | `465`            |
+| TLS/STARTTLS port  | `587`            |
+| Use authentication | `yes`            |
 
-### POP3
+### POP3 settings
 
- * `pop.gmail.com:995`
- * SSL: yes
+| Key  | Value           |
+| ---- | --------------- |
+| Host | `pop.gmail.com` |
+| Port | `995`           |
+| SSL  | `Yes`           |

@@ -3,52 +3,50 @@ title: DOM Selection
 category: JavaScript
 ---
 
-## Selection
-See <http://devdocs.io/dom/selection>
+### Selection
 
 ```js
-var selection = document.getSelection()
+var sel = document.getSelection()
 ```
 
-## Methods
+See: <http://devdocs.io/dom/selection>
+
+### Selection methods
 
 ```js
-selection
-  .removeAllRanges()   // deselects
-  .addRange(range)     // sets a selection
-  .removeRange(range)  // remove a range
+sel.removeAllRanges() //  deselects
+sel.addRange(range) //    sets a selection
+sel.removeRange(range) // remove a range
 ```
 
 ```js
-selection
-  .rangeCount          // ranges
-  .getRangeAt(0)       // get the 0th range
+sel.rangeCount //        ranges
+sel.getRangeAt(0) //     get the 0th range
 ```
 
 ### Collapsing
 
 ```js
-selection
-  .collapse(parent, offset)
-  .collapseToEnd()
-  .collapseToStart()
-  .isCollapsed
+sel.collapse(parent, offset)
+sel.collapseToEnd()
+sel.collapseToStart()
+sel.isCollapsed
 ```
 
 ```js
-selection
-  .containsNode(node)
+sel.containsNode(node)
 ```
 
 ### Deleting
 
 ```js
-selection
-  .deleteFromDocument()
+sel.deleteFromDocument()
 ```
 
 ### Events
 
 ```js
-document.addEventListener('selectionchange', () => {})
+document.addEventListener('selectionchange', () => {
+  /* ... */
+})
 ```

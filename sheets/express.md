@@ -40,7 +40,7 @@ app.use(express.logger())
 
 ```js
 app.locals({
-  title: "MyApp",
+  title: 'MyApp'
 })
 ```
 
@@ -49,13 +49,13 @@ app.locals({
 ### Request
 
 ```js
-// GET  /user/tj
-req.path         //=> "/user/tj"
-req.url          //=> "/user/tj"
-req.xhr          //=> true|false
-req.method       //=> "GET"
+// GET /user/tj
+req.path //       => "/user/tj"
+req.url //        => "/user/tj"
+req.xhr //        => true|false
+req.method //     => "GET"
 req.params
-req.params.name  //=> "tj"
+req.params.name // => "tj"
 req.params[0]
 ```
 
