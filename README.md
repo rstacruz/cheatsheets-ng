@@ -2,12 +2,12 @@
 
 > TL;DR for developer documentation - a ridiculous collection of cheatsheets
 
-[![Status](https://travis-ci.org/rstacruz/cheatsheets.svg?branch=master)](https://travis-ci.org/rstacruz/cheatsheets "See test builds")
+[![Status](https://travis-ci.org/rstacruz/cheatsheets.svg?branch=master)](https://travis-ci.org/rstacruz/cheatsheets 'See test builds')
 
 <br>
 
 <p align='center'>
-<a href='https://devhints.io/'><img src='_docs/images/screenshot.png' width=600></a>
+<a href='https://devhints.io/'><img src='https://raw.githubusercontent.com/rstacruz/cheatsheets/master/_docs/images/screenshot.png' width=600></a>
 <br>
 ✨ <b><a href='https://devhints.io/'>devhints.io</a></b> ✨
 </p>
