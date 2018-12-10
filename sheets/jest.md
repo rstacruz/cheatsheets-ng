@@ -9,16 +9,18 @@ intro: |
   A quick overview to [Jest](https://facebook.github.io/jest/), a test framework for Node.js. This guide targets Jest v20.
 ---
 
-Testing
--------
+## Testing
+
 <!-- {.-three-column} -->
 
 ### Quick start
+
 <!-- {.-prime} -->
 
 ```bash
 npm install --save-dev jest babel-jest
 ```
+
 <!-- {data-line="1"} -->
 
 ```js
@@ -83,7 +85,6 @@ it.only(···) // alias: fit()
 
 See: [test.only](http://facebook.github.io/jest/docs/en/api.html#testonlyname-fn)
 
-
 ### Skipping tests
 
 ```js
@@ -93,16 +94,15 @@ it.skip(···) // alias: xit()
 
 See: [test.skip](http://facebook.github.io/jest/docs/en/api.html#testskipname-fn)
 
-Expect
-------
+## Expect
+
 <!-- {.-three-column} -->
 
 ### Basic expectations
 
 ```js
 expect(value)
-  .not
-  .toBe(value)
+  .not.toBe(value)
   .toEqual(value)
   .toBeTruthy()
 ```
@@ -113,8 +113,7 @@ See: [expect()](http://facebook.github.io/jest/docs/en/expect.html#expectvalue)
 ### Snapshots
 
 ```js
-expect(value)
-  .toMatchSnapshot()
+expect(value).toMatchSnapshot()
 ```
 
 ### Errors
@@ -168,8 +167,7 @@ expect(value)
 ### Strings
 
 ```js
-expect(value)
-  .toMatch(regexpOrString)
+expect(value).toMatch(regexpOrString)
 ```
 
 ### Others
@@ -182,8 +180,7 @@ expect.addSnapshotSerializer(serializer)
 expect.assertions(1)
 ```
 
-More features
--------------
+## More features
 
 ### Asynchronous tests
 
@@ -194,6 +191,7 @@ test('works with promises', () => {
   })
 })
 ```
+
 <!-- {data-line="2"} -->
 
 ```js
@@ -202,6 +200,7 @@ test('works with async/await', async () => {
   ···
 })
 ```
+
 <!-- {data-line="2"} -->
 
 Return promises, or use async/await.
@@ -215,6 +214,7 @@ it('works', () => {
   expect(output).toMatchSnapshot()
 })
 ```
+
 <!-- {data-line="3"} -->
 
 First run creates a snapshot. Subsequent runs match the saved snapshot.
@@ -225,17 +225,19 @@ See: [Snapshot testing](http://facebook.github.io/jest/docs/en/snapshot-testing.
 ```jsx
 import renderer from 'react-test-renderer'
 ```
+
 <!-- {.-setup} -->
 
 ```jsx
 it('works', () => {
-  const tree = renderer.create(
-    <Link page="http://www.facebook.com">Facebook</Link>
-  ).toJSON()
+  const tree = renderer
+    .create(<Link page="http://www.facebook.com">Facebook</Link>)
+    .toJSON()
 
   expect(tree).toMatchSnapshot()
 })
 ```
+
 <!-- {data-line="2,3,4"} -->
 
 React's test renderer can be used for Jest snapshots.
@@ -285,7 +287,7 @@ expect(fn)
 expect(fn)
   .toHaveBeenCalledWith(expect.anything())
   .toHaveBeenCalledWith(expect.any(constructor))
-  .toHaveBeenCalledWith(expect.arrayContaining([ values ]))
+  .toHaveBeenCalledWith(expect.arrayContaining([values]))
   .toHaveBeenCalledWith(expect.objectContaining({ props }))
   .toHaveBeenCalledWith(expect.stringContaining(string))
   .toHaveBeenCalledWith(expect.stringMatching(regexp))
@@ -304,6 +306,7 @@ b = new Fn()
 Fn.mock.instances
 // → [a, b]
 ```
+
 <!-- {data-line="1"} -->
 
 See: [.mock property](http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
@@ -317,10 +320,11 @@ fn(456)
 ```
 
 ```js
-fn.mock.calls.length   // → 2
-fn.mock.calls[0][0]    // → 123
-fn.mock.calls[1][0]    // → 456
+fn.mock.calls.length // → 2
+fn.mock.calls[0][0] // → 123
+fn.mock.calls[1][0] // → 456
 ```
+
 <!-- {data-line="1,2,3"} -->
 
 See: [.mock property](http://facebook.github.io/jest/docs/en/mock-functions.html#mock-property)
@@ -341,19 +345,22 @@ jest.fn().mockReturnValueOnce('hello')
 ### Mock implementations
 
 ```js
-const fn = jest.fn()
+const fn = jest
+  .fn()
   .mockImplementationOnce(() => 1)
   .mockImplementationOnce(() => 2)
 ```
+
 <!-- {data-line="2,3"} -->
 
 ```js
-fn()    // → 1
-fn()    // → 2
+fn() // → 1
+fn() // → 2
 ```
 
 ## References
+
 <!-- {.-one-column} -->
 
-- <http://facebook.github.io/jest/>
-<!-- {.-also-see} -->
+* <http://facebook.github.io/jest/>
+  <!-- {.-also-see} -->

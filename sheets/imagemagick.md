@@ -2,30 +2,51 @@
 title: Imagemagick
 ---
 
-### Stuff
+### Common options
 
-    -resize 100x40
-    -crop 40x30+10+10   # (width)x(height)+(x)+y
-    -crop 40x30-10-10   # (width)x(height)+(x)+y
-    -flip               # vertical
-    -flop               # horizontal
-    -transpose          # flip vertical + rotate 90deg
-    -transverse         # flip horizontal + rotate 270deg
-    -trim               # trim image edges
-    -rotate 90
+| Options             | Description                     |
+| ------------------- | ------------------------------- |
+| `-resize 100x40`    | Resize                          |
+| ---                 | ---                             |
+| `-crop 40x30+10+10` | Crop (`WIDTHxHEIGHT+X+Y`)       |
+| `-crop 40x30-10-10` | Crop (`WIDTHxHEIGHT-X-Y`)       |
+| ---                 | ---                             |
+| `-flip`             | Flip vertical                   |
+| `-flop`             | Flip horizontal                 |
+| `-transpose`        | Flip vertical + rotate 90deg    |
+| `-transverse`       | Flip horizontal + rotate 270deg |
+| ---                 | ---                             |
+| `-rotate 90`        | Rotate 90 degrees               |
+| `-trim`             | Trim image edges                |
 
 ### Resize to fit
 
-    convert input.jpg -resize 80x80^ -gravity center -extent 80x80 icon.png
+```bash
+convert input.jpg \
+  -resize 80x80^ \
+  -gravity center \
+  -extent 80x80 \
+  icon.png
+```
+
+This resizes to `80x80`, fit to cover.
 
 ### Convert all images to another format
 
-    mogrify -format jpg -quality 85 *.png
+```bash
+mogrify -format jpg -quality 85 *.png
+```
+
+This converts all `jpg` to `png`.
 
 ### Make a pdf
 
-    convert *.jpg hello.pdf
+```bash
+convert *.jpg hello.pdf
+```
+
+Converts a jpeg to PDF.
 
 ### References
 
-  * http://www.noah.org/wiki/ImageMagick
+* <http://www.noah.org/wiki/ImageMagick>

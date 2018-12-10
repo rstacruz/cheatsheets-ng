@@ -11,6 +11,7 @@ weight: -1
 ```
 npm install --save-dev expect
 ```
+
 <!-- {.-setup} -->
 
 ```js
@@ -32,12 +33,13 @@ See: [mjackson/expect](https://github.com/mjackson/expect)
 ### Assertions
 
 ```js
-expect(x).toBe(y)
+expect(x)
+  .toBe(y)
   .toBe(val)
   .toEqual(val)
   .toThrow(err)
-  .toExist()          // aka: toBeTruthy()
-  .toNotExist()       // aka: toBeFalsy()
+  .toExist() //    aka: toBeTruthy()
+  .toNotExist() // aka: toBeFalsy()
   .toBeA(constructor)
   .toBeA('string')
   .toMatch(/expr/)
@@ -45,7 +47,7 @@ expect(x).toBe(y)
   .toBeGreaterThan(n)
   .toBeLessThanOrEqualTo(n)
   .toBeGreaterThanOrEqualTo(n)
-  .toInclude(val)     // aka: toContain(val)
+  .toInclude(val) // aka: toContain(val)
   .toExclude(val)
   .toIncludeKey(key)
   .toExcludeKey(key)
@@ -71,6 +73,7 @@ const video = {
   play: function () { ··· }
 }
 ```
+
 <!-- {.-setup} -->
 
 ```js
@@ -101,5 +104,5 @@ expect(spy).toHaveBeenCalledWith('some', 'args')
 
 ### References
 
-- <https://www.npmjs.com/package/expect>
-- <https://github.com/mjackson/expect>
+* <https://www.npmjs.com/package/expect>
+* <https://github.com/mjackson/expect>

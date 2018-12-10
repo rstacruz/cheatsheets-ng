@@ -20,7 +20,9 @@ weight: -1
  *     foo('hello')
  */
 
-function foo(n) { return n }
+function foo(n) {
+  return n
+}
 ```
 
 See: <http://usejsdoc.org/index.html>
@@ -28,7 +30,7 @@ See: <http://usejsdoc.org/index.html>
 ### Types
 
 | Type                         | Description           |
-| ---                          | ---                   |
+| ---------------------------- | --------------------- |
 | `@param {string=} n`         | Optional              |
 | `@param {string} [n]`        | Optional              |
 | `@param {(string|number)} n` | Multiple types        |
@@ -73,7 +75,8 @@ const FOO = 1
  * @param {Song} song - The {@link Song} to be played
  */
 
-function play (song) {
+function play(song) {
+  // ...
 }
 ```
 

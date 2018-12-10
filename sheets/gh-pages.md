@@ -6,7 +6,7 @@ layout: 2017/sheet
 
 ## Custom domains
 
-### Custom domains
+### Setting up CNAME file
 
 ```sh
 $ echo "foobar.com" > CNAME
@@ -19,23 +19,27 @@ See: [Setting up a custom domain](https://help.github.com/articles/quick-start-s
 
 ### Set up your domain
 
-Subdomain (like www):
-<!-- {.-setup} -->
+#### For subdomains (eg, www)
 
-     CNAME => username.github.io
+```
+CNAME => username.github.io
+```
 
-Apex domains:
-<!-- {.-setup} -->
+#### For apex domains
 
-     ALIAS => username.github.io
+```
+ALIAS => username.github.io
+```
 
-Apex domains (alternative):
-<!-- {.-setup} -->
+#### For Apex domains (alternative)
 
-    A => 192.30.252.153
-    A => 192.30.252.154
+```
+A => 192.30.252.153
+A => 192.30.252.154
+```
 
-## References
+### References
+
 <!-- {.-one-column} -->
 
-- <https://pages.github.com>
+* <https://pages.github.com>

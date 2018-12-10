@@ -42,8 +42,5 @@ let store = createStore(reducer)
 let render = createRenderer(document.body, store.dispatch)
 
 // Update the page and add redux state to the context
-render(
-  <MyButton>Hello World!</MyButton>,
-  store.getState()
-  )
+render(<MyButton>Hello World!</MyButton>, store.getState())
 ```

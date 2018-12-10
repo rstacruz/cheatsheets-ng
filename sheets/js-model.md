@@ -2,47 +2,60 @@
 title: js-model
 category: JavaScript libraries
 layout: 2017/sheet
+intro: |
+  [js-model](http://benpickles.github.io/js-model/) is a library for RESTful models in JavaScript.
 ---
 
 ### Example
 
-```bash
-Project = Model "project", ->
-  @extend
-    findByTitle: (title) -> ...
+```js
+Project = Model('project', function() {
+  this.extend({
+    findByTitle: title => {
+      /*...*/
+    }
+  })
 
-  @include
-    markAsDone: -> ...
-
-  # ActiveRecord::Base.include_root_in_json = false
+  this.include({
+    markAsDone: () => {
+      /*...*/
+    }
+  })
+})
 ```
 
-```bash
+```js
 project = Project.find(1)
-project = Project.findByTitle("hello")
+project = Project.findByTitle('hello')
+```
 
+```js
 project.markAsDone()
 ```
 
+In Rails, be sure to set `ActiveRecord::Base.include_root_in_json = false` to make persistence work properly.
+
 ### Persistence
 
-```bash
-Project "hi", ->
-  @persistence Model.REST, "/projects"
-  @persistence Model.localStorage
+```js
+Project('hi', function() {
+  this.persistence(Model.REST, '/projects')
+  this.persistence(Model.localStorage)
+})
 ```
 
-```bash
-Project.load ->
-  # loaded
+```js
+Project.load(function() {
+  // Loaded
+})
 ```
 
 ### Attrs
 
-```bash
-project = new Project(name: "Hello")
+```js
+project = new Project((name: 'Hello'))
 
-project.attr('name', "Hey")
+project.attr('name', 'Hey')
 project.attr('name')
 
 project.save()
@@ -51,36 +64,49 @@ project.destroy()
 
 ### Collection
 
-```bash
+```js
 Food.add(egg)
 Food.all()
-Food.select (food) -> ...
+Food.select(food => {
+  /* ... */
+})
 Food.first()
 ```
 
-```bash
+```js
 Food.find(id)
 ```
 
 ### Events
 
-```bash
-# Classes
-Project.bind "add", (obj) ->
-Project.bind "remove", (obj) ->
+#### Classes
+
+```js
+Project.bind('add', obj => {
+  /*...*/
+})
+Project.bind('remove', obj => {
+  /*...*/
+})
 ```
 
-```bash
-# Instances
-project.bind "update", ->
-project.bind "destroy", ->
+#### Instances
+
+```js
+project.bind('update', () => {
+  /*...*/
+})
+project.bind('destroy', () => {
+  /*...*/
+})
 ```
 
-```bash
-project.trigger "turn_blue"
+```js
+project.trigger('turn_blue')
 ```
 
 ## References
+
 <!-- {.-one-column} -->
 
-- <http://benpickles.github.io/js-model/>
+* <http://benpickles.github.io/js-model/>

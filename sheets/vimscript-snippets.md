@@ -5,36 +5,47 @@ category: Vim
 
 ### Bind function to key and command
 
-    command! YoFunctionHere call s:YoFunctionHere()
-    nnoremap <silent> x :call <SID>FunctionHere()<CR>
-    function! s:FunctionHere()
-    endfunction
+```vim
+command! YoFunctionHere call s:YoFunctionHere()
+nnoremap <silent> x :call <SID>FunctionHere()<CR>
+
+function! s:FunctionHere()
+  " ...do something here
+endfunction
+```
 
 ### Call a function in insert mode
 
-    inoremap X <C-R>=script#myfunction()<CR>
-    inoremap <F2> <C-R>=MyVimFunc()?'':''<CR>
+```vim
+inoremap X <C-R>=script#myfunction()<CR>
+inoremap <F2> <C-R>=MyVimFunc()?'':''<CR>
+```
 
 ### Checking plugins
 
-    if globpath(&rtp, "plugin/commentary.vim") != ""
+```
+if globpath(&rtp, "plugin/commentary.vim") != ""
+```
 
-## Autoload
+Checks if there's a `plugin/commentary.vim` in the runtime path.
 
-    " autoload/hello.vim
-    if exists("g:hello_loaded") | finish | endif
-    let g:hello_loaded=1
+### Autoload
 
-    function hello#method()
-    endfunction
+```vim
+" autoload/hello.vim
+if exists("g:hello_loaded") | finish | endif
+let g:hello_loaded=1
 
-    " calling hello#method() will load only if autoload()
+function hello#method()
+endfunction
+```
 
-## Misc
+Calling `hello#method()` will load autoload the script.
 
-### Version check
+### Version checking
 
-    if version < 704
-      echom "requires vim >= 7.4"
-    endif
-
+```vim
+if version < 704
+  echom "requires vim >= 7.4"
+endif
+```

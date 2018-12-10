@@ -24,12 +24,14 @@ gremlins.createHorde().unleash()
 ### Custom gremlins
 
 ```js
-gremlins.createHorde()
+gremlins
+  .createHorde()
   .allGremlins()
-  .gremlin(function () {
+  .gremlin(function() {
     document.activeElement.blur()
   })
 ```
+
 <!-- {data-line="3,4,5"} -->
 
 Runs the given function at regular intervals.
@@ -59,31 +61,33 @@ See: [Specifying gremlins](https://github.com/marmelab/gremlins.js#setting-greml
 ### Before and after
 
 ```js
-gremlins.createHorde()
-  .before(function () {
+gremlins
+  .createHorde()
+  .before(function() {
     this.log('sync')
     console.profile('gremlins')
   })
-  .after(function () {
+  .after(function() {
     this.log('done')
     console.profileEnd()
   })
 ```
+
 <!-- {data-line="2,6"} -->
 
 ### Asynchronous
 
 ```js
-gremlins.createHorde()
-  .before(function (done) {
-    setTimeout(() => {
-      this.log('async')
-      done()
-    }, 500)
-  })
+gremlins.createHorde().before(function(done) {
+  setTimeout(() => {
+    this.log('async')
+    done()
+  }, 500)
+})
 ```
+
 <!-- {data-line="2"} -->
 
 ## References
 
-- [marmelab/gremlins.js](https://github.com/marmelab/gremlins.js)
+* [marmelab/gremlins.js](https://github.com/marmelab/gremlins.js)
