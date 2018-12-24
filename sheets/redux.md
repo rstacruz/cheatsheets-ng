@@ -11,18 +11,19 @@ weight: -3
 ```js
 import { createStore } from 'redux'
 ```
+
 <!-- {.-setup} -->
 
 ```js
 // Reducer
-function counter (state = { value: 0 }, action) {
+function counter(state = { value: 0 }, action) {
   switch (action.type) {
-  case 'INCREMENT':
-    return { value: state.value + 1 }
-  case 'DECREMENT':
-    return { value: state.value - 1 }
-  default:
-    return state
+    case 'INCREMENT':
+      return { value: state.value + 1 }
+    case 'DECREMENT':
+      return { value: state.value - 1 }
+    default:
+      return state
   }
 }
 ```
@@ -44,6 +45,7 @@ returns a new `state` depending on the `action` it was given.
 ```js
 let store = createStore(counter)
 ```
+
 <!-- {.-setup} -->
 
 ```js
@@ -71,13 +73,16 @@ Dispatch actions to change the store's state.
 ```js
 import { Provider } from 'react-redux'
 ```
+
 <!-- {.-setup} -->
 
 ```js
 React.render(
   <Provider store={store}>
     <App />
-  </Provider>, mountNode)
+  </Provider>,
+  mountNode
+)
 ```
 
 The `<Provider>` component makes the store available in your React components. You need this so you can use `connect()`.
@@ -87,30 +92,27 @@ The `<Provider>` component makes the store available in your React components. Y
 ```js
 import { connect } from 'react-redux'
 ```
+
 <!-- {.-setup} -->
 
 ```js
 // A functional React component
-function App ({ message, onMessageClick }) {
-  return (
-    <div onClick={() => onMessageClick('hello')}>
-      {message}
-    </div>
-  )
+function App({ message, onMessageClick }) {
+  return <div onClick={() => onMessageClick('hello')}>{message}</div>
 }
 ```
 
 ```js
 // Maps `state` to `props`:
 // These will be added as props to the component.
-function mapState (state) {
+function mapState(state) {
   return { message: state.message }
 }
 
 // Maps `dispatch` to `props`:
-function mapDispatch (dispatch) {
+function mapDispatch(dispatch) {
   return {
-    onMessageClick (message) {
+    onMessageClick(message) {
       dispatch({ type: 'click', message })
     }
   }
@@ -124,11 +126,11 @@ export default connect(mapState, mapDispatch)(App)
 
 ```js
 export default connect(
-  (state) => ({
+  state => ({
     message: state.message
   }),
-  (dispatch) => ({
-    onMessageClick: (message) => {
+  dispatch => ({
+    onMessageClick: message => {
       dispatch({ type: 'click', message })
     }
   })
@@ -141,7 +143,9 @@ Same as above, but shorter.
 
 ```js
 const reducer = combineReducers({
-  counter, user, store
+  counter,
+  user,
+  store
 })
 ```
 
@@ -185,12 +189,14 @@ const enhancer = applyMiddleware(logger, thunk, ...)
 ```js
 const store = createStore(reducer, {}, enhancer)
 ```
+
 <!-- {data-line="1"} -->
 
 ## References
+
 <!-- {.-one-column} -->
 
 * [Redux](https://www.npmjs.com/package/redux) _(npmjs.com)_
 * [React-redux](https://www.npmjs.com/package/react-redux) _(npmjs.com)_
 * [Usage with React](http://redux.js.org/docs/basics/UsageWithReact.html) _(redux.js.org)_
-<!-- {.-also-see} -->
+  <!-- {.-also-see} -->

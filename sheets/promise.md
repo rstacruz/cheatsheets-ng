@@ -11,20 +11,21 @@ Based on the [Promise API reference][promise] (mozilla.org).
 ### Creating promises
 
 ```js
-new Promise(function (ok, err) {
-  doStuff(function () {
-    if (success) { ok(); }
-    else { err(); }
-  });
+new Promise(function(ok, err) {
+  doStuff(function() {
+    if (success) {
+      ok()
+    } else {
+      err()
+    }
+  })
 })
 ```
 
 ### Consuming promises
 
 ```js
-promise
-  .then(okFn, errFn)
-  .catch(errFn)
+promise.then(okFn, errFn).catch(errFn)
 ```
 
 ### Multiple promises

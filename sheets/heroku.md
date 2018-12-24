@@ -116,7 +116,6 @@ heroku maintenance:off
 
 ## Processes
 
-
 ### `ps` - Managing processes
 
 ```bash
@@ -191,5 +190,5 @@ See: [gist.github.com](https://gist.github.com/3316425)
 
 ## References
 
- * <https://addons.heroku.com/>
- * <https://devcenter.heroku.com/>
+* <https://addons.heroku.com/>
+* <https://devcenter.heroku.com/>
