@@ -1,12 +1,27 @@
 ---
 title: Regexp
+tags: [WIP]
 ---
 
-    (?P<named_match>...)
-    (?:invisible group)
+### Named matches
 
-    (?!negative look-ahead)
-    (?=positive look-ahead)
-    (?<!negative look-behind)
-    (?<=positive look-behind)
+```js
+(?P<named_match>...)
+```
 
+### Invisible group
+
+```
+(?:invisible group)
+```
+
+Groups prefixed with `?:` won't show up as matches.
+
+### Look-aheads
+
+```
+(?!negative look-ahead)
+(?=positive look-ahead)
+(?<!negative look-behind)
+(?<=positive look-behind)
+```

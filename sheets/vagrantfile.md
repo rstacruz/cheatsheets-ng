@@ -5,6 +5,7 @@ layout: 2017/sheet
 ---
 
 ## Vagrantfile
+
 <!-- {.-one-column} -->
 
 ```rb

@@ -31,11 +31,11 @@ Replace `.png` with `.jpg.png` in `*.png`.
 ### Options
 
 | Option | Description               |
-| ---    | ---                       |
+| ------ | ------------------------- |
 | `-n`   | Simulation                |
 | `-l`   | Symlink instead of rename |
 | `-i`   | Interactive               |
 
 ## Also see
 
-- [Rename website](http://plasmasturm.org/code/rename/) _(plasmasturm.org)_
+* [Rename website](http://plasmasturm.org/code/rename/) _(plasmasturm.org)_

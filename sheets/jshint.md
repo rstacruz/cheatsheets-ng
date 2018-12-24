@@ -7,8 +7,9 @@ updated: 2017-09-12
 
 ### Relaxing
 
-Enable these options to *not* throw errors in these conditions.
+Enable these options to _not_ throw errors in these conditions.
 See: [Relaxing](http://www.jshint.com/docs/options/#relaxing-options)
+
 <!-- {.-setup} -->
 
 ```js
@@ -22,6 +23,7 @@ missing_semicolons()
 if (m = str.match(/.../))
 ```
 
+<!-- pretiter-ignore -->
 ```js
 /* jshint debug: true */
 debugger;
@@ -44,6 +46,7 @@ div.innerWidth;
 expect(x).be.true;
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint laxcomma: true */
 var one = 1
@@ -64,26 +67,30 @@ process.env['name_here']
 
 ```js
 /* jshint strict: "global" */
-"use strict";
+'use strict'
 ```
 
 ### Enforcing
 
 Enable these options to catch more errors.
 See: [Enforcing](http://www.jshint.com/docs/options/#enforcing-options)
+
 <!-- {.-setup} -->
 
+<!-- prettier-ignore -->
 ```js
 /* jshint curly: true */
 while (day)                     // err: use { }'s
   shuffle();
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint eqeqeq: true */
 if (a == null)                  // err: use ===
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint es3: true */
 // ...for legacy IE compatibility
@@ -91,16 +98,19 @@ a.default = function() { ... }; // err: reserved word
 array = [ 1, 2, 3, ];           // err: extra comma
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint forin: true */
 for (key in obj) { ... }        // err: check obj.hasOwnProperty(key)
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint freeze: true */
 Array.prototype.count = ...;    // err: don't modify native prototypes
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint indent: 4 */
 if (x) {                        // err: expected indent of 4, found 2
@@ -108,12 +118,14 @@ if (x) {                        // err: expected indent of 4, found 2
 }
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint quotmark: single */
 /* jshint quotmark: double */
-alert("hi");                    // err: only single allowed
+alert("hi") // err: only single allowed
 ```
 
+<!-- prettier-ignore -->
 ```js
 /* jshint strict: true */
 function() { ... }              // err: need "use strict"

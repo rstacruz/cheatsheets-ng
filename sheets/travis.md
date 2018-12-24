@@ -79,6 +79,7 @@ rvm:
     before_install:
     - sudo apt-get update -q
     - sudo apt-get install gcc-4.8 -y
+
 <https://docs.travis-ci.com/user/installing-dependencies/>
 
 ### Etc
@@ -103,6 +104,6 @@ rvm:
 
 ### References
 
- * http://about.travis-ci.org/docs/user/build-configuration/
- * http://about.travis-ci.org/docs/user/languages/javascript-with-nodejs/
- * http://about.travis-ci.org/docs/user/languages/ruby/
+* http://about.travis-ci.org/docs/user/build-configuration/
+* http://about.travis-ci.org/docs/user/languages/javascript-with-nodejs/
+* http://about.travis-ci.org/docs/user/languages/ruby/

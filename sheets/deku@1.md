@@ -7,10 +7,10 @@ This is for Deku v1. See [deku](./deku) for a more updated cheatsheet.
 
 ```js
 /** @jsx element */
-import element from 'virtual-element'  // replacement for React.createElement
-import {render, tree} from 'deku'
+import element from 'virtual-element' // replacement for React.createElement
+import { render, tree } from 'deku'
 
-var app = <div class='my-app'>Hello World!</div>
+var app = <div class="my-app">Hello World!</div>
 
 render(tree(app), document.body)
 ```
@@ -19,11 +19,19 @@ render(tree(app), document.body)
 
 ```js
 Button = {
-  render () { return <button>Submit</button> }
+  render() {
+    return <button>Submit</button>
+  }
 }
 
 App = {
-  render () { return <div><Button /></div> }
+  render() {
+    return (
+      <div>
+        <Button />
+      </div>
+    )
+  }
 }
 
 render(tree(<App />), document.body)
@@ -57,6 +65,7 @@ render(tree(<App />), document.body)
 ```
 
 ## Magic virtual element
+
 Use [magic-virtual-element](https://github.com/dekujs/magic-virtual-element) to enable nice classnames.
 
 ```

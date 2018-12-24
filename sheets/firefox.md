@@ -1,5 +1,6 @@
 ---
-title: Firefox
+title: Firefox history
+tags: [Outdated]
 ---
 
 ### [Firefox 31](https://www.mozilla.org/en-US/firefox/31.0/releasenotes/) (July 2014)

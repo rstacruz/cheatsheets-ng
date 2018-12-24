@@ -8,14 +8,15 @@ updated:  2017-05-14
 ### Properties
 
 ```js
-import {observable, computed} from 'mobx'
+import { observable, computed } from 'mobx'
 
 class Page {
   @observable title = ''
   @observable published = false
   @observable author = null
 
-  @computed get authorName () {
+  @computed
+  get authorName() {
     return this.author || 'Anonymous'
   }
 }
@@ -25,7 +26,8 @@ class Page {
 
 ```js
 class Page {
-  @action publish () {
+  @action
+  publish() {
     this.published = true
     // do ajax/async here if you like
   }
@@ -52,7 +54,7 @@ temp.observe(...)
 ### Importing
 
 ```js
-import {autorun, autorunAsync, when} from 'mobx'
+import { autorun, autorunAsync, when } from 'mobx'
 ```
 
 ### autorun()
@@ -68,10 +70,8 @@ autorun(() => {
 
 ```js
 class Foo {
-  constructor () {
-    when(
-      () => !this.isVisible,
-      () => this.doSomething())
+  constructor() {
+    when(() => !this.isVisible, () => this.doSomething())
   }
 }
 ```
@@ -88,10 +88,10 @@ render () {
 
 ## [Modifiers](http://mobxjs.github.io/mobx/refguide/modifiers.html)
 
-- `asMap(obj)` - JS map (dynamic keys)
-- `asReference(fn)` - don't observe me
-- `asStructure(obj)` - JS object (observe as deepEqual)
-- `asFlat(array)` - JS array (observe its children)
+* `asMap(obj)` - JS map (dynamic keys)
+* `asReference(fn)` - don't observe me
+* `asStructure(obj)` - JS object (observe as deepEqual)
+* `asFlat(array)` - JS array (observe its children)
 
 ## React
 
@@ -102,12 +102,12 @@ import { observer } from 'mobx-react'
 
 @observer
 class PageView extends React.Component {
-  render () {
+  render() {
     return <div>{this.props.page.title}</div>
   }
 }
 
-<PageView page={page} />
+;<PageView page={page} />
 ```
 
 ### Functional components
@@ -124,4 +124,4 @@ const PageView = observer(({page}) => {
 
 ## References
 
-- <https://github.com/mobxjs/mobx>
+* <https://github.com/mobxjs/mobx>
