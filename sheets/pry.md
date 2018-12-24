@@ -3,111 +3,133 @@ title: Pry
 category: Ruby libraries
 ---
 
-### cd
+### `cd` and `ls`
 
 ```
-> cd Array
+pry(main)> cd Array
 ```
 
-```nohighlight
-> ls
+```
+pry(main)> ls
   Array.methods: [] try_convert
   Array#methods: & * + abbrev assoc at ...
 ```
 
 ```
-> show-source
+pry(main)> show-source
 ```
 
-### Code
+### Code (`show-method`)
 
-```nohighlight
-> show-method Array#select
+```
+pry(main)> show-method Array#select
 ```
 
-### Docs
+### Docs (`ri`, `show-doc`)
 
-```nohighlight
-> ri Array
-> ri Array#each
-
-> cd Gem
-> show-doc try_activate
+```
+pry(main)> ri Array
+pry(main)> ri Array#each
 ```
 
-### Finding
+pry(main)> cd Gem
+pry(main)> show-doc try_activate
+```
 
-```nohighlight
-> find-method each
+### Finding (`find-method`)
+
+```
+pry(main)> find-method each
   Array#each
   Array#each_index
   Enumerable#each_slice
   ...
 ```
 
-### Editing
+### Editing (`edit`)
 
-    > edit Pry#repl
+```
+pry(main)> edit Pry#repl
+```
 
-### Gems
+### Gems (`gem-*`)
 
-    > gem-cd foo      # Switch to gem's dir
-    > gem-install foo
-    > gem-list
+```
+pry(main)> gem-cd foo      # Switch to gem's dir
+pry(main)> gem-install foo
+pry(main)> gem-list
+```
 
 ### Misc commands
 
-    > hist          # History
-    > wtf?          # Trace of recent exception
+```
+pry(main)> hist    # History
+pry(main)> wtf?    # Trace of recent exception
+```
 
 ## Rails
 
 ### Rails console
 
-Also consider [pry-rails](https://rubygems.org/gems/pry-rails).
+```sh
+pry -r ./config/environment
+```
 
-    $ pry -r ./config/environment
+Also consider [pry-rails](https://rubygems.org/gems/pry-rails).
 
 ### Rails
 
-    > show-models
-    > show-routes
-    > show-middleware
+```
+pry(main)> show-models
+pry(main)> show-routes
+pry(main)> show-middleware
+```
 
 ### ls
 
-    > ls         # All
-
-    > ls -m      # Methods
-    > ls -M      # Instance methods
-
-    > ls -g      # Globals
-    > ls -l      # Local vars
-    > ls -c      # Constants
-
-    > ls -i      # Instance vars
-
-    > ls -G xx   # Grey by regex
+| Command     | Description      |
+| ----------- | ---------------- |
+| `ls`        | All              |
+| ---         | ---              |
+| `ls -m`     | Methods          |
+| `ls -M`     | Instance methods |
+| ---         | ---              |
+| `ls -g`     | Globals          |
+| `ls -l`     | Local vars       |
+| `ls -c`     | Constants        |
+| ---         | ---              |
+| `ls -i`     | Instance vars    |
+| ---         | ---              |
+| `ls -G xxx` | Grey by regex    |
 
 ## Shell integration
 
-shell-mode adds dir to the prompt.
+`shell-mode` adds dir to the prompt.
 
-    pry(main)> shell-mode
-    pry(main):/home/x $
+```
+pry(main)> shell-mode
+pry(main):/home/x $
+```
 
 Commands with `.` are shell commands.
 
-    pry(main)> .cat hello.txt
+```
+pry(main)> .cat hello.txt
+```
 
 ## hirb
+
+```rb
+pry(main)> table User.all
+pry(main)> view User.all
+pry(main)> view User.all, fields: %w[id name email]
+```
+
 Add the [hirb](https://rubygems.org/gems/hirb) gem.
 
-    > table User.all
-    > view User.all
-    > view User.all, fields: %w[id name email]
 
 ## pry-rescue
+
 Add the [pry-rescue](https://github.com/ConradIrwin/pry-rescue) gem.
 
 ```rb
@@ -116,21 +138,20 @@ Pry::rescue {
 }
 ```
 
-Or run:
+#### Or run:
 
 ```
 bundle exec rescue rspec
 ```
 
-Additional commands:
+#### Additional commands:
 
-```
+```pry
 pry(main)> cd-cause
 pry(main)> try-again
 ```
 
-## pry-remote
-Add the [pry-remote](https://github.com/Mon-Ouie/pry-remote) gem.
+### pry-remote
 
 ```rb
 # In your code:
@@ -140,7 +161,9 @@ binding.remote_pry
 bundle exec pry-remote
 ```
 
-## Reference
+Add the [pry-remote](https://github.com/Mon-Ouie/pry-remote) gem.
 
- * [Pry](https://github.com/pry/pry)
- * [Hirb](https://github.com/cldwalker/hirb)
+### References
+
+* [Pry](https://github.com/pry/pry)
+* [Hirb](https://github.com/cldwalker/hirb)
