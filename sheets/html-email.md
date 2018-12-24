@@ -8,7 +8,7 @@ updated: 2017-08-29
 ### Properties to avoid
 
 | Property             | Where                   |
-| ---                  | ---                     |
+| -------------------- | ----------------------- |
 | `position`           | (Outlook, Gmail, Yahoo) |
 | `display`            | (Outlook, Gmail)        |
 | `float`              | (Outlook)               |
@@ -28,11 +28,11 @@ updated: 2017-08-29
 
 ### Selectors to avoid
 
-| `E[attr]`                  | (Outlook, Gmail)        |
-| `E:nth-child(n)`           | (Outlook, Gmail)        |
+| `E[attr]` | (Outlook, Gmail) |
+| `E:nth-child(n)` | (Outlook, Gmail) |
 | `::before` _and_ `::after` | (Outlook, Yahoo, Gmail) |
-| `E F`                      | (Gmail)                 |
-| `E + F`, `E > F` _etc_     | (Outlook, Gmail)        |
+| `E F` | (Gmail) |
+| `E + F`, `E > F` _etc_ | (Outlook, Gmail) |
 
 Inline your CSS as much as possible.
 
@@ -61,6 +61,7 @@ Inline your CSS as much as possible.
 `<style>` is supported in the head and body by everything except Gmail. Only use them for responsive styles.
 
 ## References
+
 <!-- {.-one-column} -->
 
-- [CSS support matrix](https://www.campaignmonitor.com/css/) _campaignmonitor.com_
+* [CSS support matrix](https://www.campaignmonitor.com/css/) _campaignmonitor.com_

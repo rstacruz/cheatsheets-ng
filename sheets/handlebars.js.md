@@ -7,15 +7,19 @@ weight: -1
 
 ### Helpers
 
+#### Defining
+
 ```js
 Handlebars.registerHelper('link_to', function() {
-  return "<a href='" + this.url + "'>" + this.body + "</a>";
+  return "<a href='" + this.url + "'>" + this.body + '</a>'
 })
 ```
 
+#### Using
+
 ```js
-var context = { posts: [{url: "/hello-world", body: "Hello World!"}] }
-var source = "<ul>{{#posts}}<li>{{{link_to}}}</li>{{/posts}}</ul>"
+var context = { posts: [{ url: '/hello-world', body: 'Hello World!' }] }
+var source = '<ul>{{#posts}}<li>{{{link_to}}}</li>{{/posts}}</ul>'
 ```
 
 ```js
@@ -23,7 +27,7 @@ var template = Handlebars.compile(source)
 template(context)
 ```
 
-Would render:
+#### Rendered output
 
 ```html
 <ul>

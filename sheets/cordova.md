@@ -23,8 +23,8 @@ cordova platform check
 
 You'll likely need these:
 
- * [org.apache.cordova.console](https://github.com/apache/cordova-plugin-console)
- * [org.apache.cordova.inappbrowser](https://github.com/apache/cordova-plugin-inappbrowser)
- * [org.apache.cordova.statusbar](https://github.com/apache/cordova-plugin-statusbar)
- * org.apache.cordova.splashscreen
- * com.phonegap.plugins.facebookconnect
+* [org.apache.cordova.console](https://github.com/apache/cordova-plugin-console)
+* [org.apache.cordova.inappbrowser](https://github.com/apache/cordova-plugin-inappbrowser)
+* [org.apache.cordova.statusbar](https://github.com/apache/cordova-plugin-statusbar)
+* org.apache.cordova.splashscreen
+* com.phonegap.plugins.facebookconnect

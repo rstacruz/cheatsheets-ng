@@ -3,6 +3,8 @@ title: Nopt
 category: JavaScript libraries
 ---
 
+### Basic example
+
 ```js
 var args = require('nopt')({
   foo: [String, null],
@@ -22,29 +24,35 @@ args == {
   size: 'big',
   argv: {
     remain: ['...', '...'],
-    cooked: ...,
-    original: ...
+    cooked: /* ... */,
+    original: /* ... */
   }
 }
 ```
 
+### Example (continued)
+
 ```js
 if (args.help) {
-  console.log([
+  console.log(
+    [
       'Usage:',
       '  hicat [options] [file]',
       '',
       'Options:',
       '  -h, --help         print usage information',
-      '  -v, --version      show version info and exit',
-  ].join('\n'));
-  process.exit(0);
+      '  -v, --version      show version info and exit'
+    ].join('\n')
+  )
+  process.exit(0)
 }
 
 if (args.version) {
-  console.log(require('../package.json').version);
-  process.exit(0);
+  console.log(require('../package.json').version)
+  process.exit(0)
 }
 ```
 
-https://www.npmjs.org/package/nopt
+### References
+
+- <https://www.npmjs.org/package/nopt>

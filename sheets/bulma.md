@@ -91,11 +91,11 @@ The following classes **align** the text
 
 The following classes **transform** the text
 
-| Class              | Transformation        |
-| ---                | ---                   |
-| `.is-capitalized`  | Transforms the **first character** of each word to **uppercase**   |
-| `.is-lowercase`    | Transforms **all** characters to **lowercase**                     |
-| `.is-uppercase`    | Transforms **all** characters to **uppercase**                     |
+| Class             | Transformation                                                   |
+| ----------------- | ---------------------------------------------------------------- |
+| `.is-capitalized` | Transforms the **first character** of each word to **uppercase** |
+| `.is-lowercase`   | Transforms **all** characters to **lowercase**                   |
+| `.is-uppercase`   | Transforms **all** characters to **uppercase**                   |
 
 ### WYSIWYG Content
 

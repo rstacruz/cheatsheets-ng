@@ -4,6 +4,7 @@ category: JavaScript
 ---
 
 ### Creating ranges
+
 See <http://devdocs.io/dom/document/createrange>
 
 ```js
@@ -11,6 +12,7 @@ var range = document.createRange()
 ```
 
 ## Methods
+
 See <http://devdocs.io/dom/range>
 
 ```js
@@ -29,20 +31,21 @@ range
 
 ### Collapsing
 
+<!-- prettier-ignore -->
 ```js
 range
-  .collapse()     // to end (a single point)
+  .collapse() //     to end (a single point)
   .collapse(true) // to start (a single point)
-  .collapsed      // true | false
+  .collapsed //      true | false
 ```
 
 ### Operations
 
 ```js
 range
-  .cloneContents()   // copy => DocumentFragment
+  .cloneContents() //   copy => DocumentFragment
   .extractContents() // cut  => DocumentFragment
-  .deleteContents()  // delete
+  .deleteContents() //  delete
 
   .insertNode(node)
 ```
@@ -50,18 +53,18 @@ range
 ### Etc
 
 ```js
-range
-  .toString()
+range.toString()
 ```
 
 ### Read-only attributes
 
+<!-- prettier-ignore -->
 ```js
 range
-  .collapsed         // true/false
-  .startContainer    // Node
+  .collapsed         /* true | false */
+  .startContainer    /* Node */
   .startOffset
-  .endContainer      // Node
+  .endContainer      /* Node */
   .endOffset
-  .commonAncestorContainer // closest of start and end containers
+  .commonAncestorContainer /* closest of start and end containers */
 ```

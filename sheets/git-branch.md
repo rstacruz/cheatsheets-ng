@@ -6,6 +6,7 @@ updated: 2017-09-20
 ---
 
 ## Working with branches
+
 <!-- {.-three-column} -->
 
 ### Creating

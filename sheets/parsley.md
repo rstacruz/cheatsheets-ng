@@ -4,7 +4,7 @@ updated: 2017-10-19
 weight: -1
 layout: 2017/sheet
 keywords:
-  - "data-parsley-validate"
+  - 'data-parsley-validate'
   - "$('#form').parsley()"
   - errorClass
   - successClass
@@ -17,6 +17,7 @@ intro: |
 ---
 
 ## Parsley
+
 <!-- {.-three-column} -->
 
 ### Installing via NPM
@@ -31,9 +32,11 @@ npm install --save parsleyjs
 
 #### via HTML
 
+<!-- prettier-ignore -->
 ```html
 <form data-parsley-validate>
 <!-- ✗ not preferred -->
+</form>
 ```
 
 #### via JavaScript
@@ -48,9 +51,10 @@ It's preferable to explicitly call `$.fn.parsley()`.
 
 #### Form
 
+<!-- prettier-ignore -->
 ```js
 $('#myform').parsley()
-  .isValid()  // → true | null
+  .isValid() // → true | null
   .validate()
   .reset()
   .destroy()
@@ -59,7 +63,8 @@ $('#myform').parsley()
 #### Input
 
 ```js
-$('#myform input').parsley()
+$('#myform input')
+  .parsley()
   .isValid()
   .validate() // returns errors
 ```
@@ -67,76 +72,106 @@ $('#myform input').parsley()
 ### Validators
 
 ```html
-<input ...>
+<input ... />
 ```
 
 #### Required
 
+<!-- prettier-ignore -->
 ```html
+<input
   required
+/>
 ```
 
 #### Types
 
+<!-- prettier-ignore -->
 ```html
+<input
   type='email'
+/>
 ```
 
+<!-- prettier-ignore -->
 ```html
-  type='url'
-  data-parsley-type='url'
+<input
+  type="url"
+  data-parsley-type="url"
+/>
 ```
 
 #### Length
 
+<!-- prettier-ignore -->
 ```html
-  maxlength='6'
-  data-parsley-maxlength='6'
-  minlength='10'
-  data-parsley-minlength='10'
+<input
+  maxlength="6"
+  data-parsley-maxlength="6"
+  minlength="10"
+  data-parsley-minlength="10"
+/>
 ```
 
 #### Numeric
 
+<!-- prettier-ignore -->
 ```html
-  pattern='\d+'
-  data-parsley-pattern='\d+'
+<input
+  pattern="\d+"
+  data-parsley-pattern="\d+"
+  />
 ```
 
+<!-- prettier-ignore -->
 ```html
+<input
   type='number'
   data-parsley-type='number'
   data-parsley-type='integer'
   data-parsley-type='digits'
   data-parsley-type='alphanum'
+/>
 ```
 
 #### Range
 
+<!-- prettier-ignore -->
 ```html
+<input
   type='range'
-  data-parsley=range='[6, 10]'
+  data-parsley-range='[6, 10]'
+/>
 ```
 
+<!-- prettier-ignore -->
 ```html
+<input
   max='10'
   data-parsley-max='10'
   min='6'
   data-parsley-min='6'
+/>
 ```
 
 #### Checkboxes
 
+<!-- prettier-ignore -->
 ```html
+<input
   data-parsley-mincheck='1'
   data-parsley-maxcheck='3'
   data-parsley-check='[1, 3]'
+/>
 ```
 
 #### Confirmation
 
+<!-- prettier-ignore -->
 ```html
+<input
   data-parsley-equalto='#confirm'
+/>
 ```
 
 ## Options
@@ -145,13 +180,13 @@ $('#myform input').parsley()
 
 ```js
 // Supported & excluded inputs by default
-  inputs: 'input, textarea, select'
-  excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden]'
+inputs: 'input, textarea, select',
+excluded: 'input[type=button], input[type=submit], input[type=reset], input[type=hidden]',
 ```
 
 ```js
 // Stop validating field on highest priority failing constraint
-  priorityEnabled: true
+priorityEnabled: true,
 ```
 
 See: [Options](http://parsleyjs.org/doc/annotated-source/defaults.html)
@@ -161,13 +196,13 @@ See: [Options](http://parsleyjs.org/doc/annotated-source/defaults.html)
 ```js
 // identifier used to group together inputs
 // (e.g. radio buttons…)
-  multiple: null
+multiple: null
 ```
 
 ```js
 // identifier (or array of identifiers) used to
 // validate only a select group of inputs
-  group: null
+group: null
 ```
 
 These options are only available for fields.
@@ -176,29 +211,29 @@ These options are only available for fields.
 
 ```js
 // Enable/disable error messages
-  uiEnabled: true
+uiEnabled: true
 ```
 
 ```js
 // Key events threshold before validation
-  validationThreshold: 3
+validationThreshold: 3
 ```
 
 ```js
 // Focused field on form validation error. ‘first’|’last’|’none’
-  focus: 'first'
+focus: 'first'
 ```
 
 ```js
 // $.Event() that will trigger validation. eg: keyup, change…
-  trigger: false
+trigger: false
 ```
 
 ```js
 // Class that would be added on every failing validation
 // Parsley field
-  errorClass: 'parsley-error'
-  successClass: 'parsley-success'
+errorClass: 'parsley-error'
+successClass: 'parsley-success'
 ```
 
 ```js
@@ -217,12 +252,12 @@ These options are only available for fields.
 
 ```js
 // ul elem that would receive errors’ list
-  errorsWrapper: '<ul class="parsley-errors-list"></ul>'
+errorsWrapper: '<ul class="parsley-errors-list"></ul>'
 ```
 
 ```js
 // li elem that would receive error message
-  errorTemplate: '<li></li>'
+errorTemplate: '<li></li>'
 ```
 
 ## Examples
@@ -231,7 +266,7 @@ These options are only available for fields.
 
 ```js
 $('[data-parsley]').parsley({
-  errorsContainer (field) {
+  errorsContainer(field) {
     return field.$element.closest('.block, .control')
   }
 })
@@ -257,7 +292,7 @@ Uses custom markup.
 
 ```js
 $('[data-parsley]').parsley({
-  classHandler (field) {
+  classHandler(field) {
     const $parent = field.$element.closest('.input-group')
     if ($parent.length) return $parent
 
@@ -273,26 +308,25 @@ Applies the `errorClass` and `successClass` to the closest `.input-group`, if av
 #### HTML
 
 ```html
-<input type='text' data-parsley-multiple-of='3' />
+<input type="text" data-parsley-multiple-of="3" />
 ```
 
 #### JavaScript
 
 ```js
-window.Parsley
-  .addValidator('multipleOf', {
-    // string | number | integer | date | regexp | boolean
-    requirementType: 'integer',
+window.Parsley.addValidator('multipleOf', {
+  // string | number | integer | date | regexp | boolean
+  requirementType: 'integer',
 
-    // validateString | validateDate | validateMultiple
-    validateNumber (value, requirement) {
-      return 0 === value % requirement
-    },
+  // validateString | validateDate | validateMultiple
+  validateNumber(value, requirement) {
+    return 0 === value % requirement
+  },
 
-    messages: {
-      en: 'This value should be a multiple of %s'
-    }
-  })
+  messages: {
+    en: 'This value should be a multiple of %s'
+  }
+})
 ```
 
 See: [Custom validators](http://parsleyjs.org/doc/index.html#custom)

@@ -6,7 +6,7 @@ layout: 2017/sheet
 
 ### Usage
 
-``` vim
+```vim
 :Unite file
 :Unite file_rec/async:!
 :Unite tag

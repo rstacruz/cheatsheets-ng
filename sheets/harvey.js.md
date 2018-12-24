@@ -10,13 +10,13 @@ intro: |
 
 ```js
 Harvey.attach('(min-width: 600px)', {
-  setup: function () {
+  setup: function() {
     // Called on first enter
   },
-  on: function () {
+  on: function() {
     // Called on every enter
   },
-  off: function () {
+  off: function() {
     // Called on every exit
   }
 })

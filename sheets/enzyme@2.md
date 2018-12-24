@@ -10,14 +10,17 @@ intro: |
 ---
 
 ## Getting started
+
 <!-- {.-three-column} -->
 
 ### Mounting
+
 <!-- {.-prime} -->
 
 ```js
-import {shallow, mount} from 'enzyme'
+import { shallow, mount } from 'enzyme'
 ```
+
 <!-- {.-setup} -->
 
 ```js
@@ -38,6 +41,7 @@ See: [Shallow rendering](http://airbnb.io/enzyme/docs/api/shallow.html),
 ```js
 import toJson from 'enzyme-to-json'
 ```
+
 <!-- {.-setup} -->
 
 ```js
@@ -62,23 +66,23 @@ Shows HTML for debugging purposes. See: [debug()](http://airbnb.io/enzyme/docs/a
 ### Traversing
 
 ```js
-wrap.find('button')   // => ReactWrapper
+wrap.find('button') //   => ReactWrapper
 wrap.filter('button') // => ReactWrapper
-wrap.not('span')      // => ReactWrapper (inverse of filter())
-wrap.children()       // => ReactWrapper
-wrap.parent()         // => ReactWrapper
-wrap.closest('div')   // => ReactWrapper
-wrap.childAt(0)       // => ReactWrapper
-wrap.at(0)            // => ReactWrapper
-wrap.first()          // => ReactWrapper
-wrap.last()           // => ReactWrapper
+wrap.not('span') //      => ReactWrapper (inverse of filter())
+wrap.children() //       => ReactWrapper
+wrap.parent() //         => ReactWrapper
+wrap.closest('div') //   => ReactWrapper
+wrap.childAt(0) //       => ReactWrapper
+wrap.at(0) //            => ReactWrapper
+wrap.first() //          => ReactWrapper
+wrap.last() //           => ReactWrapper
 ```
 
 ```js
-wrap.get(0)           // => ReactElement
-wrap.getNode()        // => ReactElement
-wrap.getNodes()       // => Array<ReactElement>
-wrap.getDOMNode()     // => DOMComponent
+wrap.get(0) //       => ReactElement
+wrap.getNode() //    => ReactElement
+wrap.getNodes() //   => Array<ReactElement>
+wrap.getDOMNode() // => DOMComponent
 ```
 
 See: [Full rendering API](http://airbnb.io/enzyme/docs/api/mount.html)
@@ -92,15 +96,19 @@ wrap.simulate('click')
 ### React components
 
 ```js
-wrap.setState({ ... })
-wrap.setProps({ ... })
-wrap.setContext({ ... })
+wrap.setState({ /*...*/ })
+wrap.setProps({ /*...*/ })
+wrap.setContext({ /*...*/ })
+```
 
-wrap.state()            // => Any (get state)
-wrap.props()            // => object (get props)
-wrap.context()          // => Any (get context)
+```js
+wrap.state() //    => Any (get state)
+wrap.props() //    => object (get props)
+wrap.context() //  => Any (get context)
+```
 
-wrap.instance()         // => ReactComponent
+```js
+wrap.instance() // => ReactComponent
 ```
 
 ### Mount
@@ -108,28 +116,30 @@ wrap.instance()         // => ReactComponent
 ```js
 wrap.mount()
 wrap.unmount()
-wrap.update()      // calls forceUpdate()
+wrap.update() // calls forceUpdate()
 ```
 
 ### Tests
 
 ```js
-wrap.debug()               // => string
-wrap.html()                // => string
-wrap.text()                // => string
-wrap.type()                // => string | function
-wrap.name()                // => string
-wrap.is('.classname')      // => boolean
-wrap.hasClass('class')     // => boolean
-wrap.exists()              // => boolean
-wrap.contains(<div />)     // => boolean
-wrap.contains([ <div /> ]) // => boolean
+wrap.debug() //             => string
+wrap.html() //              => string
+wrap.text() //              => string
+wrap.type() //              => string | function
+wrap.name() //              => string
+wrap.is('.classname') //    => boolean
+wrap.hasClass('class') //   => boolean
+wrap.exists() //            => boolean
+wrap.contains(<div />) //   => boolean
+wrap.contains([<div />]) // => boolean
+```
 
-wrap.containsMatchingElement(<div />)         // => boolean
-wrap.containsAllMatchingElements([ <div /> ]) // => boolean
-wrap.containsAnyMatchingElements([ <div /> ]) // => boolean
+```js
+wrap.containsMatchingElement(<div />) //       => boolean
+wrap.containsAllMatchingElements([<div />]) // => boolean
+wrap.containsAnyMatchingElements([<div />]) // => boolean
 ```
 
 ## References
 
-- <https://airbnb.io/enzyme>
+* <https://airbnb.io/enzyme>

@@ -1,46 +1,77 @@
 ---
 title: Mocha.js TDD interface
 category: JavaScript libraries
+updated: 2018-12-24
 ---
 
 ### TDD
 
-    mocha.setup('tdd');
+```js
+mocha.setup('tdd')
 
-    suite('something', function() {
-      setup(function() {
-      });
+suite('something', () => {
+  setup(() => {
+    /* ... */
+  })
 
-      test('should work', function() {
-      });
+  test('should work', () => {
+    /* ... */
+  })
 
-      teardown(function() {
-      });
-    });
+  teardown(() => {
+    /* ... */
+  })
+})
+```
 
 ### Async
 
-    test('should save', function(done) {
-      var user = new User();
-      user.save(function(err) {
-        if (err) throw err;
-        done();
-      });
-    });
+#### Using callbacks
+
+```js
+test('should save', done => {
+  var user = new User()
+  user.save(err => {
+    if (err) throw err
+    done()
+  })
+})
+```
+
+#### Using callbacks
+
+```js
+test('should save', () => {
+  return new Promise((resolve, reject) => {
+    /* ... */
+  })
+})
+```
 
 ### Chai: Expect
 
-    var expect = chai.expect;
+```js
+const expect = chai.expect
+```
 
-    expect(foo).to.be.a('string');
-    expect(foo).to.equal('bar');
-    expect(foo).to.have.length(3);
-    expect(tea).to.have.property('flavors').with.length(3);
+```js
+expect(foo).to.be.a('string')
+expect(foo).to.equal('bar')
+expect(foo).to.have.length(3)
+```
+
+```js
+expect(tea)
+  .to.have.property('flavors')
+  .with.length(3)
+```
+
+Also see the [Chai](./chai) cheatsheet.
 
 ### See also
 
- * [Mocha BDD](mocha.html)
- * [Mocha HTML](mocha-html.html)
- * [Chai](chai.html)
- * [Sinon](sinon.html)
- * [Sinon Chai](sinon-chai.html)
+- [Mocha BDD](./mocha)
+- [Mocha HTML](./mocha-html)
+- [Chai](./chai)
+- [Sinon](./sinon)
+- [Sinon Chai](./sinon-chai)
