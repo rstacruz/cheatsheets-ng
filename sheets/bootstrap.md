@@ -1,6 +1,5 @@
 ---
 title: Bootstrap
-layout: 2017/sheet
 prism_languages: [scss, haml, html]
 weight: -1
 description: |
@@ -19,6 +18,7 @@ description: |
 
 #### Min:
 
+<!-- prettier-ignore -->
 ```scss
 @media (min-width: @screen-sm-min) // >= 768px (small tablet)
 @media (min-width: @screen-md-min) // >= 992px (medium laptop)
@@ -27,10 +27,11 @@ description: |
 
 #### Max:
 
+<!-- prettier-ignore -->
 ```scss
-@media (max-width: @screen-xs-max) { // < 768px (xsmall phone)
-@media (max-width: @screen-sm-max) { // < 992px (small tablet)
-@media (max-width: @screen-md-max) { // < 1200px (medium laptop)
+@media (max-width: @screen-xs-max) // < 768px (xsmall phone)
+@media (max-width: @screen-sm-max) // < 992px (small tablet)
+@media (max-width: @screen-md-max) // < 1200px (medium laptop)
 ```
 
 ### Columns
@@ -88,6 +89,8 @@ description: |
 .hidden
 ```
 
+## JavaScript behaviors
+
 ### Modal
 
 ```html
@@ -111,25 +114,39 @@ description: |
 
 ### Modal via ajax (Rails)
 
-```haml
-%button.btn{data: { |
-  toggle: 'modal', |
-  target: '#chooseTheme', |
-  remote: '/path/to/remote'}
-  Change Theme
+#### Modal
+
+```html
+<button class='btn'
+  data-toggle='modal'
+  data-target='#chooseTheme'
+  data-remote='/path/to/remote'
+>
+  Change theme
+</button>
 ```
 
-```haml
-.modal.fade#chooseTheme
-  .modal-dialog.modal-xl
-    .modal-content
-      .modal-header
-        %h4.modal-title Choose a theme
+#### Body
 
-      .modal-body
-        .spinner-panel.-lg
-          %i
+```html
+<div class='modal fade' id='chooseTheme'>
+  <!--                      ^^^^^^^^^^^ -->
+  <div class='modal-dialog modal-xl'>
+    <div class='modal-content'>
+      <div class='modal-header'>
+        <h4 class='modal-title'>
+          Choose a theme
+        </h4>
+      </div>
+      <div class='modal-body'>
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
 ```
+
+This example will open the `#chooseTheme` modal on click of the button.
 
 ### Tooltip
 
@@ -141,7 +158,7 @@ description: |
 ```
 
 ```js
-$(function () {
+$(function() {
   $('[data-toogle~="tooltip"]').tooltip()
 })
 ```

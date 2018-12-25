@@ -634,9 +634,11 @@ xnoremap
 
 ### Arguments
 
+| Argument   | Description            |
+| ---------- | ---------------------- |
 | `<buffer>` | only in current buffer |
-| `<silent>` | no echo |
-| `<nowait>` | |
+| `<silent>` | no echo                |
+| `<nowait>` |                        |
 
 ## Syntax
 

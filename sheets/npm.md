@@ -9,7 +9,7 @@ updated: 2017-10-27
 ### Package management
 
 | Command                           | Description                        |
-| ---                               | ---                                |
+| --------------------------------- | ---------------------------------- |
 | `npm i`                           | Alias for `npm install`            |
 | `npm install`                     | Install everything in package.json |
 | ---                               | ---                                |
@@ -22,7 +22,7 @@ updated: 2017-10-27
 ### Install names
 
 | Command                              | Description             |
-| ---                                  | ---                     |
+| ------------------------------------ | ----------------------- |
 | `npm i sax`                          | NPM package             |
 | `npm i sax@latest`                   | Specify tag `latest`    |
 | `npm i sax@3.0.0`                    | Specify version `3.0.0` |
@@ -42,13 +42,12 @@ updated: 2017-10-27
 ### Updating
 
 | Command             | Description                |
-| ---                 | ---                        |
+| ------------------- | -------------------------- |
 | `npm update`        | Update production packages |
 | `npm update --dev`  | Update dev packages        |
 | `npm update -g`     | Update global packages     |
 | ---                 | ---                        |
 | `npm update lodash` | Update a package           |
-
 
 ### Misc features
 

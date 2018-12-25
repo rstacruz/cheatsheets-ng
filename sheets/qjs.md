@@ -5,71 +5,131 @@ category: JavaScript libraries
 
 ### Creating promises (Q.promise)
 
-    Q.promise (ok, fail) =>
-      asyncFunction ->
-        if error
-          fail new Error("Failure")
-        else
-          ok(data)
+```js
+Q.promise((resolve, reject) => {
+  asyncFunction(() => {
+    if (error) {
+      reject(new Error('Failure'))
+    } else {
+      resolve(data)
+    }
+  })
+})
+```
+
+Similar to ES2015's `new Promise()`.
 
 ### For arrays
 
-    promises = [saveDisk(), saveCloud()]
+```js
+const promises = [saveDisk(), saveCloud()]
+```
 
-    # When all succeeds, or *at least one* error
-    Q.all(promises).done ->
-      alert "Saved"
+#### Q.all
 
-    # Same, but get the values
-    Q.all(promises).spread (a, b) ->
-      alert "Result A:" + a
-      alert "Result B:" + b
+```js
+// When all succeeds, or *at least one* error
+Q.all(promises).done(() => {
+  console.log('Saved!')
+})
+```
 
-    # When all either succeeds or errors
-    Q.allSettled(promises).done -> ...
+#### Q.all.spread
 
+```js
+// Same, but get the values
+Q.all(promises).spread((a, b) => {
+  console.log('Result A: ' + a)
+  console.log('Result B: ' + b)
+})
+```
+
+#### Q.allSettled
+
+```js
+// When all either succeeds or errors
+Q.allSettled(promises).done(() => {
+  /* ... */
+})
+```
 
 ### Creating promises from Node
 
-    # Works like .call() or .apply()
+#### Q.nfcall
 
-    Q.nfcall(FS.readFile, 'foo.txt', 'utf-8')
-    .then -> ...
+```js
+// Works like `.call()`
+Q.nfcall(FS.readFile, 'foo.txt', 'utf-8').then(() => {
+  /* ... */
+})
+```
 
-    Q.nfapply(FS.readFile, ['foo.txt', 'utf-8'])
-    .then -> ...
+#### Q.nfapply
 
-    Q.npost(FS, 'readFile', ['foo.txt, 'utf-8'])
-    .then -> ...
+```js
+// Works like `.apply()`
+Q.nfapply(FS.readFile, ['foo.txt', 'utf-8']).then(() => {
+  /* ... */
+})
+```
 
-    Q.npost(FS, 'readFile', 'foo.txt, 'utf-8')
-    .then -> ...
+#### Q.npost
 
-    readFile = Q.denodeify(FS.readFile)
-    readFile('foo.txt').then -> ...
+```js
+Q.npost(FS, 'readFile', ['foo.txt, 'utf-8'])
+  .then(() => { /* ... */ })
+```
+
+```js
+Q.npost(FS, 'readFile', 'foo.txt, 'utf-8')
+  .then(() => { /* ... */ })
+```
+
+#### Q.denodeify
+
+```js
+readFile = Q.denodeify(FS.readFile)
+readFile('foo.txt').then(() => {
+  /* ... */
+})
+```
 
 ### Promises to Node async
 
-    createUser = (next) ->
-      promiseMaker()
-      .nodeify(next)
+#### Promise.nodeify
+
+```js
+const createUser = next => {
+  return promiseMaker().nodeify(next)
+}
+```
 
 ### Promise sugars
 
-    # Shortcut for .then(ok, fail, progress)
-    promise
-    .then (data) ->
-    .catch (err) ->
-    .progress (percent) ->
+```js
+// Shortcut for .then(ok, fail, progress)
+promise
+  .then(data => {
+    /* ... */
+  })
+  .catch(error => {
+    /* ... */
+  })
+  .progress(percent => {
+    /* ... */
+  })
+```
 
 ### Try
 
-  Q.try ->
-    promise()
-
-  .catch (e) ->
-    console.error "Oh well", e
+```js
+Q.try(() => {
+  promise()
+}).catch(error => {
+  console.error('Oh well', error)
+})
+```
 
 ### Reference
 
- * https://github.com/kriskowal/q/wiki/API-Reference
+* [API reference](https://github.com/kriskowal/q/wiki/API-Reference) _(github.com)_

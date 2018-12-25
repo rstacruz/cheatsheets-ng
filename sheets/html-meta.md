@@ -18,6 +18,7 @@ weight: -3
 <meta property='og:title'  content='···'>
 <meta name='twitter:title' content='···'>
 ```
+
 <!-- {data-line="2"} -->
 
 ```html
@@ -26,6 +27,7 @@ weight: -3
 <meta property='og:url'  content='http://···'>
 <meta name='twitter:url' content='http://···'>
 ```
+
 <!-- {data-line="2"} -->
 
 ```html
@@ -34,6 +36,7 @@ weight: -3
 <meta property='og:description'  content='···'>
 <meta name='twitter:description' content='···'>
 ```
+
 <!-- {data-line="2"} -->
 
 ```html
@@ -75,12 +78,12 @@ See: [OpenGraph protocol](https://developers.facebook.com/docs/opengraphprotocol
 
 ### Opengraph for articles
 
-- `article:published_time`
-- `article:modified_time`
-- `article:expiration_time`
-- `article:author`
-- `article:section`
-- `article:tag`
+* `article:published_time`
+* `article:modified_time`
+* `article:expiration_time`
+* `article:author`
+* `article:section`
+* `article:tag`
 
 ### Apple-only
 
@@ -149,8 +152,9 @@ Chrome on Android recommends [192x192](https://developers.google.com/web/updates
 See: [Icons](https://developers.google.com/web/fundamentals/design-and-ui/browser-customization/)
 
 ## Reference
+
 <!-- {.-one-column} -->
 
- * <https://dev.twitter.com/docs/cards>
- * <https://developers.facebook.com/docs/opengraphprotocol/#types>
-<!-- {.-also-see} -->
+* <https://dev.twitter.com/docs/cards>
+* <https://developers.facebook.com/docs/opengraphprotocol/#types>
+  <!-- {.-also-see} -->

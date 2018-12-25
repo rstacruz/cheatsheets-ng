@@ -6,6 +6,7 @@ updated: 2017-09-09
 ---
 
 ## Writing help files
+
 <!-- {.-left-reference} -->
 
 ### Creating a document
@@ -41,8 +42,8 @@ This is a cheatsheet for writing Vim help files. See: `:help help-writing`
 ### Reference
 
 | Code                 | Description    | Example             |
-| -----                | -----          | -----               |
-| *Inline items*                                              |
+| -------------------- | -------------- | ------------------- |
+| _Inline items_       |
 | -----                | -----          | -----               |
 | `*tags*`             | Tags           |                     |
 | `|link-to-tags|`     | Links to tags  | `|:command|`        |
@@ -53,7 +54,7 @@ This is a cheatsheet for writing Vim help files. See: `:help help-writing`
 | `` `code-text` ``    | Code text      | `` `set fo=want` `` |
 | `CTRL-X`             | Code text      |                     |
 | -----                | -----          | -----               |
-| *Block items*                                               |
+| _Block items_        |
 | -----                | -----          | -----               |
 | `INTRODUCTION *tag*` | Section header |                     |
 | `Column heading~`    | Highlighting   |                     |
@@ -64,9 +65,9 @@ This is a cheatsheet for writing Vim help files. See: `:help help-writing`
 
 ### Tags
 
- * Tags are created with asterisks, eg, `*potion-usage*`
- * Links to tags are `|potion-usage|`
- * Press `^]` to jump to a tag
+* Tags are created with asterisks, eg, `*potion-usage*`
+* Links to tags are `|potion-usage|`
+* Press `^]` to jump to a tag
 
 ### Code blocks
 
@@ -96,6 +97,7 @@ CONTENTS                                                     *potion-contents*
 Starts with `ALL CAPS`, ends with `*a-tag*`
 
 ### Notes
+
 Using `*Todo` and `*Error` will highlight your notes.
 
 ```

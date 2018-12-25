@@ -6,10 +6,10 @@ updated: 2017-08-29
 weight: -5
 ---
 
-Request
--------
+## Request
 
 ### Request
+
 <!-- {.-prime} -->
 
 ```elixir
@@ -39,10 +39,10 @@ conn
 
 Usually only useful for tests.
 
-Response
---------
+## Response
 
 ### Response
+
 <!-- {.-prime} -->
 
 ```elixir
@@ -116,10 +116,10 @@ conn
 layout(conn)
 ```
 
-Other features
---------------
+## Other features
 
 ### Other fields
+
 <!-- {.-prime} -->
 
 ```elixir
@@ -168,4 +168,3 @@ conn
 ```
 
 Also available: `flash` `cookie` `params`
-
