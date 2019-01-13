@@ -9,6 +9,7 @@ intro: |
 ### Quickstart guide
 
 Install blanket:
+
 <!-- {.-setup} -->
 
 ```bash
@@ -21,9 +22,9 @@ In your test helpers, use Blanket before `require`ing:
 if (process.env.COVERAGE) {
   require('blanket')({
     pattern: require('path').resolve('./index.js')
-  });
+  })
 }
-thing = require('../index');
+thing = require('../index')
 ```
 
 Add to `package.json`:
@@ -49,6 +50,7 @@ npm run coverage
 ### Travis + coveralls.io support
 
 Visit [coveralls.io] then activate your repo. Then install the appropriate packages:
+
 <!-- {.-setup} -->
 
 ```bash
