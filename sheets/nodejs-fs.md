@@ -5,50 +5,76 @@ category: Node.js
 
 ### Reading
 
-    fs.readFile('file.txt', function(err, data) { .. });
-    fs.readFile('file.txt', {encoding: 'utf-8'}, function(err, data) { .. });
+```js
+fs.readFile('file.txt', (err, data) => {
+  /* ... */
+})
+fs.readFile('file.txt', { encoding: 'utf-8' }, (err, data) => {
+  /* ... */
+})
+```
 
 ### Writing
 
-    fs.writeFile('output.txt', function(err) { .. });
-    fs.appendFile('output.txt', function(err) { .. });
+```js
+fs.writeFile('output.txt', err => {
+  /* ... */
+})
+fs.appendFile('output.txt', err => {
+  /* ... */
+})
+```
 
 ### Watch
 
-    fs.watch('dir OR file.txt', { persistent: true }, function(event, file) {
-      event; /* rename | change */
-    });
+```js
+fs.watch('dir OR file.txt', { persistent: true }, (event, file) => {
+  event /* rename | change */
+})
+```
 
 ### Getting info
 
-    fs.exists('file.txt', function(exists /*bool*/) { ... });
-
-    fs.stat('file.txt', function(stats) {
-      stats.isFile();
-      stats.isDirectory();
-      stats.isSymbolicLink();
-    });
+```js
+fs.stat('file.txt', stats => {
+  stats.isFile()
+  stats.isDirectory()
+  stats.isSymbolicLink()
+})
+```
 
 ### File operations
 
-    fs.rename('old.txt', 'new.txt', function(){});
-    fs.chown('file.txt', uid, gid, function(){});
-    fs.symlink('src', 'dest', function(){});
-    fs.unlink('path', function(){});
-    fs.rmdir('path', function(){});
+```js
+fs.rename('old.txt', 'new.txt', function() {})
+fs.chown('file.txt', uid, gid, function() {})
+fs.symlink('src', 'dest', function() {})
+fs.unlink('path', function() {})
+fs.rmdir('path', function() {})
+```
 
-    fs.readdir('path', function(err, files) { .. }); /* `files` = array of names */
+```js
+fs.readdir('path', (err, files) => {
+  // files === array of names
+})
+```
 
 ### Path
 
-    fs.realpath('/etc/passwd', function(err, path) { /* "/private/etc/passwd" */ });
+```js
+fs.realpath('/etc/passwd', (err, path) => {
+  // path === "/private/etc/passwd"
+})
+```
 
 ### Sync
 
-    data = fs.readFileSync('input.txt');
-    fs.writeFileSync('output.txt', data);
-    fs.appendFileSync('output.txt', data);
-    fs.existsSync('file.txt');
+```js
+data = fs.readFileSync('input.txt')
+fs.writeFileSync('output.txt', data)
+fs.appendFileSync('output.txt', data)
+fs.existsSync('file.txt')
+```
 
 ### References
 

@@ -3,16 +3,29 @@ title: path
 category: Node.js
 ---
 
-    fs.realpath('/etc/passwd', function(err, path) { /* "/private/etc/passwd" */ 
-    });
+### Finding real paths
 
-    dir = path.join('etc', 'passwd');
-    dir = path.resolve('/etc', 'passwd', '..', 'var');
+```js
+fs.realpath('/etc/passwd', (err, path) => {
+  // path === "/private/etc/passwd"
+})
+```
 
-    path.dirname('/etc/passwd')       //=> "/etc"
-    path.basename('/etc/passwd')      //=> "passwd"
-    path.basename('/etc/rc.d', '.d')  //=> "rc"
+### Joining paths
+
+```js
+dir = path.join('etc', 'passwd')
+dir = path.resolve('/etc', 'passwd', '..', 'var')
+```
+
+### dirname and basename
+
+```js
+path.dirname('/etc/passwd') //      => "/etc"
+path.basename('/etc/passwd') //     => "passwd"
+path.basename('/etc/rc.d', '.d') // => "rc"
+```
 
 ### References
 
-- http://nodejs.org/api/path.html
+- <http://nodejs.org/api/path.html>
