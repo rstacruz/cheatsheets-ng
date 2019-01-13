@@ -1,4 +1,3 @@
-FROM mhart/alpine-node:10.5.0
-RUN apk update && apk add make bash git
+FROM node:10
 RUN mkdir -p /app
 WORKDIR /app

@@ -6,5 +6,8 @@ services:
     volumes:
       - '.:/app'
     ports:
-      - '19337:19337'
+      - '19400:19400'
+    environment:
+      PORT: '19400'
     command: 'yarn develop'
+    user: '1000'

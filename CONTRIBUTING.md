@@ -19,7 +19,7 @@ dr yarn --force
 dr yarn develop
 ```
 
-This starts a server in <http://localhost:19337/>. You can also use `docker-compose up`.
+This starts a server in <http://localhost:19400/>. You can also use `docker-compose up`.
 
 ## Dev setup (traditional)
 
@@ -39,7 +39,7 @@ yarn --force
 yarn develop
 ```
 
-Unless you override `$PORT`, this starts a server in <http://localhost:19337/>.
+Unless you override `$PORT`, this starts a server in <http://localhost:19400/>.
 
 ## Linting
 

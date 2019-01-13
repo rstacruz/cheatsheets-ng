@@ -1,14 +1,14 @@
 SHEET_PATH := $(shell pwd -LP)/sheets
-PORT := 19337
+PORT := 19400
 HOST := 0.0.0.0
 
 # Start development server
 develop: devhints-engine
-	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run develop --host ${HOST} --port ${PORT}
+	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run gatsby develop --host ${HOST} --port ${PORT}
 
 # Start development server, but only for wip/
 develop-wip: devhints-engine
-	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run develop --host ${HOST} --port ${PORT}
+	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run gatsby develop --host ${HOST} --port ${PORT}
 
 # Build
 build: public
