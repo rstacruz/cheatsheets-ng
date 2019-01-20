@@ -2,7 +2,11 @@
 title: tmux
 ---
 
-### Commands
+## Reference
+
+<!-- {.three-column} -->
+
+### Tmux
 
 ```
 $ tmux
@@ -10,7 +14,7 @@ $ tmux
   -S ~/.tmux.socket
 ```
 
-#### Sessions
+### Sessions
 
 ```
 $ tmux new
@@ -100,7 +104,7 @@ See `message-command-style` in the man page.
 ### Attribute/colors
 
 | Code              | Description    |
-| ----              | ---            |
+| ----------------- | -------------- |
 | `#[fg=1]`         | standard color |
 | `#[fg=yellow]`    | yellow         |
 | `#[bold]`         | bold           |
@@ -111,19 +115,19 @@ See `message-command-style` in the man page.
 
 ### Colors
 
- * `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white`
- * `brightred` (and so on)
- * `colour0` ... `colour255`
- * `#333` (rgb hex)
+- `black` `red` `green` `yellow` `blue` `magenta` `cyan` `white`
+- `brightred` (and so on)
+- `colour0` ... `colour255`
+- `#333` (rgb hex)
 
 ### Attributes
 
- * `bold` `underscore` `blink` `noreverse` `hidden` `dim` `italics`
+- `bold` `underscore` `blink` `noreverse` `hidden` `dim` `italics`
 
 ### Variables
 
 | Variable  | Description     |
-| ---       | ---             |
+| --------- | --------------- |
 | `#(date)` | shell command   |
 | `#I`      | window index    |
 | `#S`      | session name    |
