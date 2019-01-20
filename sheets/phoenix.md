@@ -53,6 +53,7 @@ See: [Installation](https://hexdocs.pm/phoenix/installation.html) _(hexdocs.pm)_
 ├── priv/
 └── test/
 ```
+
 <!-- {.-box-chars} -->
 
 See: [Adding pages](https://hexdocs.pm/phoenix/adding_pages.html) _(hexdocs.pm)_
@@ -77,6 +78,7 @@ end
 ```
 
 [Ecto migrations cheatsheet](./phoenix-migrations)
+
 <!-- {.-crosslink} -->
 
 ### Routing
@@ -95,6 +97,7 @@ user_post_path(conn, :show, 17, 12)  # → /users/17/posts/12
 ```
 
 [Phoenix routing cheatsheet](./phoenix-routing)
+
 <!-- {.-crosslink} -->
 
 ### Conn
@@ -119,6 +122,7 @@ conn
 ```
 
 [Phoenix conn cheatsheet](./phoenix-conn)
+
 <!-- {.-crosslink} -->
 
 ### Ecto
@@ -133,9 +137,10 @@ $ mix phx.gen.html \
 ```
 
 [Ecto cheatsheet](./phoenix-ecto)
+
 <!-- {.-crosslink} -->
 
 ### Also see
 
-- [Phoenix framework site](http://phoenixframework.org/) _(phoenixframework.org)_
-- [Phoenix: getting started](https://hexdocs.pm/phoenix/overview.html) _(hexdocs.pm)_
+* [Phoenix framework site](http://phoenixframework.org/) _(phoenixframework.org)_
+* [Phoenix: getting started](https://hexdocs.pm/phoenix/overview.html) _(hexdocs.pm)_

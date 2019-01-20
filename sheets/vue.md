@@ -80,6 +80,7 @@ new Vue({
 ```
 
 ## Vue templates
+
 Via [vueify](https://www.npmjs.com/package/vueify)
 
 ```js
@@ -87,7 +88,7 @@ Via [vueify](https://www.npmjs.com/package/vueify)
 <template>
   <h1 class="red">{{msg}}</h1>
 </template>
- 
+
 <script>
   module.exports = {
     data () {
@@ -96,7 +97,7 @@ Via [vueify](https://www.npmjs.com/package/vueify)
       }
     }
   }
-</script> 
+</script>
 ```
 
 Also

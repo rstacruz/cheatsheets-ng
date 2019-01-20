@@ -96,4 +96,4 @@ execute create: "posts", capped: true, size: 1024
 
 ## References
 
-- [Ecto.Migration](http://devdocs.io/phoenix/ecto/ecto.migration)
+* [Ecto.Migration](http://devdocs.io/phoenix/ecto/ecto.migration)

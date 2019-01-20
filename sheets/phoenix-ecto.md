@@ -7,6 +7,7 @@ updated: 2017-08-29
 ---
 
 ## Schemas
+
 <!-- {.-three-column} -->
 
 ### Generating
@@ -38,19 +39,20 @@ end
 
 ### Field types
 
-| Field |
-| --- |
-| `:id` |
-| `:binary` |
-| `:boolean` |
-| `:string` |
-| --- |
-| `:integer` |
-| `:float` |
-| `:decimal` |
-| --- |
+| Field                  |
+| ---------------------- |
+| `:id`                  |
+| `:binary`              |
+| `:boolean`             |
+| `:string`              |
+| ---                    |
+| `:integer`             |
+| `:float`               |
+| `:decimal`             |
+| ---                    |
 | `{:array, inner_type}` |
-| `:map` |
+| `:map`                 |
+
 <!-- {.-left-align} -->
 
 ## Changesets
@@ -205,6 +207,7 @@ from(p in Post, where: p.id < 10)
 ```
 
 ## References
+
 <!-- {.-one-column} -->
 
-- Based on Ecto 1.3.
+* Based on Ecto 1.3.
