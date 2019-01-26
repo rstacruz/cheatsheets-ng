@@ -5,36 +5,58 @@ category: Node.js
 
 ### Streams
 
-    process.stdout.write('...');
-    process.stderr.write('...');
+```js
+process.stdout.write('...')
+process.stderr.write('...')
+process.stdin.read()
+```
 
-    function stdin(fn) {
-      var data = '';
+### Reading from stdin
 
-      process.stdin.setEncoding('utf8');
-      process.stdin.on('readable', function() {
-        var chunk = process.stdin.read();
-        if (chunk !== null) data += chunk;
-      });
+```js
+function stdin(fn) {
+  var data = ''
 
-      process.stdin.on('end', function() {
-        fn(null, data);
-      });
-    }
+  process.stdin.setEncoding('utf8')
+  process.stdin.on('readable', function() {
+    var chunk = process.stdin.read()
+    if (chunk !== null) data += chunk
+  })
+
+  process.stdin.on('end', function() {
+    fn(null, data)
+  })
+}
+```
 
 ### stuff
 
-    process.argv; //=> ['node', 'file.js', 'one', 'two']
-    process.env; //=> {TERM: 'screen-256color', SHELL: '/bin/bash', ...}
+```js
+process.argv
+// => ['node', 'file.js', 'one', 'two']
+```
 
-    process.exit();
-    process.exit(1);
+```js
+process.env
+// => {TERM: 'screen-256color', SHELL: '/bin/bash', ...}
+```
+
+```js
+process.exit()
+process.exit(1)
+```
 
 ### Directories
-    
-    process.cwd(); //=> "/tmp"
-    process.chdir('dir');
+
+```js
+process.cwd()
+// => "/tmp"
+```
+
+```js
+process.chdir('dir')
+```
 
 ### References
 
-- http://nodejs.org/api/process.html
+- <http://nodejs.org/api/process.html>

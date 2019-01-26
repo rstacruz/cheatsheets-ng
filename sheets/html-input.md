@@ -8,70 +8,70 @@ weight: -3
 
 ### Input
 
-```html
- <input ...
-   disabled
-   required
-   checked
-```
-
-```html
-   autofocus
-```
-
-```html
-   autocomplete='off'        <!-- autocomplete -->
-   autocompletetype='cc-exp'
-   autocapitalize='off'      <!-- for mobiles -->
-   pattern='\d*'             <!-- force numeric input in iOS -->
-```
+| Property                    | Description          |
+| --------------------------- | -------------------- |
+| `disabled`                  |                      |
+| `required`                  |                      |
+| `checked`                   |                      |
+|                             |                      |
+| `autofocus`                 |                      |
+|                             |                      |
+| `autocomplete='off'`        | Autocomplete         |
+| `autocompletetype='cc-exp'` | Credit card types    |
+| `autocapitalize='off'`      | For mobiles          |
+| `pattern='\d\*'`            | Numeric input on iOS |
 
 ### Input types
 
 #### Text
 
-* email
-* hidden
-* **password**
-* tel
-* **text**
-* search
-  <!-- {.-four-column} -->
+- email
+- hidden
+- **password**
+- tel
+- **text**
+- search
+
+<!-- {.-four-column} -->
 
 #### Time
 
-* date
-* time
-  <!-- {.-four-column} -->
+- date
+- time
+
+<!-- {.-four-column} -->
 
 #### Time (not widely supported)
 
-* month
-* week
-* datetime
-* datetime-local
-  <!-- {.-four-column} -->
+- month
+- week
+- datetime
+- datetime-local
+
+<!-- {.-four-column} -->
 
 #### Etc
 
-* **file**
-* **radio**
-* **checkbox**
-  <!-- {.-four-column} -->
+- **file**
+- **radio**
+- **checkbox**
+
+<!-- {.-four-column} -->
 
 #### Buttons
 
-* button
-* reset
-* submit
-* image
+- button
+- reset
+- submit
+- image
   <!-- {.-four-column} -->
 
 #### Numeric
 
-* number
-* range
-  <!-- {.-four-column} -->
+- number
+- range
+
+<!-- {.-four-column} -->
 
 ## Examples
 
@@ -109,4 +109,4 @@ weight: -3
 
 ## Also see
 
-* <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input>
+- <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input>

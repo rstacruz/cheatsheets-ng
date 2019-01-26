@@ -6,12 +6,13 @@ updated: 2017-09-20
 ---
 
 ## Support table
+
 <!-- {.-one-column} -->
 
 ### CSS Selectors
 
 | Feature                                                    | IE6 | IE7 | IE8 | IE9 | IE10 |
-| ---------------------------------------------------------- | -   | -   | -   | -   | --   |
+| ---------------------------------------------------------- | --- | --- | --- | --- | ---- |
 | `>` _(descendant)_                                         |     | 7 ✓ | ✓   | ✓   | ✓    |
 | `[attr]` _(attribute)_                                     |     | 7 ✓ | ✓   | ✓   | ✓    |
 | `.class1.class2` _(multiple classes)_                      |     | 7 ✓ | ✓   | ✓   | ✓    |
@@ -34,6 +35,7 @@ updated: 2017-09-20
 | `:target`                                                  |     |     |     | 9 ✓ | ✓    |
 | `::selection`                                              |     |     |     | 9 ✓ | ✓    |
 | `:root`                                                    |     |     |     | 9 ✓ | ✓    |
+
 <!-- {.-headers.-no-wrap} -->
 
 `first-child:` doesn't work for elements inserted via JS.
@@ -41,7 +43,7 @@ updated: 2017-09-20
 ### CSS properties
 
 | Feature                                                    | IE6 | IE7 | IE8 | IE9 | IE10 | IE11 |
-| ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
+| ---------------------------------------------------------- | --- | --- | --- | --- | ---- | ---- |
 | `max-width`                                                |     | 7 ✓ | ✓   | ✓   | ✓    | ✓    |
 | `position: fixed`                                          |     | 7 ✓ | ✓   | ✓   | ✓    | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
@@ -69,6 +71,7 @@ updated: 2017-09-20
 | `text-shadow` — [polyfill][text-shadow]                    |     |     |     |     | 10 ✓ | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
 | `border-image`                                             |     |     |     |     |      | 11 ✓ |
+
 <!-- {.-headers.-no-wrap} -->
 
 `inline-block:` IE6/7 can only support inline-block for elements that are naturally inline, like span
@@ -76,7 +79,7 @@ updated: 2017-09-20
 ### Features
 
 | Feature                                                    | IE6 | IE7 | IE8 | IE9 | IE10 | IE11 |
-| ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
+| ---------------------------------------------------------- | --- | --- | --- | --- | ---- | ---- |
 | PNG alpha transparency                                     |     | 7 ✓ | ✓   | ✓   | ✓    | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
 | data URI [⊙][datauri]                                      |     |     | 8 ✓ | ✓   | ✓    | ✓    |
@@ -97,6 +100,7 @@ updated: 2017-09-20
 | JS: Web sockets                                            |     |     |     |     | 10 ✓ | ✓    |
 | ---------------------------------------------------------- | -   | -   | -   | -   | --   | --   |
 | JS: Fullscreen mode                                        |     |     |     |     |      | 11 ✓ |
+
 <!-- {.-headers.-no-wrap} -->
 
 `flexbox:` IE10 only supports the 2012 syntax with -ms- prefix.
@@ -107,11 +111,11 @@ updated: 2017-09-20
 
 Always install these in almost every project:
 
- - [json2] for JSON parsing (for IE7 below)
- - [selectivizr] for selectors (for IE8 below)
- - [html5shiv] for new HTML tags (for IE8 below)
- - [respond] for media queries (for IE8 below)
- - See [this article](http://ricostacruz.com/til/ie-polyfills.html) for info
+* [json2] for JSON parsing (for IE7 below)
+* [selectivizr] for selectors (for IE8 below)
+* [html5shiv] for new HTML tags (for IE8 below)
+* [respond] for media queries (for IE8 below)
+* See [this article](http://ricostacruz.com/til/ie-polyfills.html) for info
 
 ```html
 <!--[if lt IE 9]>
@@ -120,23 +124,22 @@ Always install these in almost every project:
 <script src='https://cdn.rawgit.com/gisu/selectivizr/1.0.3/selectivizr.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js'>
-<![endif]--> 
+<![endif]-->
 ```
 
 ### You may also need
 
- - [modernizr] for feature detection
+* [modernizr] for feature detection
 
 ### for CSS3 decorations
 
- - [css3pie]
- - [cssSandpaper]
- - [ecsstender]
+* [css3pie]
+* [cssSandpaper]
+* [ecsstender]
 
 See: [Cross-browser polyfills list][fills]
 
-Misc
-----
+## Misc
 
 ### IE Conditional comment HTML
 
@@ -159,7 +162,7 @@ Misc
 [ie7.js]: http://ie7-js.googlecode.com/svn/test/index.html
 [selectivizr]: http://selectivizr.com/
 [css3pie]: http://css3pie.com/
-[cssSandpaper]: https://github.com/zoltan-dulac/cssSandpaper
+[csssandpaper]: https://github.com/zoltan-dulac/cssSandpaper
 [html5shiv]: https://code.google.com/p/html5shiv/
 [fills]: https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills
 [json2]: https://github.com/douglascrockford/JSON-js
