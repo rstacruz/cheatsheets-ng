@@ -23,8 +23,8 @@ Works for both arrays and objects.
 ### Accessing
 
 ```js
-_.at([ abcd ], 0)               // → [ a ] - same as list[0]
-_.at([ abcd ], [ 0, 1 ])        // → [ ab ]
+_.at([abcd], 0) // → [ a ] - same as list[0]
+_.at([abcd], [0, 1]) // → [ ab ]
 ```
 
 ### Set/get
@@ -54,10 +54,10 @@ _.any(users, ...)                // → true|false (aka _.some)
 ### Arrays
 
 ```js
-_.chunk([ abcd ], 2)           // → [ [ab], [cd] ]
+_.chunk([abcd], 2) // → [ [ab], [cd] ]
 _.compact(list)
 
-_.fill(Array(4), 'x')          // → [ 'x', 'x', 'x', 'x' ]
+_.fill(Array(4), 'x') // → [ 'x', 'x', 'x', 'x' ]
 _.flatten
 _.flattenDeep
 ```
@@ -65,16 +65,16 @@ _.flattenDeep
 ### Filtering
 
 ```js
-_.drop([ abcdef ], 2)          // → [   cdef ]
-_.dropRight([ abcdef ], 2)     // → [ abcd   ]
-_.take([ abcdef ], 2)          // → [ ab     ]
-_.takeRight([ abcdef ], 2)     // → [     de ]
-_.slice([ abcdef ], 2, 4)      // → [   cd   ]
+_.drop([abcdef], 2) // → [   cdef ]
+_.dropRight([abcdef], 2) // → [ abcd   ]
+_.take([abcdef], 2) // → [ ab     ]
+_.takeRight([abcdef], 2) // → [     de ]
+_.slice([abcdef], 2, 4) // → [   cd   ]
 ```
 
 ```js
-_.initial([ abcdef ])          // → [ abcde  ] - dropRight(list, 1)
-_.rest([ abcdef ])             // → [  bcdef ] - takeRight(list, 1)
+_.initial([abcdef]) // → [ abcde  ] - dropRight(list, 1)
+_.rest([abcdef]) // → [  bcdef ] - takeRight(list, 1)
 ```
 
 ```js
@@ -86,27 +86,27 @@ _.dropRightWhile(list, ...)
 ```
 
 ```js
-_.without([ abcde ], b)        // → [ acde ]
+_.without([abcde], b) // → [ acde ]
 ```
 
 ```js
-_.remove(list, (n) => n % 2)
+_.remove(list, n => n % 2)
 ```
 
 ### Accessing
 
 ```js
-_.first([ abcdef ])            // → a
-_.last([ abcdef ])             // → f
+_.first([abcdef]) // → a
+_.last([abcdef]) // → f
 ```
 
 ### Sets
 
 ```js
 _.uniq()
-_.difference([ abc ], [ bc ])       // → [ a    ]
-_.intersection([ abc ], [ bcd ])    // → [  bc  ]
-_.union([ abc ], [ bcd ])           // → [ abcd ] (unique)
+_.difference([abc], [bc]) // → [ a    ]
+_.intersection([abc], [bcd]) // → [  bc  ]
+_.union([abc], [bcd]) // → [ abcd ] (unique)
 ```
 
 ```js
@@ -136,19 +136,20 @@ _.indexOf(list, val)
 ```js
 greet = (greeting, name) => `${greeting}, ${name}!`
 ```
+
 <!-- {.-setup} -->
 
 ```js
 fn = _.partial(fn, 'hi')
-fn('joe')    // → 'hi, joe!'
+fn('joe') // → 'hi, joe!'
 
 fn = _.partial(fn, 'joe')
-fn('yo')     // → 'yo, joe!'
+fn('yo') // → 'yo, joe!'
 ```
 
 ```js
-_.curry(greet)('hi')         // → function(name)
-_.curryRight(greet)('joe')   // → function(greet)
+_.curry(greet)('hi') // → function(name)
+_.curryRight(greet)('joe') // → function(greet)
 ```
 
 ## Decorating functions
@@ -163,9 +164,9 @@ _.debounce(fn)
 ### Limiting
 
 ```js
-_.before(5, fn)         // only works 5 times
-_.after(5, fn)          // works only after 5 times
-_.once(fn)              // like _.before(fn, 1)
+_.before(5, fn) // only works 5 times
+_.after(5, fn) // works only after 5 times
+_.once(fn) // like _.before(fn, 1)
 ```
 
 ### Etc
@@ -187,11 +188,11 @@ _.memoize(fn, ...)
 ### Capitalization
 
 ```js
-_.capitalize('hello world')   // → 'Hello world'
-_.startCase('hello_world')    // → 'Hello World'
-_.snakeCase('hello world')    // → 'hello_world'
-_.kebabCase('hello world')    // → 'hello-world'
-_.camelCase('hello world')    // → 'helloWorld'
+_.capitalize('hello world') // → 'Hello world'
+_.startCase('hello_world') // → 'Hello World'
+_.snakeCase('hello world') // → 'hello_world'
+_.kebabCase('hello world') // → 'hello-world'
+_.camelCase('hello world') // → 'helloWorld'
 ```
 
 ### Padding
@@ -206,22 +207,22 @@ _.padRight(...)
 ### Trim
 
 ```js
-_.trim('  str  ')         // → 'str' 
-_.trimLeft('  str  ')     // → 'str  '
-_.trimRight('  str  ')    // → '  str'
+_.trim('  str  ') // → 'str'
+_.trimLeft('  str  ') // → 'str  '
+_.trimRight('  str  ') // → '  str'
 ```
 
 ### Etc
 
 ```js
-_.repeat('-', 2)              // → '--'
-_.deburr('déjà vu')           // → 'deja vu'
-_.trunc('hello world', 5)     // → 'hello...'
+_.repeat('-', 2) // → '--'
+_.deburr('déjà vu') // → 'deja vu'
+_.trunc('hello world', 5) // → 'hello...'
 ```
 
 ```js
-_.startsWith('abc', 'a')   // → true
-_.endsWith('abc', 'c')     // → true
+_.startsWith('abc', 'a') // → true
+_.endsWith('abc', 'c') // → true
 ```
 
 ## Objects
@@ -240,8 +241,8 @@ _.values(obj)
 ```js
 _([1, 2, 3])
   .reduce((total, n) => total + n)
-  .map((n) => n * n)
+  .map(n => n * n)
   .tap(console.log)
-  .thru((n) => n.reverse())
+  .thru(n => n.reverse())
   .value()
 ```

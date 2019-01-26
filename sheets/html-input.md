@@ -36,13 +36,13 @@ weight: -3
 * tel
 * **text**
 * search
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 #### Time
 
 * date
 * time
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 #### Time (not widely supported)
 
@@ -50,14 +50,14 @@ weight: -3
 * week
 * datetime
 * datetime-local
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 #### Etc
 
 * **file**
 * **radio**
 * **checkbox**
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 #### Buttons
 
@@ -65,48 +65,48 @@ weight: -3
 * reset
 * submit
 * image
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 #### Numeric
 
 * number
 * range
-<!-- {.-four-column} -->
+  <!-- {.-four-column} -->
 
 ## Examples
 
 ### Dates
 
-| Type | Example |
-| --- | --- |
+| Type          | Example             |
+| ------------- | ------------------- |
 | `type='date'` | <input type='date'> |
 | `type='time'` | <input type='time'> |
 
 ### Datetime
 
-| Type | Example |
-| --- | --- |
-| `type='datetime'` | <input type='datetime'> |
+| Type                    | Example                       |
+| ----------------------- | ----------------------------- |
+| `type='datetime'`       | <input type='datetime'>       |
 | `type='datetime-local'` | <input type='datetime-local'> |
 
 `datetime` and `datetime-local` fields are not widely supported.
 
 ### Numbers
 
-| Type | Example |
-| --- | --- |
+| Type            | Example               |
+| --------------- | --------------------- |
 | `type='number'` | <input type='number'> |
-| `type='range'` | <input type='range'> |
+| `type='range'`  | <input type='range'>  |
 
 ### Text
 
-| Type | Example |
-| --- | --- |
-| `type='text'` | <input type='text'> |
+| Type              | Example                 |
+| ----------------- | ----------------------- |
+| `type='text'`     | <input type='text'>     |
 | `type='password'` | <input type='password'> |
-| `type='search'` | <input type='search'> |
-| `type='tel'` | <input type='tel'> |
+| `type='search'`   | <input type='search'>   |
+| `type='tel'`      | <input type='tel'>      |
 
 ## Also see
 
- * <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input>
+* <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input>

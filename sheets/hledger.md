@@ -5,13 +5,14 @@ category: Ledger
 
 ## Reporting
 
-```
+### Balance and registry
+
+```bash
 hledger bal {query}
 hledger reg {query}
 ```
-{:.large.terminal}
 
-## Query
+### Query
 
 Queries are used on all commands (`bal`, `reg`, etc). [(docs)](http://hledger.org/manual.html#queries)
 
@@ -19,22 +20,31 @@ Queries are used on all commands (`bal`, `reg`, etc). [(docs)](http://hledger.or
 Assets           # An account (regex)
 acct:Assets      # same
 ^Assets          # Starting with Assets (eg, not 'Expenses:Assets')
+```
 
+```
 acctonly:A       # no subaccounts
+```
 
+```
 amt:2000         # amount (in absolute value)
 amt:<200         # amount comparison (in absolute value)
-amt:<+200        # amount comparison
-                 # also: <=, >, >=
+amt:<+200        # amount comparison (also: <=, >, >=)
+```
 
+```
 desc:REGEX      # description
 code:REGEX      # transaction code (check number?)
 tag:REGEX
 cur:'\$'
+```
 
+```
 real:            # real posts
 real:0           # virtual posts
+```
 
+```
 depth:N          # --depth 2
 not:...          # eg, not:status:!
 ```
@@ -49,6 +59,7 @@ status:          #     --uncleared
 ```
 
 ### Periods
+
 For dates and intervals (see above).
 
 ```
@@ -70,6 +81,7 @@ date2:PERIODEXPR
 ```
 
 ### Intervals
+
 Used on all commands (`bal`, `reg`, etc). Displays in multi-column mode. In `ledger-cli`, only `reg` is supported. Can also specified via `-p` (period).
 
 ```
@@ -81,6 +93,7 @@ Used on all commands (`bal`, `reg`, etc). Displays in multi-column mode. In `led
 ```
 
 ### Smart dates
+
 Used for `--period`, `--begin` and `--end` (`-p` `-b` `-e`).
 
 ```
@@ -118,7 +131,12 @@ Used for `--period`, `--begin` and `--end` (`-p` `-b` `-e`).
 ```
 
 ## Multi-column mode
+
+### Multi-column mode
+
 When used with intervals (like `--weekly`):
+
+<!-- {.-setup} -->
 
 ```
 -T, --row-total
@@ -127,20 +145,23 @@ When used with intervals (like `--weekly`):
 
 Also: (only in `bal`)
 
+<!-- {.-setup} -->
+
 ```
     --cumulative    # show ending balance per period
 -I, --historical    # like --cumulative but only for --begin
 -A, --average
 ```
 
+## Other commands
 
-## Accounts
+### Accounts
 
 ```
 hledger accounts [--tree]
 ```
 
-## Other commands
+### Others
 
 ```
 hledger balancesheet       # bs
@@ -153,22 +174,30 @@ hledger stats
 
 ## Examples
 
+### Examples
+
 ```
 # Current balance
   hledger bal Assets
   hledger balancesheet
+```
 
+```
   hledger balancesheet Assets [--cleared --cost --empty -e tomorrow]
   # ...discard future stuff; convert foreign currencies
+```
 
+```
 # Monthly changes in assets
   hledger bal Assets Liabilities --monthly --tree --historical [--cleared --cost --empty -e tomorrow]
+```
 
+```
 # Weekly expenses
   hledger bal Expenses --weekly --average --tree -b 'last month' [--cleared --cost --empty -e tomorrow]
 ```
 
-## See also
+### See also
 
-* <http://hledger.org/manual.html>
-* <http://ledger-cli.org/3.0/doc/ledger3.html>
+- <http://hledger.org/manual.html>
+- <http://ledger-cli.org/3.0/doc/ledger3.html>

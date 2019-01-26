@@ -3,146 +3,209 @@ title: Git tricks
 category: Git
 ---
 
-## Refs
+## Git tricks
 
-    HEAD^       # 1 commit before head
-    HEAD^^      # 2 commits before head
-    HEAD~5      # 5 commits before head
+<!-- {.three-column} -->
 
-## Branches
+### Refs
 
-    # create a new branch
-      git checkout -b $branchname
-      git push origin $branchname --set-upstream
+| Ref      | Description           |
+| -------- | --------------------- |
+| `HEAD^`  | 1 commit before head  |
+| `HEAD^^` | 2 commits before head |
+| `HEAD~5` | 5 commits before head |
 
-    # get a remote branch
-      git fetch origin
-      git checkout --track origin/$branchname
+### Branches
 
-    # delete local remote-tracking branches (lol)
-      git remote prune origin
+```bash
+# create a new branch
+  git checkout -b $branchname
+  git push origin $branchname --set-upstream
+```
 
-    # list merged branches
-      git branch -a --merged
+```bash
+# get a remote branch
+  git fetch origin
+  git checkout --track origin/$branchname
+```
 
-    # delete remote branch
-      git push origin :$branchname
-      
-    # go back to previous branch
-      git checkout -
-      
-## Collaboration
+```bash
+# delete local remote-tracking branches (lol)
+  git remote prune origin
+```
 
-    # Rebase your changes on top of the remote master
-      git pull --rebase upstream master
-      
-    # Squash multiple commits into one for a cleaner git log
-    # (on the following screen change the word pick to either 'f' or 's')
-      git rebase -i $commit_ref
+```bash
+# list merged branches
+  git branch -a --merged
+```
 
-Submodules
-----------
+```bash
+# delete remote branch
+  git push origin :$branchname
+```
 
-    # Import .gitmodules
-      git submodule init
+```bash
+# go back to previous branch
+  git checkout -
+```
 
-    # Clone missing submodules, and checkout commits
-      git submodule update --init --recursive
+### Collaboration
 
-    # Update remote URLs in .gitmodules
-    # (Use when you changed remotes in submodules)
-      git submodule sync
+```bash
+# Rebase your changes on top of the remote master
+  git pull --rebase upstream master
+```
 
-Diff
-----
+```bash
+# Squash multiple commits into one for a cleaner git log
+# (on the following screen change the word pick to either 'f' or 's')
+  git rebase -i $commit_ref
+```
+
+### Submodules
+
+```bash
+# Import .gitmodules
+  git submodule init
+```
+
+```bash
+# Clone missing submodules, and checkout commits
+  git submodule update --init --recursive
+```
+
+```bash
+# Update remote URLs in .gitmodules
+# (Use when you changed remotes in submodules)
+  git submodule sync
+```
 
 ### Diff with stats
 
-    git diff --stat
-    app/a.txt    | 2 +-
-    app/b.txt    | 8 ++----
-    2 files changed, 10 insertions(+), 84 deletions(-)
+```bash
+git diff --stat
+app/a.txt    | 2 +-
+app/b.txt    | 8 ++----
+2 files changed, 10 insertions(+), 84 deletions(-)
+```
 
 ### Just filenames
 
-    git diff --summary
+```bash
+git diff --summary
+```
 
-Log options
------------
+### Log options
 
-    --oneline
-      e11e9f9 Commit message here
+```bash
+--oneline
+  e11e9f9 Commit message here
+```
 
-    --decorate
-      shows "(origin/master)"
+```bash
+--decorate
+  shows "(origin/master)"
+```
 
-    --graph
-      shows graph lines
+```bash
+--graph
+  shows graph lines
+```
 
-    --date=relative
-      "2 hours ago"
+```bash
+--date=relative
+  "2 hours ago"
+```
 
-Misc
-----
+## Misc
+
+<!-- {.three-column} -->
 
 ### Cherry pick
 
-    git rebase 76acada^
+```bash
+git rebase 76acada^
+```
 
 ### Misc
 
-    # get current sha1 (?)
-      git show-ref HEAD -s
+```bash
+# get current sha1 (?)
+  git show-ref HEAD -s
+```
 
-    # show single commit info
-      git log -1 f5a960b5
+```bash
+# show single commit info
+  git log -1 f5a960b5
+```
 
-    # Go back up to root directory
-      cd "$(git rev-parse --show-top-level)"
+```bash
+# Go back up to root directory
+  cd "$(git rev-parse --show-top-level)"
+```
 
-## Short log
+### Short log
 
-     $ git shortlog
-     $ git shortlog HEAD~20..    # last 20 commits
+```bash
+ $ git shortlog
+ $ git shortlog HEAD~20..    # last 20 commits
+```
 
-     James Dean (1):
-         Commit here
-         Commit there
+```bash
+ James Dean (1):
+     Commit here
+     Commit there
 
-     Frank Sinatra (5):
-         Another commit
-         This other commit
+ Frank Sinatra (5):
+     Another commit
+     This other commit
+```
 
-## Bisect
+### Bisect
 
-    git bisect start HEAD HEAD~6
-    git bisect run npm test
-    git checkout refs/bisect/bad   # this is where it screwed up
-    git bisect reset
+```bash
+git bisect start HEAD HEAD~6
+git bisect run npm test
+git checkout refs/bisect/bad   # this is where it screwed up
+git bisect reset
+```
 
 ### Manual bisection
 
-    git bisect start
-    git bisect good   # current version is good
+```bash
+git bisect start
+git bisect good   # current version is good
+```
 
-    git checkout HEAD~8
-    npm test          # see if it's good
-    git bisect bad    # current version is bad
+```bash
+git checkout HEAD~8
+npm test          # see if it's good
+git bisect bad    # current version is bad
+```
 
-    git bisect reset  # abort
+```bash
+git bisect reset  # abort
+```
 
-## Searching
+### Searching
 
-    git log --grep="fixes things"  # search in commit messages
-    git log -S"window.alert"       # search in code
-    git log -G"foo.*"              # search in code (regex)
+```bash
+git log --grep="fixes things"  # search in commit messages
+git log -S"window.alert"       # search in code
+git log -G"foo.*"              # search in code (regex)
+```
 
-## GPG Signing
+### GPG Signing
 
-    git config set user.signingkey <GPG KEY ID>       # Sets GPG key to use for signing
+```bash
+git config set user.signingkey <GPG KEY ID>       # Sets GPG key to use for signing
+```
 
-    git commit -m "Implement feature Y" --gpg-sign    # Or -S, GPG signs commit
+```bash
+git commit -m "Implement feature Y" --gpg-sign    # Or -S, GPG signs commit
+```
 
-    git config set commit.gpgsign true                # Sign commits by default
-    git commit -m "Implement feature Y" --no-gpg-sign # Do not sign
-    
+```bash
+git config set commit.gpgsign true                # Sign commits by default
+git commit -m "Implement feature Y" --no-gpg-sign # Do not sign
+```

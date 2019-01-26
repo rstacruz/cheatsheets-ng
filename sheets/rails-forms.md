@@ -1,10 +1,12 @@
 ---
-title: Form helpers
+title: Rails Form helpers
 hljs_languages: [haml]
 category: Rails
 ---
 
 ## Form builder
+
+### Form builder
 
 ```haml
 - form_for @post do |f|
@@ -108,24 +110,25 @@ f.collection_select :city_id, City.all, :id, :name
 f.time_zone_select :time_zone
 f.date_select :birthday
 ```
+
 ### I18n
 
 ```yaml
 helpers:
   submit:
     # helpers.submit.<action>
-    create: "Create a %{model}"
-    update: "Confirm changes to %{model}"
+    create: 'Create a %{model}'
+    update: 'Confirm changes to %{model}'
 
     # helpers.submit.<model>.<action>
     article:
-      create: "Publish article"
-      update: "Update article"
+      create: 'Publish article'
+      update: 'Update article'
 
   # helpers.label.<model>.<field>
   label:
     post:
-      body: "Your body text"
+      body: 'Your body text'
 ```
 
 ### Outside `f`
@@ -147,4 +150,3 @@ select(method, choices = nil, options = {}, html_options = {}, &block)
 
 submit(value=nil, options={})
 ```
-
