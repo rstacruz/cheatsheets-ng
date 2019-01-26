@@ -1,7 +1,7 @@
 ---
 title: React-router
 category: React
-layout: default-ad
+tags: [Outdated]
 ---
 
 ### Basic
@@ -11,11 +11,11 @@ import { default as Router, Route } from 'react-router'
 
 const routes = (
   <Route>
-    <Route path='*' handler={RootView} />
+    <Route path="*" handler={RootView} />
   </Route>
 )
 
-Router.run(routes, Router.HashLocation, (Root) => {
+Router.run(routes, Router.HashLocation, Root => {
   React.render(<Root />, document.getElementById('all'))
 })
 ```
@@ -25,16 +25,16 @@ Router.run(routes, Router.HashLocation, (Root) => {
 ```js
 const routes = (
   <Route handler={Chrome}>
-    <Route path='about' handler={About} />
-    <Route path='inbox' handler={Inbox} />
-    <Route path='messages/:id' handler={Message} />
+    <Route path="about" handler={About} />
+    <Route path="inbox" handler={Inbox} />
+    <Route path="messages/:id" handler={Message} />
   </Route>
 )
 
 import { RouteHandler } from 'react-router'
 
 const Chrome = React.createClass({
-  render () {
+  render() {
     return (
       <div>
         <h1>App</h1>
@@ -66,7 +66,6 @@ import { Link } from 'react-router'
 <Link to='login'
   activeClassName='-active'
   onClick='...'>
-
 ```
 
 ### Other config
@@ -75,12 +74,13 @@ import { Link } from 'react-router'
 <Route path='/'>
   <DefaultRoute handler={Home} />
   <NotFoundRoute handler={NotFound} />
-  
+
   <Redirect from='login' to='sessions/new' />
   <Redirect from='login' to='sessions/new' params={{from: 'home'}} />
   <Redirect from='profile/:id' to='about-user' />
 
   <Route name='about-user' ... />
+</Route>
 ```
 
 ### Router.create
@@ -91,7 +91,9 @@ var router = Router.create({
   location: Router.HistoryLocation
 })
 
-router.run((Root) => { ... })
+router.run(Root => {
+  /* ... */
+})
 ```
 
 ### Navigation
@@ -100,11 +102,11 @@ router.run((Root) => { ... })
 import { Navigation } from 'react-router'
 
 React.createClass({
-  mixins: [ Navigation ], ...
+  mixins: [Navigation]
+  /* ... */
 })
 
-this
-  .transitionTo('user', {id: 10})
+this.transitionTo('user', { id: 10 })
   .transitionTo('/path')
   .transitionTo('http://...')
   .replaceWith('about')
