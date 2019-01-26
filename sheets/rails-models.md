@@ -4,15 +4,13 @@ category: Rails
 layout: 2017/sheet
 ---
 
-Generating
-----------
+## Generating
 
 ### Generating
 
     $ rails g model User
 
-Using models
-------------
+## Using models
 
 ### Query methods
 
@@ -204,6 +202,7 @@ See: [Calculations](http://devdocs.io/rails/activerecord/calculations)
 ### Dynamic attribute-based finders
 
 Given a field called `name`:
+
 <!-- {.-setup} -->
 
 ```ruby
@@ -229,17 +228,16 @@ Person.find_by_name!(name)
 Person.scoped_by_user_name
 ```
 
-Associations
-------------
+## Associations
 
 ### Associations
 
-- `belongs_to`
-- `has_one`
-- `has_many`
-- `has_many :through`
-- `has_one :through`
-- `has_and_belongs_to_many`
+* `belongs_to`
+* `has_one`
+* `has_many`
+* `has_many :through`
+* `has_one :through`
+* `has_and_belongs_to_many`
 
 ### Has many
 
@@ -289,6 +287,7 @@ belongs_to :author,
 ### Many-to-many
 
 If you have a join model:
+
 <!-- {.-setup} -->
 
 ```ruby
@@ -297,6 +296,7 @@ class Programmer < ActiveRecord::Base
   has_many :projects, :through => :assignments
 end
 ```
+
 <!-- {data-line="2,3"} -->
 
 ```ruby
@@ -305,6 +305,7 @@ class Project < ActiveRecord::Base
   has_many :programmers, :through => :assignments
 end
 ```
+
 <!-- {data-line="2,3"} -->
 
 ```ruby
@@ -313,6 +314,7 @@ class Assignment
   belongs_to :programmer
 end
 ```
+
 <!-- {data-line="2,3"} -->
 
 ### Many-to-many (HABTM)
@@ -334,6 +336,7 @@ class Post
   has_many :attachments, as: :parent
 end
 ```
+
 <!-- {data-line="2"} -->
 
 ```ruby
@@ -341,6 +344,7 @@ class Image
   belongs_to :parent, polymorphic: true
 end
 ```
+
 <!-- {data-line="2"} -->
 
 And in migrations:
@@ -350,22 +354,24 @@ create_table :images do |t|
   t.references :post, polymorphic: true
 end
 ```
+
 <!-- {data-line="2"} -->
 
-Validation
-----------
+## Validation
 
 ### Validation
 
 ```ruby
 class Person < ActiveRecord::Base
 ```
+
 {:.-setup}
 
 ```ruby
   # Presence
   validates :name,     presence: true
 ```
+
 <!-- {data-line="2"} -->
 
 ```ruby
@@ -449,6 +455,7 @@ class Person < ActiveRecord::Base
 ```ruby
 end
 ```
+
 <!-- {.-setup} -->
 
 ### Custom validations
@@ -462,6 +469,7 @@ class Person < ActiveRecord::Base
   end
 end
 ```
+
 <!-- {data-line="2"} -->
 
 ### Errors
@@ -476,16 +484,15 @@ record.errors.messages    # → { :name => ["can't be blank"] }
 record.errors[:name].any?
 ```
 
-Other API
----------
+## Other API
 
 ### Callbacks
 
- * [Guides: callbacks](http://guides.rubyonrails.org/active_record_validations_callbacks.html)
+* [Guides: callbacks](http://guides.rubyonrails.org/active_record_validations_callbacks.html)
 
 ### Mass updates
 
- ```ruby
+```ruby
 # Updates person id 15
 Person.update 15, name: "John", age: 24
 Person.update [1,2], [{name: "John"}, {name: "foo"}]
@@ -532,6 +539,7 @@ class User < ActiveRecord::Base
   serialize :preferences
 end
 ```
+
 <!-- {data-line="2"} -->
 
 ```ruby
@@ -543,8 +551,8 @@ user = User.create(
 )
 ```
 
-You can also specify a class option as the second parameter that’ll raise an 
-exception if a serialized object is retrieved as a descendant of a class not in 
+You can also specify a class option as the second parameter that’ll raise an
+exception if a serialized object is retrieved as a descendant of a class not in
 the hierarchy.
 
 ```ruby
@@ -553,6 +561,7 @@ class User < ActiveRecord::Base
   serialize :preferences, Hash
 end
 ```
+
 <!-- {data-line="3"} -->
 
 ```ruby
@@ -561,8 +570,7 @@ user = User.create(preferences: %w(one two three))
 User.find(user.id).preferences
 ```
 
-Other tricks
-------------
+## Other tricks
 
 ### Overriding accessors
 
@@ -579,15 +587,15 @@ class Song < ActiveRecord::Base
   end
 end
 ```
+
 <!-- {data-line="4,8"} -->
 
 See: <http://api.rubyonrails.org/classes/ActiveRecord/Base.html>
 
-Callbacks
----------
+## Callbacks
 
-- after_create
-- after_initialize
-- after_validation
-- after_save
-- after_commit
+* after_create
+* after_initialize
+* after_validation
+* after_save
+* after_commit
