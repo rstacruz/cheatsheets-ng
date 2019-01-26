@@ -2,22 +2,39 @@
 title: PostgreSQL
 ---
 
-Replace anything within `<placeholder>` accordingly
+## PostgreSQL
+
+<!-- {.-three-column} -->
 
 ### Console
 
-    $ psql #logs in to default database & default user
-    $ sudo -u <rolename:postgres> psql #logs in with a particular user
+```sh
+psql
+```
 
 ### Commands
 
- * Show roles: `\du`
- * Show tables: `\dt`
- * Show databases: `\l`
- * Connect to a database: `\c <database>`
- * Show columns of a table: `\d <table>` or `\d+ <table>`
- * Quit: `\q`
+| Command       | Description            |
+| ------------- | ---------------------- |
+| `\du`         | Show roles             |
+| `\dt`         | Show tables            |
+| `\l`          | Show databases         |
+| `\c`          | Connect to a database  |
+|               |                        |
+| `\d <table>`  | Show columns           |
+| `\d+ <table>` | Show columns (verbose) |
+|               |                        |
+| `\q`          | Quit                   |
 
-### Creating database
+These are commands in `psql`. Replace anything within `<placeholder>` accordingly.
 
-     $ createdb databasename
+### Managing databases
+
+| Command             | Description     |
+| ------------------- | --------------- |
+| `createdb <dbname>` | Create database |
+| `dropdb <dbname>`   | Drop database   |
+|                     |                 |
+| `createuser <user>` | Create a user   |
+
+These are shell commands.
