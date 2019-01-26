@@ -54,47 +54,51 @@ category: Vim
 
 ### `:EasyAlign = dr` (delimiter_align right)
 
-    apple    = 1
-    banana  += apple
-    cake   ||= banana
+```
+apple    = 1
+banana  += apple
+cake   ||= banana
+```
 
 ### `:EasyAlign :` (for json or yaml)
 
-    url:      jdbc:mysql://localhost/test
-    database: test
+```
+url:      jdbc:mysql://localhost/test
+database: test
+```
 
 ### `:EasyAlign *|` (markdown tables)
 
-```nohighlight
+| Key       | Description                   |
+| --------- | ----------------------------- |
 | `<Enter>` | right align                   |
 | `1`       | on 1st occurrence             |
 | `2`       | on 2nd occurrence (and so on) |
-```
 
-Interactive mode
-----------------
+## Interactive mode
 
+| Key             | Description                     |
+| --------------- | ------------------------------- |
 | `{Visual}` `⏎`  | activate for selection          |
 | `ga` `{motion}` | activate for motion/text object |
-{:.greycode}
 
 Then press options (if available), then a delimiter.
 
 ### Interactive mode options
 
+| Key              | Description                                      |
+| ---------------- | ------------------------------------------------ |
 | `⏎`              | Set `alignment`                                  |
 | `<ctrl-l>` `4 ⏎` | Set `left_margin` (to the left of the delimiter) |
 | `<ctrl-r>` `4 ⏎` | Set `right_margin`                               |
 | `↓`              | no margin                                        |
-{:.greycode}
 
 ### Example
 
- * `gaip` `<ctrl-l>` `8⏎` `=` - puts 8 spaces before the equal sign
+- `gaip` `<ctrl-l>` `8⏎` `=` - puts 8 spaces before the equal sign
 
-Also see
---------
+## Also see
 
-* [vim-easy-align](https://github.com/junegunn/vim-easy-align)
-* [Examples](https://github.com/junegunn/vim-easy-align#examples)
-* [Alignment options](https://github.com/junegunn/vim-easy-align#alignment-options)
+- [vim-easy-align](https://github.com/junegunn/vim-easy-align)
+- [Examples](https://github.com/junegunn/vim-easy-align#examples)
+- [Alignment options](https://github.com/junegunn/vim-easy-align#alignment-options)

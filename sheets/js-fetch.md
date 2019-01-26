@@ -6,6 +6,7 @@ weight: -3
 ---
 
 ### Fetch
+
 <!-- {.-prime} -->
 
 ```js
@@ -16,23 +17,23 @@ fetch('/data.json')
   })
   .catch(err => ...)
 ```
+
 <!-- {data-line="4"} -->
 
 ### Response
 
 ```js
-fetch('/data.json')
-.then(res => {
-  res.text()       // response body (=> Promise)
-  res.json()       // parse via JSON (=> Promise)
-  res.status       //=> 200
-  res.statusText   //=> 'OK'
-  res.redirected   //=> false
-  res.ok           //=> true
-  res.url          //=> 'http://site.com/data.json'
-  res.type         //=> 'basic'
-                   //   ('cors' 'default' 'error'
-                   //    'opaque' 'opaqueredirect')
+fetch('/data.json').then(res => {
+  res.text() //      -  response body (=> Promise)
+  res.json() //      -  parse via JSON (=> Promise)
+  res.status //      => 200
+  res.statusText //  => 'OK'
+  res.redirected //  => false
+  res.ok //          => true
+  res.url //         => 'http://site.com/data.json'
+  res.type //        => 'basic'
+  //s                   ('cors' 'default' 'error'
+  //s                    'opaque' 'opaqueredirect')
 
   res.headers.get('Content-Type')
 })
@@ -59,12 +60,11 @@ fetch('/data.json', {
 ### Catching errors
 
 ```js
-fetch('/data.json')
-  .then(checkStatus)
+fetch('/data.json').then(checkStatus)
 ```
 
 ```js
-function checkStatus (res) {
+function checkStatus(res) {
   if (res.status >= 200 && res.status < 300) {
     return res
   } else {
@@ -86,6 +86,7 @@ const fetch = require('isomorphic-fetch')
 See: [isomorphic-fetch](https://npmjs.com/package/isomorphic-fetch) _(npmjs.com)_
 
 ## References
+
 <!-- {.-one-column} -->
 
 - <https://fetch.spec.whatwg.org/>

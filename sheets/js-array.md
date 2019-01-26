@@ -9,6 +9,7 @@ layout: 2017/sheet
 ```bash
 list = [a,b,c,d,e]
 ```
+
 <!-- {.-setup} -->
 
 ```bash
