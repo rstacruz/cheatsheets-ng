@@ -2,6 +2,12 @@
 title: Unicode symbols
 ---
 
+## Common unicode symbols
+
+<!-- {.-three-column} -->
+
+### Symbols
+
     ✈   \u2708 airplane
     ❄   \u2744 snowflake
     ⚑   \u2691 flag
@@ -10,8 +16,12 @@ title: Unicode symbols
     ☀   \u2600 rays
     ⚠   \u26a0 warning
 
+### Stars
+
     ★   star
     ☆   star2
+
+### Flag
 
     ⚐   \u2690 flag
     ⚑   \u2691 flag
@@ -33,7 +43,6 @@ title: Unicode symbols
     ✘   \u2718 x mark bold
     ❏   \u274f checkbox
     ×   times
-
 
 ### Spinners
 

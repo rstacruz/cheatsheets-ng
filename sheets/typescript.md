@@ -1,88 +1,102 @@
 ---
 title: TypeScript
 category: JavaScript libraries
+intro: |
+  TypeScript is just like ES2015 with type-checking. All ES2015 (classes, etc) should work.
 ---
 
-TypeScript is just like ES2015 with type-checking. All ES2015 (classes, etc) should work.
+## Reference
 
-## Basic types
+<!-- {.-three-column} -->
+
+### Basic types
+
+| Type                            |
+| ------------------------------- |
+| `any`                           |
+| `boolean`                       |
+| `number`                        |
+| `string`                        |
+|                                 |
+| `null`                          |
+| `undefined`                     |
+|                                 |
+| `string[]` (or `Array<string>`) |
+| `[string, number]` (tuple)      |
+|                                 |
+| `string | null` (union)         |
+
+### Enum
 
 ```ts
-any
-void
-
-boolean
-number
-string
-
-null
-undefined
-
-string[]          /* or Array<string> */
-[string, number]  /* tuple */
-
-string | null | undefined   /* union */
-
-never  /* unreachable */
-```
-
-```ts
-enum Color {Red, Green, Blue = 4}
+enum Color {
+  Red,
+  Green,
+  Blue = 4
+}
 let c: Color = Color.Green
 ```
 
-## Declarations
+### Declarations
+
+#### Variables
 
 ```ts
 let isDone: boolean
 let isDone: boolean = false
 ```
 
+#### Args and return
+
 ```ts
-function add (a: number, b: number): number {
+function add(a: number, b: number): number {
   return a + b
 }
-
-// Return type is optional
-function add (a: number, b: number) { ... }
 ```
 
-## Type assertions
+```ts
+// Return type is optional
+function add(a: number, b: number) {
+  /* ... */
+}
+```
+
+### Type assertions
 
 ```ts
 let len: number = (input as string).length
-let len: number = (<string> input).length  /* not allowed in JSX */
 ```
 
 ## Interfaces
 
-### Inline
-
-```ts
-function printLabel (options: { label: string }) {
-  console.log(options.label)
-}
-
-// Note the semicolon
-function getUser (): { name: string; age?: number } {
-}
-```
-
-### Explicit
+### Explicit interfaces
 
 ```ts
 interface LabelOptions {
   label: string
 }
 
-function printLabel(options: LabelOptions) { ... }
+function printLabel(options: LabelOptions) {
+  /* ... */
+}
+```
+
+### Inline interfaces
+
+```ts
+function printLabel(options: { label: string }) {
+  console.log(options.label)
+}
+
+// Note the semicolon
+function getUser(): { name: string; age?: number } {}
 ```
 
 ### Optional properties
 
 ```ts
 interface User {
-  name: string,
+  name: string
   age?: number
 }
 ```
@@ -99,27 +113,29 @@ interface User {
 
 ```ts
 {
-  [key: string]: Object[]
+  [key: string]: any
 }
 ```
 
-## Type aliases
+## More features
+
+### Type aliases
 
 ```ts
 type Name = string | string[]
 ```
 
-## Function types
+### Function types
 
 ```ts
-interface User { ... }
-
-function getUser(callback: (user: User) => any) { callback({...}) }
-
-getUser(function (user: User) { ... })
+function getUser(callback: (user: User) => any) {
+  callback({
+    /* ... */
+  })
+}
 ```
 
-## Classes
+### Classes
 
 ```ts
 class Point {
@@ -133,7 +149,7 @@ class Point {
 }
 ```
 
-## Generics
+### Generics
 
 ```ts
 class Greeter<T> {
@@ -146,8 +162,12 @@ class Greeter<T> {
 let greeter = new Greeter<string>('Hello, world')
 ```
 
-## Modules
+### Modules
 
+```typescript
+export interface User {
+  /* ... */
+}
 ```
-export interface User { ... }
-```
+
+Types and interfaces can be imported and exported just like any other JavaScript.
