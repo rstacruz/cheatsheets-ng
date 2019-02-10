@@ -8,8 +8,8 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Try 'make build' or 'make build-prefixed'\"; exit 1",
-    "deploy": "echo \"Try 'make build' (or 'build-prefixed') then 'make deploy'\"; exit 1",
+    "build": "echo \"Try 'make build'\"; exit 1",
+    "deploy": "echo \"Try 'make build' then 'make deploy'\"; exit 1",
     "develop": "make develop",
     "lint:check": "./support/check.sh",
     "lint:fix": "./support/format.sh",

@@ -1,35 +1,28 @@
+help:
+	@echo
+	@echo Makefile targets
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+	@echo
+
 SHEET_PATH := $(shell pwd -LP)/sheets
 PORT := 19400
 HOST := 0.0.0.0
 
-# Start development server
-develop: devhints-engine
+develop: devhints-engine ## Start development server
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run gatsby develop --host ${HOST} --port ${PORT}
 
-# Start development server, but only for wip/
-develop-wip: devhints-engine
+develop-wip: devhints-engine ## Start development server, but only for wip/
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH}/wip yarn run gatsby develop --host ${HOST} --port ${PORT}
 
 # Build
-build: public
+build: public ## Build public/ for deployment
 public: devhints-engine
 	cd devhints-engine && env SHEET_PATH=${SHEET_PATH} yarn run build
 	rm -rf ./public
 	mv devhints-engine/public ./public
 	echo "next.devhints.io" > public/CNAME
 
-# Build
-build-prefixed:
-	env PATH_PREFIX=/cheatsheets-ng make build
-	rm -f public/CNAME
-
-# Deploys. Be sure to 'make build' (or 'make build-prefixed') first
-deploy:
-	@if [ ! -e public ]; then echo "ERR: public/ not found. Try 'make build' (or 'build-prefixed') first"; exit 1; fi
-	yarn run gh-pages -d public
-
-# Update (or create) devhints-engine
-devhints-engine:
+devhints-engine: ## Update (or create) devhints-engine
 	if [ ! -e devhints-engine ]; then git clone https://github.com/rstacruz/devhints-engine.git -b master; fi
 	cd devhints-engine && git pull origin master
 	cd devhints-engine && yarn

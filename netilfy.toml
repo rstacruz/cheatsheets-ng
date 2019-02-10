@@ -1,0 +1,9 @@
+[build]
+publish = 'public'
+command = 'make build'
+
+[build.environment]
+NODE_VERSION = '10.15.0'
+
+[context.deploy-preview.environment]
+DEPLOY_PREVIEW = '1'
