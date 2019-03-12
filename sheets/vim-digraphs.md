@@ -1,6 +1,7 @@
 ---
 title: Vim digraphs
 category: Vim
+updated: 2019-03-04
 ---
 
 ### Typing digraphs in insert mode
@@ -8,77 +9,173 @@ category: Vim
 ```
 <Ctrl-K>OK
 ```
-{:.light}
+
+Press `Ctrl-K` and enter 2 letters.
 
 ### Listing digraphs
 
-
 ```
-:dig
 :digraphs
 ```
-{:.lights}
+
+Or `:dig`.
 
 ## Reference
 
-### Symbols
+<!-- {.-three-column} -->
 
-| ℠  | ™  | ©  | ®  | ¶  | †  | ‡  | &ndash; | ±  |
-| SM | TM | Co | Rg | PI | /- | /= | --      | +- |
+### Marks
 
-| §  | µ  | £  | ¢  | ¥  | ¤  |
-| SE | My | $$ | Ct | Ye | Cu |
+| Digraph | Name            | Symbol |
+| ------- | --------------- | ------ |
+| `SM`    | Service mark    | ℠      |
+| `TM`    | Trademark       | ™      |
+| `Co`    | Copyright       | ©      |
+| `Rg`    | Registered sign | ®      |
 
-| ★  | ☆  | ♡  | ◆  | ◇  |
-| *2 | *1 | cH | Db | Dw |
-
-| ✓  | ✗  |
-| OK | XX |
-
-### Dots and bullets
-
-| ⋅  | ·  | ○  | ∙  | ∘  | ∴  | ∵  | ∶  | ∷  |
-| .P | .M | 0m | Sb | Ob | .: | :. | :R | :: |
-
-| ⊙  | ⊚  | ◎   | □  | ▪  |
-| 0. | 02 | 0o  | OS | sB |
+<!-- {.-shortcuts} -->
 
 ### Math
 
-| ø  | ≃  | ≅  | ≥  | ≤  | ≡  | ≮  | ≯  | ≠  |
+| Digraph | Name          | Symbol |
+| ------- | ------------- | ------ |
+| `+-`    | Plus/minus    | ±      |
+| `DG`    | Degree        | °      |
+|         |               |        |
+| `1S`    | Sperscript 1  | ¹      |
+| `2S`    | Superscript 2 | ²      |
+| `3S`    | Superscript 3 | ³      |
+|         |               |        |
+| `My`    | Mu            | µ      |
+
+<!-- {.-shortcuts} -->
+
+### Typographic stuff
+
+| Digraph | Name                | Symbol  |
+| ------- | ------------------- | ------- |
+| `-N`    | En dash             | &ndash; |
+| `-M`    | Em dash             | &mdash; |
+|         |                     |         |
+| `PI`    | Pilcrow (paragraph) | ¶       |
+| `SE`    | Section             | §       |
+|         |                     |         |
+| `/-`    | Dagger              | †       |
+| `/=`    | Double dagger       | ‡       |
+
+<!-- {.-shortcuts} -->
+
+### Currencies
+
+| Digraph | Name     | Symbol |
+| ------- | -------- | ------ |
+| `Cu`    | Currency | ¤      |
+| `$$`    | Pound    | £      |
+| `Ct`    | Cent     | ¢      |
+| `Ye`    | Yen      | ¥      |
+
+<!-- {.-shortcuts} -->
+
+### Symbols
+
+| Digraph | Name             | Symbol |
+| ------- | ---------------- | ------ |
+| `*2`    | Star             | ★      |
+| `*1`    | Star             | ☆      |
+| `cH`    | Heart            | ♡      |
+| `Db`    | Diamond, filled  | ◆      |
+| `Dw`    | Diamond, outline | ◇      |
+| `cS`    | Spade            | ♠      |
+| `cC`    | Club             | ♣      |
+
+<!-- {.-shortcuts} -->
+
+### Check / X
+
+| Digraph | Name      | Character |
+| ------- | --------- | --------- |
+| `OK`    | Checkmark | ✓         |
+| `XX`    | X         | ✗         |
+
+<!-- {.-shortcuts} -->
+
+### Dots and bullets
+
+| ⋅ | · | ○ | ∙ | ∘ | ∴ | ∵ | ∶ | ∷ |
+| .P | .M | 0m | Sb | Ob | .: | :. | :R | :: |
+
+| ⊙ | ⊚ | ◎ | □ | ▪ |
+| 0. | 02 | 0o | OS | sB |
+
+### Math
+
+| ø | ≃ | ≅ | ≥ | ≤ | ≡ | ≮ | ≯ | ≠ |
 | o/ | ?- | ?= | >= | =< | =3 | !< | !> | != |
 
-| √         | ×          | ÷           |
-| RT *root* | /\ *times* | -: *divide* |
+| √ | × | ÷ |
+| RT _root_ | /\ _times_ | -: _divide_ |
 
-| ⊂           | ⊃             | ∩                 | ∪          |
-| (C *subset* | )C *superset* | (U *intersection* | )U *union* |
+### Fractions
 
-| ¼  | ½  | ¾  | ₃  | ₂  | ³  | ²  |
+| ¼ | ½ | ¾ | ₃ | ₂ | ³ | ² |
 | 14 | 12 | 34 | 3s | 2s | 3S | 2S |
 
-### Triangles
+### Sets
 
-| ▲  | △  | ▼  | ▽  |
-| UT | uT | Dt | dT |
+| Digraph | Name         | Character |
+| ------- | ------------ | --------- |
+| `(C`    | Subset       | ⊂         |
+| `)C`    | Superset     | ⊃         |
+| `(U`    | Intersection | ∩         |
+| `)U`    | Union        | ∪         |
 
-| ▶  | ▷  | ◀  | ◁  |
-| PR | Tr | PL | Tl |
+<!-- {.-shortcuts} -->
 
-| »  | «  | 〈 | 〉 | ‹  | ›  |
+### Triangles, filled
+
+| Digraph | Name  | Character |
+| ------- | ----- | --------- |
+| `UT`    | Up    | ▲         |
+| `Dt`    | Down  | ▼         |
+| `PL`    | Left  | ◀         |
+| `PR`    | Right | ▶         |
+
+<!-- {.-shortcuts} -->
+
+### Triangles, outline
+
+| Digraph | Name  | Character |
+| ------- | ----- | --------- |
+| `uT`    | Up    | △         |
+| `dT`    | Down  | ▽         |
+| `Tl`    | Left  | ◁         |
+| `Tr`    | Right | ▷         |
+
+### Chevrons
+
+| » | « | 〈 | 〉 | ‹ | › |
 | >> | << | </ | /> | <1 | >1 |
 
 ### Arrows
 
-| ←  | →  | ↑  | ↓  | ↕ | ↔ |
-| <- | -> | -! | -v | UD | <> |
+| Digraph | Name         | Character |
+| ------- | ------------ | --------- |
+| `<-`    | Left         | ←         |
+| `->`    | Right        | →         |
+| `-!`    | Up           | ↑         |
+| `-v`    | Down         | ↓         |
+|         |              |           |
+| `UD`    | Up & down    | ↕         |
+| `<>`    | Left & right | ↔         |
 
-| ⇐  | ⇒  | ⇔  |
-| <= | => | == |
+<!-- {.-shortcuts} -->
 
-<style>
-.all table tr td { text-align: center; }
-.all table tr:first-child td { font-size: 1.3em; padding-bottom: 0; }
-.all table tr:first-child+tr td { font-size: 0.9em; color: dodgerblue; border-top: 0; padding-top: 0; font-family: fira mono, monospace; }
-.all table em { color: #aaa; font-size: 0.9em; font-style: normal; font-family: roboto, sans-serif; }
-</style>
+### Double arrows
+
+| Digraph | Name         | Character |
+| ------- | ------------ | --------- |
+| `<=`    | Left         | ⇐         |
+| `=>`    | Right        | ⇒         |
+| `==`    | Left & right | ⇔         |
+
+<!-- {.-shortcuts} -->
