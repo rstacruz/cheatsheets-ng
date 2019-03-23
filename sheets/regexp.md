@@ -1,27 +1,60 @@
 ---
-title: Regexp
-tags: [WIP]
+title: regexp
+category: Others
+layout: 2017/sheet
+weight: -1
+authors:
+  - github: rizqyhi
+updated: 2018-10-26
+description: |
+  Basic cheatsheets for regular expression
 ---
 
-### Named matches
+### Character Classes
 
-```js
-(?P<named_match>...)
-```
+| Pattern | Description                    |
+| ------- | ------------------------------ |
+| `.`     | Any character, except newline  |
+| `\w`    | Word                           |
+| `\d`    | Digit                          |
+| `\s`    | Whitespace                     |
+| `\W`    | Not word                       |
+| `\D`    | Not digit                      |
+| `\S`    | Not whitespace                 |
+| `[abc]` | Any of a, b, or c              |
+| `[a-e]` | Characters between `a` and `e` |
+| `[1-9]` | Digit between `1` and `9`      |
 
-### Invisible group
+### Anchors
 
-```
-(?:invisible group)
-```
+| Pattern | Description      |
+| ------- | ---------------- |
+| `^abc`  | Start with `abc` |
+| `abc$`  | End with `abc`   |
 
-Groups prefixed with `?:` won't show up as matches.
+### Escaped Characters
 
-### Look-aheads
+| Pattern    | Description                            |
+| ---------- | -------------------------------------- |
+| `\. \* \\` | Escape special character used by regex |
+| `\t`       | Tab                                    |
+| `\n`       | Newline                                |
+| `\r`       | Carriage return                        |
 
-```
-(?!negative look-ahead)
-(?=positive look-ahead)
-(?<!negative look-behind)
-(?<=positive look-behind)
-```
+### Groups
+
+| Pattern | Description   |
+| ------- | ------------- |
+| `(abc)` | Capture group |
+
+### Quantifiers
+
+| Pattern  | Description           |
+| -------- | --------------------- |
+| `a*`     | Match 0 or more       |
+| `a+`     | Match 1 or more       |
+| `a?`     | Match 0 or 1          |
+| `a{5}`   | Match exactly 5       |
+| `a{,3}`  | Match up to 3         |
+| `a{3,}`  | Match 3 or more       |
+| `a{1,3}` | Match between 1 and 3 |
