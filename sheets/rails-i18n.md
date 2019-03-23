@@ -3,6 +3,14 @@ title: i18n
 category: Rails
 ---
 
+## I18n
+
+<!-- {.-three-column} -->
+
+### Basic example
+
+#### I18n.t()
+
 ```rb
 t('my.messages.hello')
 
@@ -12,13 +20,14 @@ t(:hello, scope: [:my, :messages])
 
 t('my.messages.hello', default: "Hello")
 ```
-{:.light}
+
+#### config/locales/en.yml
 
 ```yml
 en:
   my:
     messages:
-      hello: "Hello"
+      hello: 'Hello'
 ```
 
 ### Interpolation
@@ -26,10 +35,11 @@ en:
 ```rb
 t('hello', name: "John")
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
-hello: "Hello %{name}"
+hello: 'Hello %{name}'
 ```
 
 ### Lazy lookup
@@ -38,13 +48,14 @@ hello: "Hello %{name}"
 # from the 'books/index' view
 t('.title')
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 en:
   books:
     index:
-      title: "Título"
+      title: 'Título'
 ```
 
 ### Plural
@@ -53,7 +64,8 @@ en:
 t(:inbox, count: 1)  #=> 'one message'
 t(:inbox, count: 2)  #=> '2 messages'
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 inbox:
@@ -69,15 +81,16 @@ inbox:
 l(Time.now)
 l(Time.now, format: :short)
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 en:
   time:
     formats:
-      default: "%a, %d %b %Y %H:%M:%S %z"
-      long: "%B %d, %Y %H:%M"
-      short: "%d %b %H:%M"
+      default: '%a, %d %b %Y %H:%M:%S %z'
+      long: '%B %d, %Y %H:%M'
+      short: '%d %b %H:%M'
 ```
 
 ### Date
@@ -85,18 +98,21 @@ en:
 ```rb
 l(Date.today)
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 en:
   date:
     formats:
-      default: "%Y-%m-%d" # 2015-06-25
-      long: "%B %d, %Y"   # June 25, 2015
-      short: "%b %d"      # Jun 25
+      default: '%Y-%m-%d' # 2015-06-25
+      long: '%B %d, %Y' # June 25, 2015
+      short: '%b %d' # Jun 25
 ```
 
 ## ActiveRecord
+
+<!-- {.-three-column} -->
 
 ### Model names
 
@@ -104,16 +120,17 @@ en:
 User.model_name.human            #=> "User"
 Child.model_name.human(count: 2) #=> "Children"
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 en:
   activerecord:
     models:
-      user: "User"
+      user: 'User'
       child:
-        one: "Child"
-        other: "Children"
+        one: 'Child'
+        other: 'Children'
 ```
 
 ### Attributes
@@ -121,7 +138,8 @@ en:
 ```rb
 User.human_attribute_for :name   #=> "Name"
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 en:
@@ -129,8 +147,8 @@ en:
     attributes:
       user:
         # activerecord.attributes.<model>.<field>
-        name: "Name"
-        email: "Email"
+        name: 'Name'
+        email: 'Email'
 ```
 
 ### Error messages
@@ -138,7 +156,8 @@ en:
 ```rb
 error_messages_for(...)
 ```
-{:.light}
+
+#### Locale file
 
 ```yml
 activerecord:
@@ -147,7 +166,7 @@ activerecord:
       venue:
         attributes:
           name:
-            blank: "Please enter a name."
+            blank: 'Please enter a name.'
 ```
 
 Possible scopes (in order):
@@ -164,15 +183,15 @@ Where `[error]` can be:
 
 ```yml
 validates
-  confirmation - :confirmation
-  acceptance   - :accepted
-  presence     - :blank
-  length       - :too_short (%{count})
-  length       - :too_long (%{count})
-  length       - :wrong_length (%{count})
-  uniqueness   - :taken
-  format       - :invalid
-  numericality - :not_a_number
+confirmation - :confirmation
+acceptance   - :accepted
+presence     - :blank
+length       - :too_short (%{count})
+length       - :too_long (%{count})
+length       - :wrong_length (%{count})
+uniqueness   - :taken
+format       - :invalid
+numericality - :not_a_number
 ```
 
 ### Form labels
@@ -181,14 +200,13 @@ validates
 form_for @post do
   f.label :body
 ```
-{:.light}
 
 ```yml
 helpers:
   # helpers.label.<model>.<field>
   label:
     post:
-      body: "Your body text"
+      body: 'Your body text'
 ```
 
 ### Submit buttons
@@ -197,21 +215,19 @@ helpers:
 form_for @post do
   f.submit
 ```
-{:.light}
 
 ```yml
 helpers:
   submit:
     # helpers.submit.<action>
-    create: "Create a %{model}"
-    update: "Confirm changes to %{model}"
+    create: 'Create a %{model}'
+    update: 'Confirm changes to %{model}'
 
     # helpers.submit.<model>.<action>
     article:
-      create: "Publish article"
-      update: "Update article"
+      create: 'Publish article'
+      update: 'Update article'
 ```
- 
 
 ## Numbers
 
@@ -223,13 +239,13 @@ number_to_rounded(3.14, precision: 0) #=> "3"
 number_to_human(12_000)               #=> "12 Thousand"
 number_to_human_size(12345)           #=> "12.3 kb"
 ```
-{:.light}
 
 ### Delimited
 
 ```rb
 number_to_delimited(n)
 ```
+
 {:.light}
 
 ```yml
@@ -247,14 +263,15 @@ number:
 ```rb
 number_to_currency(n)
 ```
+
 {:.light}
 
 ```yml
 number:
   currency:
     format:
-      format: "%u%n" # %u = unit, %n = number
-      unit: "$"
+      format: '%u%n' # %u = unit, %n = number
+      unit: '$'
       separator: '.'
       delimiter: ','
       precision: 3
@@ -266,13 +283,12 @@ number:
 ```rb
 number_to_percentage(n)
 ```
-{:.light}
 
 ```yml
 number:
   percentage:
     format:
-      format: "%n%"
+      format: '%n%'
       # (see number.format)
 ```
 
@@ -288,11 +304,10 @@ I18n.available_locales
 I18n.translate :ok   # aka, I18n.t
 I18n.localize date   # aka, I18n.l
 ```
-{:.light}
 
 ## Reference
 
- * http://guides.rubyonrails.org/i18n.html
- * http://rails-i18n.org/wiki
- * https://github.com/svenfuchs/i18n
- * https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/en.yml
+- http://guides.rubyonrails.org/i18n.html
+- http://rails-i18n.org/wiki
+- https://github.com/svenfuchs/i18n
+- https://github.com/svenfuchs/rails-i18n/blob/master/rails/locale/en.yml
