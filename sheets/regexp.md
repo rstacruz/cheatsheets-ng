@@ -5,12 +5,16 @@ layout: 2017/sheet
 weight: -1
 authors:
   - github: rizqyhi
-updated: 2018-10-26
+updated: 2019-03-24
 description: |
   Basic cheatsheets for regular expression
 ---
 
-### Character Classes
+##
+
+<!-- {.-three-column} -->
+
+### Character classes
 
 | Pattern | Description                    |
 | ------- | ------------------------------ |
@@ -32,7 +36,7 @@ description: |
 | `^abc`  | Start with `abc` |
 | `abc$`  | End with `abc`   |
 
-### Escaped Characters
+### Escaped characters
 
 | Pattern    | Description                            |
 | ---------- | -------------------------------------- |
