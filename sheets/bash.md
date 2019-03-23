@@ -460,6 +460,53 @@ for i in "${arrayName[@]}"; do
 done
 ```
 
+## Dictionaries
+
+<!-- {.-three-column} -->
+
+### Defining
+
+```bash
+declare -A sounds
+```
+
+```bash
+sounds[dog]="bark"
+sounds[cow]="moo"
+sounds[bird]="tweet"
+sounds[wolf]="howl"
+```
+
+Declares `sound` as a Dictionary object (aka associative array).
+
+### Working with dictionaries
+
+```bash
+echo ${sounds[dog]} # Dog's sound
+echo ${sounds[@]}   # All values
+echo ${!sounds[@]}  # All keys
+echo ${#sounds[@]}  # Number of elements
+unset sounds[dog]   # Delete dog
+```
+
+### Iteration
+
+#### Iterate over values
+
+```bash
+for val in "${sounds[@]}"; do
+  echo $val
+done
+```
+
+#### Iterate over keys
+
+```bash
+for key in "${!sounds[@]}"; do
+  echo $key
+done
+```
+
 ## Options
 
 ### Options
@@ -680,6 +727,6 @@ pwd # /home/user/foo
 
 <!-- {.-one-column} -->
 
-* [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
-* [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_
-* [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
+- [Bash-hackers wiki](http://wiki.bash-hackers.org/) _(bash-hackers.org)_
+- [Shell vars](http://wiki.bash-hackers.org/syntax/shellvars) _(bash-hackers.org)_
+- [Learn bash in y minutes](https://learnxinyminutes.com/docs/bash/) _(learnxinyminutes.com)_
