@@ -2,6 +2,7 @@
 title: Vim digraphs
 category: Vim
 updated: 2019-03-04
+# TODO update
 ---
 
 ### Typing digraphs in insert mode
@@ -37,16 +38,12 @@ Or `:dig`.
 
 ### Math
 
-| Digraph | Name          | Symbol |
-| ------- | ------------- | ------ |
-| `+-`    | Plus/minus    | ±      |
-| `DG`    | Degree        | °      |
-|         |               |        |
-| `1S`    | Sperscript 1  | ¹      |
-| `2S`    | Superscript 2 | ²      |
-| `3S`    | Superscript 3 | ³      |
-|         |               |        |
-| `My`    | Mu            | µ      |
+| Digraph | Name       | Symbol |
+| ------- | ---------- | ------ |
+| `+-`    | Plus/minus | ±      |
+| `DG`    | Degree     | °      |
+|         |            |        |
+| `My`    | Mu         | µ      |
 
 <!-- {.-shortcuts} -->
 
@@ -101,11 +98,29 @@ Or `:dig`.
 
 ### Dots and bullets
 
-| ⋅ | · | ○ | ∙ | ∘ | ∴ | ∵ | ∶ | ∷ |
-| .P | .M | 0m | Sb | Ob | .: | :. | :R | :: |
+| Digraph | Name                  | Character |
+| ------- | --------------------- | --------- |
+| `.P`    | Dot operator          | ⋅         |
+| `.M`    | Middle dot            | ·         |
+| `Sb`    | Bullet operator       | ∙         |
+| `Ob`    | Ring operator         | ∘         |
+| `0M`    | Black circle          | ●         |
+| `0m`    | White circle          | ○         |
+|         |                       |           |
+| `.:`    | Therefore             | ∴         |
+| `:.`    | Because               | ∵         |
+| `:R`    | Ratio                 | ∶         |
+| `::`    | Proportion            | ::        |
+|         |                       |           |
+| `0.`    | Circled dot operator  | ⊙         |
+| `02`    | Circled ring operator | ⊚         |
+| `0o`    | Bullseye              | ◎         |
+|         |                       |           |
+| `fS`    | Black square          | ■         |
+| `OS`    | White square          | □         |
+| `sB`    | Black square, small   | ▪         |
 
-| ⊙ | ⊚ | ◎ | □ | ▪ |
-| 0. | 02 | 0o | OS | sB |
+<!-- {.-shortcuts} -->
 
 ### Math
 
@@ -115,10 +130,23 @@ Or `:dig`.
 | √ | × | ÷ |
 | RT _root_ | /\ _times_ | -: _divide_ |
 
-### Fractions
+### Fractions & numbers
 
-| ¼ | ½ | ¾ | ₃ | ₂ | ³ | ² |
-| 14 | 12 | 34 | 3s | 2s | 3S | 2S |
+| Digraph | Name           | Character |
+| ------- | -------------- | --------- |
+| `14`    | 1/4            | ¼         |
+| `12`    | 1/2            | ½         |
+| `34`    | 3/4            | ¾         |
+|         |                |           |
+| `1s`    | 1, subscript   | ₁         |
+| `2s`    | 2, subscript   | ₂         |
+| `3s`    | 3, subscript   | ₃         |
+|         |                |           |
+| `1S`    | 1, superscript | ¹         |
+| `2S`    | 2, superscript | ²         |
+| `3S`    | 3, superscript | ³         |
+
+<!-- {.-shortcuts} -->
 
 ### Sets
 
