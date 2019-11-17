@@ -3,7 +3,7 @@ title: Bash scripting
 category: CLI
 layout: 2017/sheet
 tags: [Featured]
-updated: 2019-03-23
+updated: 2019-10-02
 keywords:
   - Variables
   - Functions
@@ -670,6 +670,12 @@ source "${0%/*}/../share/foo.sh"
 ```bash
 printf "Hello %s, I'm %s" Sven Olga
 #=> "Hello Sven, I'm Olga
+
+printf "1 + 1 = %d" 2
+#=> "1 + 1 = 2"
+
+printf "This is how you print a float: %f" 2
+#=> "This is how you print a float: 2.000000"
 ```
 
 ### Directory of script
@@ -718,11 +724,12 @@ read -n 1 ans    # Just one character
 
 ### Special variables
 
-| Expression | Description                 |
-| ---------- | --------------------------- |
-| `$?`       | Exit status of last task    |
-| `$!`       | PID of last background task |
-| `$$`       | PID of shell                |
+| Expression | Description                  |
+| ---------- | ---------------------------- |
+| `$?`       | Exit status of last task     |
+| `$!`       | PID of last background task  |
+| `$$`       | PID of shell                 |
+| `$0`       | Filename of the shell script |
 
 See [Special parameters](http://wiki.bash-hackers.org/syntax/shellvars#special_parameters_and_shell_variables).
 
@@ -734,6 +741,22 @@ cd bar/
 pwd # /home/user/foo/bar
 cd -
 pwd # /home/user/foo
+```
+
+### Check for command's result
+
+```bash
+if ping -c 1 google.com; then
+  echo "It appears you have a working internet connection"
+fi
+```
+
+### Grep check
+
+```bash
+if grep -q 'foo' ~/.bash_history; then
+  echo "You appear to have typed 'foo' in the past"
+fi
 ```
 
 ## Also see

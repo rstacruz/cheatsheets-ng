@@ -262,7 +262,7 @@ function greet({ name, greeting }) {
 greet({ name: 'Larry', greeting: 'Ahoy' })
 ```
 
-Destructuring of objects and arrays can be also be done in function arguments.
+Destructuring of objects and arrays can also be done in function arguments.
 
 ### Default values
 
@@ -429,7 +429,7 @@ numbers.map(n => n * 2)
 // Same as: numbers.map(function (n) { return n * 2 })
 numbers.map(n => ({
   result: n * 2
-})
+}))
 // Implicitly returning objects requires parentheses around the object
 ```
 
