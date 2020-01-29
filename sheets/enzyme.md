@@ -91,14 +91,18 @@ expect(wrap.state('show')).toEqual(true)
 ```
 
 ```js
-expect('name' in wrap.props()).toEqual(true)
+expect('name' in wrap.props()).toEqual('Moe')
 expect('show' in wrap.state()).toEqual(true)
 ```
 
 ### Matching elements
 
 ```js
-expect(wrap.containsMatchingElement(<span>I am groot</span>)).toBeTruthy()
+expect(
+  wrap.containsMatchingElement(
+    <span>I am groot</span>
+  )
+).toBeTruthy()
 ```
 
 `containsMatchingElement()` is probably the most useful assertion in Jest.
@@ -114,7 +118,9 @@ Be sure you've set up enzyme-to-json for snapshots (see [Installing](#installing
 ### Traversions
 
 ```js
-expect(wrap.find('button').text()).toEqual('Submit')
+expect(
+  wrap.find('button').text()
+).toEqual('Submit')
 ```
 
 Use `.find()` to traverse down to nodes. It will return wrapper objects, too.
@@ -217,10 +223,10 @@ wrap.last() //           → ReactWrapper
 ```
 
 ```js
-wrap.get(0) //       → ReactElement
-wrap.getNode() //    → ReactElement
-wrap.getNodes() //   → Array<ReactElement>
-wrap.getDOMNode() // → DOMComponent
+wrap.get(0) //           → ReactElement
+wrap.getElement() //     → ReactElement
+wrap.getElements() //    → Array<ReactElement>
+wrap.getDOMNode() //     → DOMComponent
 ```
 
 See: [Full rendering API](http://airbnb.io/enzyme/docs/api/mount.html)

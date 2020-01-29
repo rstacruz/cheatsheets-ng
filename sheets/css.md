@@ -26,13 +26,14 @@ keywords:
 
 <!-- {.-setup} -->
 
-| Selector          | Description |
-| ----------------- | ----------- |
-| `div`             | Element     |
-| `.class`          | Class       |
-| `#id`             | ID          |
-| `[disabled]`      | Attribute   |
-| `[role="dialog"]` | Attribute   |
+| Selector          | Description  |
+| ----------------- | ------------ |
+| `*`               | All elements |
+| `div`             | Element      |
+| `.class`          | Class        |
+| `#id`             | ID           |
+| `[disabled]`      | Attribute    |
+| `[role="dialog"]` | Attribute    |
 
 ### Combinators
 
@@ -42,6 +43,7 @@ keywords:
 | `.parent > .child`  | Direct descendant |
 | `.child + .sibling` | Adjacent sibling  |
 | `.child ~ .sibling` | Far sibling       |
+| `.class1.class2`    | Have both classes |
 
 ### Attribute selectors
 
@@ -56,21 +58,26 @@ keywords:
 
 ### Pseudo-classes
 
-| Selector             | Description              |
-| -------------------- | ------------------------ |
-| `:target`            | eg, `h2#foo:target`      |
-| ---                  | ---                      |
-| `:disabled`          |                          |
-| `:focus`             |                          |
-| `:active`            |                          |
-| ---                  | ---                      |
-| `:nth-child(3)`      | 3rd child                |
-| `:nth-child(3n+2)`   | 2nd child in groups of 3 |
-| `:nth-child(-n+4)`   |                          |
-| ---                  | ---                      |
-| `:nth-last-child(2)` |                          |
-| `:nth-of-type(2)`    |                          |
-| ---                  | ---                      |
+| Selector             | Description                                |
+| -------------------- | ------------------------------------------ |
+| `:target`            | eg, `h2#foo:target`                        |
+| ---                  | ---                                        |
+| `:disabled`          |                                            |
+| `:focus`             |                                            |
+| `:active`            |                                            |
+| ---                  | ---                                        |
+| `:nth-child(3)`      | 3rd child                                  |
+| `:nth-child(3n+2)`   | 2nd child in groups of 3                   |
+| `:nth-child(-n+4)`   |                                            |
+| ---                  | ---                                        |
+| `:nth-last-child(2)` |                                            |
+| `:nth-of-type(2)`    |                                            |
+| ---                  | ---                                        |
+| `:checked`           | Checked inputs                             |
+| `:disabled`          | Disabled elements                          |
+| `:default`           | Default element in a group                 |
+| ---                  | ---                                        |
+| `:empty`             | Elements without children                  |
 
 ### Pseudo-class variations
 

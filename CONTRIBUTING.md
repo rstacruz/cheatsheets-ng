@@ -59,3 +59,16 @@ yarn run prettier:fix
 ## Troubleshooting
 
 Clean your cache using `sudo rm -rf node_modules public devhints-engine` if you have problems trying to start the server in Docker.
+
+<!--
+
+## Gitpod
+
+This repository supports contribution using [gitpod](https://gitpod.io) which is online IDE using [Theia](https://github.com/eclipse-theia/theia).
+
+To open-up the environment simple natigate on https://gitpod.io/#https://github.com/rstacruz/cheatsheets
+
+Or using a button:<br>
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/rstacruz/cheatsheets)
+
+-->
