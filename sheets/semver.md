@@ -8,7 +8,6 @@ weight: -3
 ### Semver
 
 Given a version number `MAJOR.MINOR.PATCH`:
-
 <!-- {.-setup} -->
 
 | Part    | Description                              |
@@ -53,9 +52,9 @@ Note that suffixed versions (`1.2.3-rc1`) are not matched.
 
 ### Hyphenated ranges
 
-| Range           | Description          |
-| --------------- | -------------------- |
-| `1.2.3 - 2.3.0` | is `>=1.2.3 <=2.3.4` |
+| Range              | Description           |
+| ---                | ---                   |
+| `1.2.3 - 2.3.4`    | is `>=1.2.3 <=2.3.4`  |
 
 #### Partial right
 
@@ -83,7 +82,9 @@ When the left is partial (eg, `1.2`), missing pieces are assumed to be `0` (eg, 
 
 ### Pre-releases
 
-    1.2.3-prerelease+build
+```
+1.2.3-prerelease+build
+```
 
 ### Explanation
 

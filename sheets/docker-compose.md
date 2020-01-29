@@ -55,6 +55,8 @@ docker-compose down
 web:
   # build from Dockerfile
   build: .
+  args:     # Add build arguments
+    APP_HOME: app
 ```
 
 ```yaml
@@ -78,7 +80,7 @@ web:
 ```yaml
   ports:
     - "3000"
-    - "8000:80"  # guest:host
+    - "8000:80"  # host:container
 ```
 
 ```yaml
@@ -215,4 +217,18 @@ networks:
   default:
     external:
       name: frontend
+```
+
+### Volume
+
+```yaml
+# Mount host paths or named volumes, specified as sub-options to a service
+  db:
+    image: postgres:latest
+    volumes:
+      - "/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"
+      - "dbdata:/var/lib/postgresql/data"
+
+volumes:
+  dbdata:
 ```
