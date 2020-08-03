@@ -1,3 +1,9 @@
+> ### This repo is archived
+>
+> Head onto the main repo for Devhints cheatsheets: https://github.com/rstacruz/cheatsheets
+
+---
+
 # Devhints
 
 > TL;DR for developer documentation - a ridiculous collection of cheatsheets
