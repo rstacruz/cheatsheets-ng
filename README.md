@@ -1,6 +1,13 @@
-> ### This repo is archived
->
-> Head onto the main repo for Devhints cheatsheets: https://github.com/rstacruz/cheatsheets
+<br><br>
+
+<h3 align='center'>This repo is archived.</h3>
+
+<p align='center'>
+Head onto the main repo for Devhints cheatsheets:
+<a href='https://github.com/rstacruz/cheatsheets'>github.com/rstacruz/cheatsheets</a>
+</p>
+
+<br><br>
 
 ---
 
